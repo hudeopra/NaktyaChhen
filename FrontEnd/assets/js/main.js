@@ -26,8 +26,8 @@ jQuery(document).ready(function ($) {
   });
 
   $(".ph-banner__slider").slick({
-    dots: true,
-    infinite: true,
+    dots: false,
+    infinite: false,
     speed: 500,
     fade: true,
     arrows: false,
