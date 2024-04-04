@@ -1,14 +1,29 @@
 $primary-dark: #021d2a;
 $primary-light: #002b40;
 $secondary: #14e114;
+$font-secondary: "Roboto Slab", serif;
 
 body {
   font-size: 16px;
-  line-height: 1.7;
-  font-family: "Montserrat", sans-serif;
+  line-height: 1.5;
+  font-family: "Josefin Sans", sans-serif;
   color: #fff;
+  background-color: $primary-light;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-secondary;
+}
+h2 ~ h3,
+h3 ~ h4,
+h4 ~ h5 {
+  font-family: "Josefin Sans", sans-serif;
+}
 ul {
   list-style: none;
   padding: 0;
@@ -27,7 +42,9 @@ a {
   &:hover {
   }
 }
-
+figure {
+  margin: 0;
+}
 .ph-btn {
   padding: 8px 20px;
   background-color: #fff;
@@ -90,11 +107,6 @@ a {
   }
 }
 
-section h2 {
-  font-size: 50px;
-  font-weight: 400;
-}
-
 /* section default stats */
 
 /* input ends */
@@ -140,7 +152,8 @@ form .ph-half {
   background-color: #fff;
   z-index: 98;
   position: fixed;
-  width: 100%;
+  width: 50px;
+  font-size: 0 !important;
   margin: 0;
   top: -70px;
   left: 0;
@@ -153,9 +166,22 @@ form .ph-half {
   transition: transform 500ms ease, background 500ms ease,
     -webkit-transform 500ms ease;
   -webkit-transition: transform 500ms ease, background 500ms ease;
-  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);x
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
   z-index: 99;
+  .ph-header__wrapper {
+    padding: 5px;
+    i {
+      font-size: 24px;
+      width: 100%;
+      text-align: center;
+    }
+  }
+  .ph-sub-menu,
+  .ph-has-sub-menu:after {
+    opacity: 0 !important;
+    visibility: hidden;
+  }
 }
 
 // height 32
@@ -248,9 +274,13 @@ header {
   float: left;
   position: fixed;
   z-index: 5;
+  a {
+    color: #fff;
+  }
 }
 
 .ph-header {
+  transition: all 0.1s;
   &__wrapper {
     position: relative;
     z-index: 2;
@@ -302,6 +332,7 @@ header {
       span {
         display: inline-block;
         position: relative;
+        margin-left: 15px;
         &:after {
           content: "";
           height: 3px;
@@ -338,16 +369,170 @@ header {
   width: 280px;
   padding: 15px;
   transition: all ease-out 0.5s;
+  box-shadow: 2px 0px 4px 2px rgba(2, 29, 42, 0.4);
   a {
     padding: 15px 30px;
   }
 }
 // header ends
 
-// main starts
+// homepage main starts
 main {
   width: calc(100% - 315px);
   position: relative;
   float: right;
+  transition: all 0.1s;
+}
+header.ph-header.header_fixed ~ main {
+  width: calc(100% - 50px);
+}
+.ph-banner {
+  div * {
+    height: 100vh;
+  }
+}
+.ph-about {
+  &__content {
+    img {
+      min-height: 400px;
+      object-fit: cover;
+    }
+  }
+}
+.ph-component {
+  background-color: $primary-dark;
+  &__img,
+  figure,
+  img {
+    height: 100%;
+    width: 100%;
+  }
+  .row:nth-child(even) {
+    .col-6 {
+      &:first-of-type {
+        order: 2;
+      }
+      &:last-of-type {
+        order: 1;
+      }
+    }
+  }
+  &__content {
+    padding: 60px;
+  }
+}
+
+.ph-menu-tab {
+  .nav-tabs {
+    justify-content: center;
+    border: 0;
+  }
+  .nav-item {
+    padding: 30px;
+    position: relative;
+    &:not(:last-of-type):after {
+      content: "";
+      height: 6px;
+      width: 6px;
+      background-color: $secondary;
+      position: absolute;
+      right: -3px;
+      top: calc(50% - 3px);
+      transform: rotate(45deg);
+    }
+  }
+  .nav-link {
+    position: relative;
+    padding: 5px;
+    color: #fff;
+    border: none !important;
+    &.active {
+      background-color: transparent;
+      color: $secondary;
+      border: 0;
+      &:after {
+        width: 100%;
+      }
+    }
+    &::after {
+      content: "";
+      width: 0;
+      height: 1px;
+      position: absolute;
+      left: 0;
+      bottom: 2px;
+      background-color: $secondary;
+      transition: all 0.5s;
+    }
+    &:hover {
+      border: none !important;
+      color: $secondary;
+      &:after {
+        width: 100%;
+      }
+    }
+  }
+  &__item {
+    display: flex;
+    margin: 15px 0;
+
+    &:hover {
+      img {
+        animation: rotateOnce 1s linear forwards; /* Apply animation for one full rotation */
+      }
+    }
+    figure {
+      margin-right: 30px;
+    }
+    img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    &--title {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      font-family: $font-secondary;
+      font-size: 24px;
+      margin-bottom: 15px;
+      h3 {
+        font-size: inherit;
+        max-width: 80%;
+        margin-bottom: 0;
+      }
+      .ph-dots {
+        flex-grow: 1;
+        border-bottom: 1px dashed;
+        margin: 0 10px 5px 10px;
+        border-color: $secondary;
+      }
+      small {
+        font-size: inherit;
+      }
+    }
+  }
+  .col-5:nth-of-type(odd) {
+    position: relative;
+    &:after {
+      content: "";
+      width: 1px;
+      height: 100%;
+      border-right: 1px dashed $secondary;
+      position: absolute;
+      right: -19.2%;
+      top: 0;
+    }
+  }
+}
+
+@keyframes rotateOnce {
+  from {
+    transform: rotate(0deg); /* Start rotation from 0 degrees */
+  }
+  to {
+    transform: rotate(360deg); /* Rotate the image by 360 degrees */
+  }
 }
 // main ends
