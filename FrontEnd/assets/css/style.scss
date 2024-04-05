@@ -46,11 +46,15 @@ figure {
   margin: 0;
 }
 .ph-btn {
+  width: 100%;
+  max-width: 360px;
   padding: 8px 20px;
   background-color: #fff;
   color: #000;
   border: 2px solid #fff;
   transition: all 0.5s ease-in-out;
+  text-align: center;
+  margin-top: 30px;
 
   &:hover {
     color: #000;
@@ -166,11 +170,12 @@ form .ph-half {
   transition: transform 500ms ease, background 500ms ease,
     -webkit-transform 500ms ease;
   -webkit-transition: transform 500ms ease, background 500ms ease;
-  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);x
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
   z-index: 99;
   .ph-header__wrapper {
     padding: 5px;
+    width: 50px;
     i {
       font-size: 24px;
       width: 100%;
@@ -181,6 +186,26 @@ form .ph-half {
   .ph-has-sub-menu:after {
     opacity: 0 !important;
     visibility: hidden;
+  }
+  .ph-header__book-now {
+    font-size: 20px;
+    transform: rotate(-90deg);
+    width: 200px;
+    height: 270px;
+    position: absolute;
+  }
+  .ph-header__user {
+    margin-top: 320px;
+  }
+  .ph-header__social {
+    a {
+      height: 0;
+      width: 0;
+      border: none;
+    }
+    i {
+      font-size: 0;
+    }
   }
 }
 
@@ -287,6 +312,9 @@ header {
     padding: 45px 30px;
     background-color: $primary-dark;
     min-height: 100vh;
+    display: inline-grid;
+    align-content: space-evenly;
+    width: 320px;
   }
   &__menu {
     margin: 45px 0;
@@ -353,8 +381,34 @@ header {
     justify-content: space-around;
     max-width: 150px;
     margin: auto;
+    margin-top: 60px;
     i {
       font-size: 30px;
+    }
+  }
+  &__social {
+    margin: 30px 0;
+    display: flex;
+    justify-content: space-between;
+    li {
+      &:hover {
+        a,
+        i {
+          border-color: $secondary;
+          color: $secondary;
+        }
+      }
+    }
+    a {
+      height: 40px;
+      width: 40px;
+      border: 1px solid #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      transition: all 0.5s;
+      font-size: 22px;
     }
   }
 }
@@ -533,6 +587,44 @@ header.ph-header.header_fixed ~ main {
   }
   to {
     transform: rotate(360deg); /* Rotate the image by 360 degrees */
+  }
+}
+
+.ph-highlight {
+  &__item {
+    position: relative;
+    min-height: 200px;
+    overflow: hidden;
+    figure {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+      }
+    }
+    &:hover {
+      .ph-highlight__item--details {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+    &--details {
+      position: absolute;
+      bottom: 30px;
+      left: 30px;
+      right: 30px;
+      visibility: hidden;
+      opacity: 0;
+      transition: all 0.5ss;
+
+      p {
+        margin-bottom: 0;
+      }
+    }
   }
 }
 // main ends

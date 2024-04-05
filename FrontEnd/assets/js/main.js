@@ -1,5 +1,5 @@
 jQuery(document).ready(function ($) {
-  var nav_offset_top = $("header").height() - window.innerHeight * 0.9; // Adjusted to 10vh scroll
+  var nav_offset_top = $("header").height() - window.innerHeight * 0.95; // Adjusted to 10vh scroll
 
   function navbarFixed() {
     if ($(".ph-header").length) {
