@@ -663,3 +663,64 @@ header.ph-header.header_fixed ~ main {
   background-color: $primary-dark;
 }
 // main ends
+
+// Homepage ends
+
+// Innerpage Starts
+.ph-innerpage {
+  .ph-banner__item--content {
+  }
+  .ph-banner,
+  .ph-banner img {
+    max-height: 600px;
+  }
+}
+.ph-breadcrums {
+  padding: 5px 0;
+  text-align: center;
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  a,
+  strong {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  a {
+    color: #0e86c0;
+    &:hover {
+      color: $secondary;
+    }
+  }
+  strong {
+    color: $secondary;
+  }
+  .item a:after {
+    content: "\f101";
+    font-family: "FontAwesome";
+    display: inline-block;
+    padding-right: 3px;
+    vertical-align: middle;
+    font-weight: 900;
+    padding: 0 10px;
+    margin-right: 1px;
+    opacity: 0.5;
+  }
+}
+// About Us Starts
+.ph-frame {
+  &__item {
+    &--img {
+      margin-bottom: 30px;
+      img {
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+    }
+    &--content {
+    }
+  }
+}

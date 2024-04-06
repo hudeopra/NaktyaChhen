@@ -726,4 +726,64 @@ header.ph-header.header_fixed ~ main {
 .ph-newsletter {
   background-color: #021d2a;
 }
+
+.ph-innerpage .ph-banner,
+.ph-innerpage .ph-banner img {
+  max-height: 600px;
+}
+
+.ph-breadcrums {
+  padding: 5px 0;
+  text-align: center;
+}
+
+.ph-breadcrums__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.ph-breadcrums a,
+.ph-breadcrums strong {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.ph-breadcrums a {
+  color: #0e86c0;
+}
+
+.ph-breadcrums a:hover {
+  color: #14e114;
+}
+
+.ph-breadcrums strong {
+  color: #14e114;
+}
+
+.ph-breadcrums .item a:after {
+  content: "\f101";
+  font-family: "FontAwesome";
+  display: inline-block;
+  padding-right: 3px;
+  vertical-align: middle;
+  font-weight: 900;
+  padding: 0 10px;
+  margin-right: 1px;
+  opacity: 0.5;
+}
+
+.ph-frame__item--img {
+  margin-bottom: 30px;
+}
+
+.ph-frame__item--img img {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 /*# sourceMappingURL=style.css.map */
