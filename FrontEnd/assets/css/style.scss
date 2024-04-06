@@ -442,7 +442,39 @@ header.ph-header.header_fixed ~ main {
 }
 .ph-banner {
   div * {
-    height: 100vh;
+  }
+  &__item {
+    position: relative;
+    &--img {
+      position: relative;
+      &:after {
+        content: "";
+        height: 100%;
+        width: 100%;
+        background-color: rgba(2, 29, 42, 0.4);
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    }
+    &--content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 750px;
+      padding: 30px;
+      text-align: center;
+      h2 {
+        font-size: 66px;
+      }
+      p {
+        font-size: 24px;
+      }
+      .ph-btn {
+        width: unset;
+      }
+    }
   }
 }
 .ph-about {
@@ -626,5 +658,8 @@ header.ph-header.header_fixed ~ main {
       }
     }
   }
+}
+.ph-newsletter {
+  background-color: $primary-dark;
 }
 // main ends
