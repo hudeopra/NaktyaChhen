@@ -17,19 +17,22 @@ jQuery(document).ready(function ($) {
   navbarFixed();
 
   // Add hover functionality to toggle "header_fixed" class
-  // $(".ph-header").hover(
-  //   function () {
-  //     $(this).toggleClass("header_fixed");
-  //   },
-  //   function () {
-  //     $(this).toggleClass("header_fixed");
-  //   }
-  // );
+  $(".ph-header").hover(
+    function () {
+      $(this).toggleClass("header_fixed");
+    },
+    function () {
+      $(this).toggleClass("header_fixed");
+    }
+  );
   $(document).on("click", ".ph-user-trigger", function () {
     $(".ph-login").toggleClass("ph-active");
     // $(".ham-menu").toggleClass("active");
     // $(".ph-header__menu ul").slideToggle();
   });
+
+  // nice select initilization
+  $("select.nice-select").niceSelect();
 
   $(".ph-banner__slider").slick({
     dots: false,

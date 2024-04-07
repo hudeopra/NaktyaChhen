@@ -144,12 +144,18 @@ textarea {
 form .ph-half {
   display: flex;
   justify-content: space-between;
+  gap: 30px;
 }
 
 .ph-half .ph-input-wrapper {
   width: calc(50% - 15px);
 }
-
+select {
+  border-radius: 20px;
+  background-size: 25px;
+  background-repeat: no-repeat;
+  background-position: right 11px center;
+}
 /* input ends */
 /* header__fixed ends */
 .header_fixed.ph-header {
@@ -207,6 +213,10 @@ form .ph-half {
       font-size: 0;
     }
   }
+  .ph-login {
+    visibility: hidden !important;
+    opacity: 0 !important;
+  }
 }
 
 // height 32
@@ -215,7 +225,11 @@ form .ph-half {
 // }
 
 /* header__fixed ends */
-
+// nice select start
+.nice-select {
+  color: $primary-dark;
+}
+// nice select end
 .ph-header .ham-menu {
   display: none;
 

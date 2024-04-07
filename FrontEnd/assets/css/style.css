@@ -135,10 +135,18 @@ form .ph-half {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  gap: 30px;
 }
 
 .ph-half .ph-input-wrapper {
   width: calc(50% - 15px);
+}
+
+select {
+  border-radius: 20px;
+  background-size: 25px;
+  background-repeat: no-repeat;
+  background-position: right 11px center;
 }
 
 /* input ends */
@@ -206,7 +214,16 @@ form .ph-half {
   font-size: 0;
 }
 
+.header_fixed.ph-header .ph-login {
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
 /* header__fixed ends */
+.nice-select {
+  color: #021d2a;
+}
+
 .ph-header .ham-menu {
   display: none;
 }
