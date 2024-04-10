@@ -142,20 +142,18 @@
                         </div>
                     </div>
                 </div>
-                
                 <div class="ph-login">
                     <h2>Login</h2>
                     <div class="ph-form-wrapper">                                
-                        <form action="">
+                        <form id="loginForm" action="/login" method="POST">
                             <div class="ph-input-wrapper">
-                                <input type="email" name="" id="" placeholder="example@gemail.com">
+                                <input type="email" name="email" id="loginEmail" placeholder="example@gemail.com">
                             </div>
                             <div class="ph-input-wrapper">
-                                <input type="password" name="" id="" placeholder="********">
+                                <input type="password" name="password" id="loginPassword" placeholder="********">
                             </div>
-                            
                             <div class="ph-input-wrapper">
-                                <input type="submit" value="Login">
+                                <input class="ph-btn ph-btn__form" type="submit" value="Login">
                             </div>
                         </form>
                         <div class="ph-login__option">
@@ -227,23 +225,23 @@
                                         At and dinner, available every day.
                                     </h3>
                                 </div>
-                                <form action="">
+                                <form id="bookingForm" action="/booking-submit" method="POST">
                                     <div class="ph-half">
                                         <div class="ph-input-wrapper">
-                                            <input type="date" name="" id="">
+                                            <input type="date" name="date" id="dateBooking">
                                         </div>
-                                        <div class="ph-input-wrapper ">
-                                            <select class="nice-select">
+                                        <div class="ph-input-wrapper">
+                                            <select class="nice-select" name="arrivalTime" id="arrivalTimeBooking">
                                                 <option data-display="Arrival Time">5PM</option>
-                                                <option value="1">6PM</option>
-                                                <option value="2">7PM</option>
-                                                <option value="3">8PM</option>
+                                                <option value="6PM">6PM</option>
+                                                <option value="7PM">7PM</option>
+                                                <option value="8PM">8PM</option>
                                             </select>
                                         </div>
                                     </div>
                                     <div class="ph-half">
-                                        <div class="ph-input-wrapper ">
-                                            <select class="nice-select">
+                                        <div class="ph-input-wrapper">
+                                            <select class="nice-select" name="numberOfPeople" id="numberOfPeopleBooking">
                                                 <option value="1" data-display="No. of People">1</option>
                                                 <option value="2">2</option>
                                                 <option value="3">3</option>
@@ -251,9 +249,9 @@
                                             </select>
                                         </div>
                                         
-                                        <div class="ph-input-wrapper ">
-                                            <select class="nice-select">
-                                                <option  value="Table 1" data-display="Table number">Table 1</option>
+                                        <div class="ph-input-wrapper">
+                                            <select class="nice-select" name="tableNumber" id="tableNumberBooking">
+                                                <option value="Table 1" data-display="Table number">Table 1</option>
                                                 <option value="Table 2">Table 2</option>
                                                 <option value="Table 3">Table 3</option>
                                                 <option value="Table 4">Table 4</option>
@@ -262,12 +260,12 @@
                                     </div>
                                         
                                     <div class="ph-input-wrapper">
-                                        <textarea placeholder="Describe yourself here..." name="" id="" ></textarea>
+                                        <textarea placeholder="Additional notes..." name="notes" id="notesBooking"></textarea>
                                     </div>
                                     <div class="ph-input-wrapper">
-                                        <input type="submit" value="Submit">
+                                        <input class="ph-btn ph-btn__form" type="submit" value="Submit">
                                     </div>
-                                </form>
+                                </form>                                
                             </div>
                         </div>
                     </div>
@@ -410,11 +408,11 @@
                         </div>
                         <div class="col-4">
                             <div class="ph-newsletter__form ph-input-wrapper">
-                                <form action="" method="post">
-                                    <input type="email" placeholder="eample@email.com" name="" id="#newsletterEmail">
-                                    <input type="submit" value="Submit">
+                                <form id="newsletterForm" action="/subscribe" method="POST">
+                                    <input type="email" placeholder="example@email.com" name="email" id="newsletterEmail">
+                                    <input class="ph-btn ph-btn__form" type="submit" value="Submit">
                                 </form>
-                            </div>
+                            </div>                            
                         </div>
                     </div>
                 </div>

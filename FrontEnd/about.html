@@ -142,20 +142,18 @@
                         </div>
                     </div>
                 </div>
-                
                 <div class="ph-login">
                     <h2>Login</h2>
                     <div class="ph-form-wrapper">                                
-                        <form action="">
+                        <form id="loginForm" action="/login" method="POST">
                             <div class="ph-input-wrapper">
-                                <input type="email" name="" id="" placeholder="example@gemail.com">
+                                <input type="email" name="email" id="loginEmail" placeholder="example@gemail.com">
                             </div>
                             <div class="ph-input-wrapper">
-                                <input type="password" name="" id="" placeholder="********">
+                                <input type="password" name="password" id="loginPassword" placeholder="********">
                             </div>
-                            
                             <div class="ph-input-wrapper">
-                                <input type="submit" value="Login">
+                                <input class="ph-btn ph-btn__form" type="submit" value="Login">
                             </div>
                         </form>
                         <div class="ph-login__option">
@@ -395,11 +393,11 @@
                         </div>
                         <div class="col-4">
                             <div class="ph-newsletter__form ph-input-wrapper">
-                                <form action="" method="post">
-                                    <input type="email" placeholder="eample@email.com" name="" id="#newsletterEmail">
-                                    <input type="submit" value="Submit">
+                                <form id="newsletterForm" action="/subscribe" method="POST">
+                                    <input type="email" placeholder="example@email.com" name="email" id="newsletterEmail">
+                                    <input class="ph-btn ph-btn__form" type="submit" value="Submit">
                                 </form>
-                            </div>
+                            </div>                            
                         </div>
                     </div>
                 </div>

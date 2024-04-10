@@ -25,15 +25,16 @@ jQuery(document).ready(function ($) {
       $(this).toggleClass("header_fixed");
     }
   );
+
+  // Toggle login form visibility
   $(document).on("click", ".ph-user-trigger", function () {
     $(".ph-login").toggleClass("ph-active");
-    // $(".ham-menu").toggleClass("active");
-    // $(".ph-header__menu ul").slideToggle();
   });
 
-  // nice select initilization
+  // Initialize nice select
   $("select.nice-select").niceSelect();
 
+  // Initialize slick slider for banner
   $(".ph-banner__slider").slick({
     dots: false,
     infinite: false,
@@ -44,4 +45,54 @@ jQuery(document).ready(function ($) {
     focusOnSelect: false,
     cssEase: "linear",
   });
+
+  // Function to handle form submission
+  function handleSubmit(event) {
+    event.preventDefault(); // Prevent default form submission
+    var form = event.target;
+    var formData = new FormData(form);
+
+    // Perform AJAX request
+    fetch(form.action, {
+      method: form.method,
+      body: formData,
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Failed to submit form");
+        }
+        // Assuming response is OK, handle success here
+        console.log("Form submitted successfully");
+      })
+      .catch((error) => {
+        console.error("Error submitting form:", error.message);
+        // You can add additional error handling here
+      });
+  }
+
+  // Attach event listener for login form
+  var loginForm = document.querySelector(".ph-login form");
+  if (loginForm) {
+    loginForm.addEventListener("submit", handleSubmit);
+  }
+
+  // Attach event listener for newsletter form
+  var newsletterForm = document.querySelector(".ph-newsletter__form form");
+  if (newsletterForm) {
+    newsletterForm.addEventListener("submit", handleSubmit);
+  }
+
+  // Attach event listeners to specific forms
+  var contactForm = document.getElementById("contactForm");
+  if (contactForm) {
+    contactForm.addEventListener("submit", handleSubmit);
+  }
+
+  var bookingForm = document.getElementById("bookingForm");
+  if (bookingForm) {
+    bookingForm.addEventListener("submit", handleSubmit);
+  }
+
+  // Attach event listener for all other forms
+  $("form").not("#contactForm, #bookingForm").on("submit", handleSubmit);
 });

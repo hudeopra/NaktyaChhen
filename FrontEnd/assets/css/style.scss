@@ -60,6 +60,15 @@ figure {
     color: #000;
     background-color: transparent;
   }
+  &__form {
+    background-color: $primary-dark;
+    border-color: $primary-dark;
+    color: #14e11471;
+    &:hover {
+      color: $secondary;
+      border-color: $secondary;
+    }
+  }
 }
 
 /* section default stats */
@@ -119,15 +128,54 @@ figure {
   position: relative;
 }
 
+// nice select start
 input,
-textarea {
+textarea,
+.nice-select {
   width: 100%;
   background-color: #e2e2e2;
   border: 0;
   outline: none;
-  padding: 8px 15px;
+  padding: 8px 20px;
+  background-color: transparent;
+  border-radius: 10px;
+  border: 2px solid #14e11476;
+  color: #ffffffbe;
+
+  color-scheme: dark;
+  &::placeholder,
+  &:after {
+    color: #4ad74a7d;
+    border-color: #4ad74a7d;
+  }
+  &:hover,
+  &.open,
+  &:focus,
+  &:active,
+  &:focus-within {
+    border-color: $secondary;
+
+    &:after {
+      border-color: $secondary;
+    }
+  }
 }
 
+.nice-select {
+  padding: 0 20px;
+  .list {
+    color: $secondary;
+    box-shadow: 0 0 4px $secondary;
+    background-color: $primary-light;
+    width: 100%;
+  }
+  .option:hover,
+  .option.focus,
+  option.selected.focus {
+    background-color: $primary-dark !important;
+  }
+}
+// nice select end
 input {
   height: 45px;
 }
@@ -225,11 +273,6 @@ select {
 // }
 
 /* header__fixed ends */
-// nice select start
-.nice-select {
-  color: $primary-dark;
-}
-// nice select end
 .ph-header .ham-menu {
   display: none;
 
