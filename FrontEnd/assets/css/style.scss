@@ -10,7 +10,10 @@ body {
   color: #fff;
   background-color: $primary-light;
 }
-
+::selection {
+  color: $primary-dark;
+  background: $secondary;
+}
 h1,
 h2,
 h3,
@@ -67,7 +70,7 @@ figure {
     border-color: $primary-dark;
     color: #14e11471;
     &:hover {
-      color: $secondary;
+      color: #fff;
       border-color: $secondary;
     }
   }
@@ -178,6 +181,12 @@ textarea,
   option.selected.focus {
     background-color: $primary-dark !important;
   }
+  &.open {
+    border-radius: 10px 10px 0 0;
+    .list {
+      border-radius: 0 0 10px 10px;
+    }
+  }
 }
 // nice select end
 input {
@@ -287,80 +296,9 @@ select {
   }
 }
 
-// height 32
-// .admin-bar .header_fixed.ph-header {
-//     top: -38px;
-// }
-
 /* header__fixed ends */
-.ph-header .ham-menu {
-  display: none;
-
-  &__ham-line {
-    background-color: #000;
-    display: block;
-    width: 30px;
-    height: 3px;
-    margin-bottom: 4px;
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
-
-    &:last-of-type {
-      margin-bottom: 0;
-    }
-  }
-}
 
 @media screen and (max-width: 991px) {
-  .ph-header .ham-menu {
-    display: block;
-    position: absolute;
-    top: 55px;
-    right: 55px;
-    z-index: 99;
-    cursor: pointer;
-    height: 30px;
-    width: 30px;
-    z-index: 2;
-
-    &.active {
-      span {
-        background-color: #000;
-
-        &:first-of-type {
-          -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-          margin-top: 12px;
-          height: 4px;
-        }
-
-        &:nth-of-type(2) {
-          display: none;
-        }
-
-        &:last-of-type {
-          -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-          margin-top: -8px;
-          height: 4px;
-        }
-      }
-    }
-  }
-
-  .ph-header__menu ul {
-    display: none;
-    position: absolute;
-    top: 110px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1;
-    padding: 50px 0;
-    background-color: #fff;
-    text-align: center;
-  }
-
   form .ph-half {
     display: block;
   }
@@ -596,7 +534,8 @@ header.ph-header.header_fixed ~ main {
   }
 }
 .ph-about {
-  .col-4 {
+  .col-12 {
+    margin-bottom: 30px;
     p {
       margin: 0;
     }
@@ -637,7 +576,7 @@ header.ph-header.header_fixed ~ main {
     width: 100%;
   }
   .row:nth-child(even) {
-    .col-6 {
+    .col-12 {
       &:first-of-type {
         order: 2;
       }
