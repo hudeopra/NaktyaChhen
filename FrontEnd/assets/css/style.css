@@ -625,6 +625,42 @@ header.ph-header.header_fixed ~ main {
   width: unset;
 }
 
+.ph-about .col-12 {
+  margin-bottom: 30px;
+}
+
+.ph-about .col-12 p {
+  margin: 0;
+}
+
+.ph-about .col-12:nth-child(even) p {
+  margin-top: 30px;
+}
+
+.ph-about .col-12:nth-child(odd) .ph-about__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.ph-about .col-12:nth-child(odd) .ph-about__content figure {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+.ph-about .col-12:nth-child(odd) .ph-about__content p {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+.ph-about .col-12:nth-child(odd) p {
+  margin-bottom: 30px;
+}
+
 .ph-about__content img {
   min-height: 400px;
   -o-object-fit: cover;

@@ -552,6 +552,32 @@ header.ph-header.header_fixed ~ main {
   }
 }
 .ph-about {
+  .col-12 {
+    margin-bottom: 30px;
+    p {
+      margin: 0;
+    }
+    &:nth-child(even) {
+      p {
+        margin-top: 30px;
+      }
+    }
+    &:nth-child(odd) {
+      .ph-about__content {
+        display: flex;
+        flex-wrap: wrap;
+        figure {
+          order: 2;
+        }
+        p {
+          order: 1;
+        }
+      }
+      p {
+        margin-bottom: 30px;
+      }
+    }
+  }
   &__content {
     img {
       min-height: 400px;
