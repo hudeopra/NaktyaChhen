@@ -33,11 +33,11 @@
     <body>
         <header class="ph-header">
             <div class="ph-header__wrapper">
-                <div class="ph-header__wrapper--head">   
-                    <div class="ph-header__logo">
-                        <img src="assets/img/NaktyaChhenLogoFull.svg" alt="Naktya Chhen Logo full">
-                        <img src="assets/img/NaktyaChhenLogoHalf.svg" alt="Naktya Chhen Logo half">
-                    </div>
+                <div class="ph-header__wrapper--head">
+                    
+                <div class="ph__logo">
+                    <img src="" alt="Naktya Chhen Logo">
+                </div>
                 <nav class="ph-header__menu">
                     <ul>
                         <li>
@@ -133,11 +133,38 @@
                             Book Now
                         </a>
                     </div>
+
                     <div  class="ph-header__user">
                         <div class="ph-header__user--trigger">
-                            <a class="ph-user-trigger" href="login.html">
+                            <a class="ph-user-trigger" href="javascript:void(0)">
                                 <i class="fa fa-user" aria-hidden="true"></i>
                             </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="ph-login">
+                    <h2>Login</h2>
+                    <div class="ph-form-wrapper">                                
+                        <form id="loginForm" action="/login" method="POST">
+                            <div class="ph-input-wrapper">
+                                <input type="email" name="email" id="loginEmail" placeholder="example@gemail.com">
+                            </div>
+                            <div class="ph-input-wrapper">
+                                <input type="password" name="password" id="loginPassword" placeholder="********">
+                            </div>
+                            <div class="ph-input-wrapper">
+                                <input class="ph-btn ph-btn__form" type="submit" value="Login">
+                            </div>
+                        </form>
+                        <div class="ph-login__option">
+                            <ul>
+                                <li>
+                                    <a href="">Forgot Password?</a>
+                                </li>
+                                <li>
+                                    <a href="">Sign Up</a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -294,26 +321,26 @@
                     </div>
                 </div>
             </section>
-        <section class="ph-newsletter ph-section__padding-sm--tb">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-md-6">
-                        <div class="ph-newsletter__content">
-                            <h2>Lorem ipsum dolor, sit amet.</h2>
-                            <p>Lorem ipsum dolor sit amet. Voluptas dolorum  inventore quae qui? Optio.</p>
+            <section class="ph-newsletter ph-section__padding-sm--tb">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="ph-newsletter__content">
+                                <h2>Lorem ipsum dolor, sit amet.</h2>
+                                <p>Lorem ipsum dolor sit amet. Voluptas dolorum  inventore quae qui? Optio.</p>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="ph-newsletter__form ph-input-wrapper">
+                                <form id="newsletterForm" action="newsletter.php" method="POST">
+                                    <input type="email" placeholder="example@email.com" name="email" id="newsletterEmail">
+                                    <input class="ph-btn ph-btn__form" type="submit" value="Submit">
+                                </form>
+                            </div>                            
                         </div>
                     </div>
-                    <div class="col-12 col-md-6">
-                        <div class="ph-newsletter__form ph-input-wrapper">
-                            <form id="newsletterForm" action="newsletter.php" method="POST">
-                                <input type="email" placeholder="example@email.com" name="email" id="newsletterEmail">
-                                <input class="ph-btn ph-btn__form" type="submit" value="Submit">
-                            </form>
-                        </div>                            
-                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
         </main>
         <footer class="ph-footer ">
             <div class="ph-section__padding-lg--tb">
@@ -371,6 +398,8 @@
         <!-- main js -->
         <script src="assets/js/main.js"></script>
     </body>
-</html>
+    
+    <script src="assets/js/contact.js">
+    </script>
     
     

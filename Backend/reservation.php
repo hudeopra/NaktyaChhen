@@ -8,8 +8,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $tableNumber = $_POST["tableNumber"];
     $description = $_POST["notes"];
 
-    // Validate inputs if necessary
-    // For example, check if date is in the correct format
+    
+    if (empty($date) || empty($time) || empty($people) || empty($tableNumber)) {
+        echo "All fields are required";
+        exit;
+    }
 
     $stmt = $conn->prepare("INSERT INTO reservation (date, time, people, tableNumber, description) VALUES (?, ?, ?, ?, ?)");
     $stmt->bind_param("ssiss", $date, $time, $people, $tableNumber, $description);

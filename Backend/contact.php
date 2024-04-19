@@ -12,10 +12,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($data === null) {
             throw new Exception("Error decoding JSON data");
         }
+         if (!filter_var($data['email'], FILTER_VALIDATE_EMAIL)) {
+            throw new Exception("Invalid email format");
+         }
 
-        // Validate the data (e.g., check if name, email, and message are present)
-
-        
         // Prepare and bind parameters to the SQL query
         $stmt = $conn->prepare("INSERT INTO contact (name, email, message) VALUES (?, ?, ?)");
         $stmt->bind_param("sss", $data['name'], $data['email'], $data['message']);
@@ -32,5 +32,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo json_encode(array("error" => $e->getMessage()));
     }
 }
-
-
+ ?>
