@@ -7,8 +7,10 @@ jQuery(document).ready(function ($) {
         var scroll = $(window).scrollTop();
         if (scroll >= nav_offset_top) {
           $(".ph-header").addClass("header_fixed");
+          $(".ph-login").removeClass("ph-active");
         } else {
           $(".ph-header").removeClass("header_fixed");
+          $(".ph-login").removeClass("ph-active");
         }
       });
     }
@@ -16,15 +18,11 @@ jQuery(document).ready(function ($) {
 
   navbarFixed();
 
-  // Add hover functionality to toggle "header_fixed" class
-  $(".ph-header").hover(
-    function () {
-      $(this).toggleClass("header_fixed");
-    },
-    function () {
-      $(this).toggleClass("header_fixed");
-    }
-  );
+  // Toggle meny form visibility
+  $(document).on("click", ".ph-header__open--trigger", function () {
+    $(".ph-header").toggleClass("header_fixed");
+    $(".ph-login").removeClass("ph-active");
+  });
 
   // Toggle login form visibility
   $(document).on("click", ".ph-user-trigger", function () {
@@ -46,6 +44,59 @@ jQuery(document).ready(function ($) {
     cssEase: "linear",
   });
 
+  // Initialize slick slider for product single page
+  $(".mt-other-products-slider").slick({
+    dots: false,
+    infinite: true,
+    speed: 7000,
+    arrows: false,
+    slidesToShow: 5,
+    slidesToScroll: 3,
+    autoplay: true,
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 4,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 4,
+        },
+      },
+      {
+        breakpoint: 431,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 381,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      // You can unslick at a given breakpoint now by adding:
+      // settings: "unslick"
+      // instead of a settings object
+    ],
+  });
+  $(".slider-for").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    fade: true,
+    asNavFor: ".slider-nav",
+  });
+  $(".slider-nav").slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: false,
+    asNavFor: ".slider-for",
+    focusOnSelect: true,
+  });
   // Function to handle form submission
   function handleSubmit(event) {
     event.preventDefault(); // Prevent default form submission
@@ -53,31 +104,32 @@ jQuery(document).ready(function ($) {
     var formData = new FormData(form);
 
     // Perform AJAX request
-    fetch(form.action, {
-      method: form.method,
-      body: formData,
-    })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Failed to submit form");
-        }
-        // Assuming response is OK, handle success here
-        console.log("Form submitted successfully");
-      })
-      .catch((error) => {
-        console.error("Error submitting form:", error.message);
-        // You can add additional error handling here
-      });
+    //   fetch(form.action, {
+    //     method: form.method,
+    //     body: formData,
+    //   })
+    //     .then((response) => {
+    //       if (!response.ok) {
+    //         throw new Error("Failed to submit form");
+    //       }
+    //       // Assuming response is OK, handle success here
+    //       console.log("Form submitted successfully");
+    //     })
+    //     .catch((error) => {
+    //       console.error("Error submitting form:", error.message);
+    //       // You can add additional error handling here
+    //     });
+    // }
   }
 
   // Attach event listener for login form
-  var loginForm = document.querySelector(".ph-login form");
+  var loginForm = document.getElementById("loginForm");
   if (loginForm) {
     loginForm.addEventListener("submit", handleSubmit);
   }
 
   // Attach event listener for newsletter form
-  var newsletterForm = document.querySelector(".ph-newsletter__form form");
+  var newsletterForm = document.getElementById("newsletterForm");
   if (newsletterForm) {
     newsletterForm.addEventListener("submit", handleSubmit);
   }
