@@ -1,13 +1,14 @@
 // Define the function to send signup data
 async function sendSignupData(data) {
+    data = JSON.stringify(data)
     console.log("Sending signup data:", data); // Check the data being sent
     try {
-        let res = await fetch("signup.php", { // Update the URL to point to signup.php in the same directory
+        let res = await fetch("../BackEnd/signup.php", { // Update the URL to point to signup.php in the same directory
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(data)
+            body: data
         });
         if (!res.ok) {
             throw new Error("Failed to submit form");
@@ -53,11 +54,11 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
         let formData = {
-            fullname: fullName,
+            fullName: fullName,
             email: email,
-            phonenumber: phoneNumber,
+            phoneNumber: phoneNumber,
             password: password,
-            confirm_password: confirmPassword
+            confirmPassword: confirmPassword
         };
         sendSignupData(formData);
     }); // You are missing the closing parenthesis here

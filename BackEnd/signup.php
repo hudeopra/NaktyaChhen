@@ -1,52 +1,31 @@
 <?php
-// Include the connection file
 include 'connection.php';
+// Get the raw POST data
+$postData = file_get_contents("php://input");
 
-// Initialize response array
-$response = array();
+// Decode the JSON data
+$data = json_decode($postData, true);
 
-// Check if form is submitted
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Get form data
-    $fullname = $_POST['fullname'];
-    $email = $_POST['email'];
-    $phonenumber = $_POST['phonenumber'];
-    $password = $_POST['password'];
-    $confirm_password = $_POST['confirm_password'];
+// Check if JSON decoding was successful
+if ($data === null) {
+    // JSON decoding failed
+    http_response_code(400); // Bad request
+    echo json_encode(array("error" => "Invalid JSON data"));
+    exit;
+}
 
-    // Check if any field is empty
-    if (empty($fullname) || empty($email) || empty($phonenumber) || empty($password) || empty($confirm_password)) {
-        $response['error'] = "All fields are required";
-    } elseif ($password !== $confirm_password) {
-        $response['error'] = "Passwords do not match";
-    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $response['error'] = "Invalid email format";
-    } else {
-        // Hash the password
-        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-        // SQL query to insert user into database
-        $sql = "INSERT INTO users (fullname, email, phonenumber, password) VALUES (?, ?, ?, ?)";
+// Now you can access the data like an associative array
+$fullName = $data['fullName'];
+$email = $data['email'];
+$phoneNumber = $data['phoneNumber'];
+$password = $data['password'];
+$confirmPassword = $data['confirmPassword'];
 
-        // Prepare the statement
-        $stmt = $mysqli->prepare($sql);
-        if ($stmt) {
-            // Bind parameters
-            $stmt->bind_param("ssss", $fullname, $email, $phonenumber, $hashed_password);
-            // Execute the statement
-            if ($stmt->execute()) {
-                $response['success'] = true;
-                $response['message'] = "Registration successful. You can now log in.";
-            } else {
-                $response['error'] = "Database error: " . $stmt->error;
-            }
-            // Close the statement
-            $stmt->close();
-        } else {
-            $response['error'] = "Database error: " . $mysqli->error;
-        }
-    }
-
-    // Return JSON response
-    echo json_encode($response);
+ $sql = "INSERT INTO users (fullname, email, phonenumber, password) VALUES ('$fullName', '$email', '$phoneNumber', '$password')";
+ 
+if ($conn->query($sql) === TRUE) {
+    // If successful, send True
+    header('Content-Type: application/json');
+    echo json_encode(['success' => true, 'message' => 'Data processed successfully']);
 }
 ?>
