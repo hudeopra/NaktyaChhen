@@ -1,5 +1,6 @@
 <?php
 include 'connection.php';
+
 // Get the raw POST data
 $postData = file_get_contents("php://input");
 
@@ -21,11 +22,16 @@ $phoneNumber = $data['phoneNumber'];
 $password = $data['password'];
 $confirmPassword = $data['confirmPassword'];
 
- $sql = "INSERT INTO users (fullname, email, phonenumber, password) VALUES ('$fullName', '$email', '$phoneNumber', '$password')";
+// SQL query to insert data into the database
+$sql = "INSERT INTO users (fullname, email, phonenumber, password) VALUES ('$fullName', '$email', '$phoneNumber', '$password')";
  
 if ($conn->query($sql) === TRUE) {
     // If successful, send True
     header('Content-Type: application/json');
-    echo json_encode(['success' => true, 'message' => 'Data processed successfully']);
+    echo json_encode(['success' => true, 'message' => 'Signup successful!']);
+} else {
+    // If insertion fails, send False with error message
+    header('Content-Type: application/json');
+    echo json_encode(['success' => false, 'error' => 'Failed to process signup data']);
 }
 ?>

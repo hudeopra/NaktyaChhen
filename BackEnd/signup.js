@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function() {
         let fullName = document.querySelector("#signupName").value;
         let email = document.querySelector("#signupEmail").value;
         let phoneNumber = document.querySelector("#signupPhoneNumber").value;
-        let password = document.querySelector("#signupPassword").value;
+        let password = document.querySelector("#signupPasswordRe").value;
         let confirmPassword = document.querySelector("#signupPassword").value; // Fix this line
 
         // Check if any required fields are empty
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Check if passwords match
         if (password !== confirmPassword) {
-            alert("Passwords do not match");
+            console.log("Passwords do not match");
             return;
         }
 

@@ -1,40 +1,44 @@
 <?php
-session_start();
 include 'connection.php';
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Get form data
-    $email = $_POST['email'];
-    $password = $_POST['password'];
+// Get the raw POST data
+$postData = file_get_contents("php://input");
 
-    // Validate user input (sanitize, validate, etc.)
+// Decode the JSON data
+$data = json_decode($postData, true);
 
-    // Check if any field is empty
-    if (empty($email) || empty($password)) {
-        echo json_encode(['error' => 'All fields are required']);
-        exit;
-    }
+// Check if JSON decoding was successful
+if ($data === null || !isset($data['email']) || !isset($data['password'])) {
+    // JSON decoding failed or required fields are missing
+    http_response_code(400); // Bad request
+    echo json_encode(array("error" => "Invalid login data"));
+    exit;
+}
 
-    // Check if the provided email exists in the database
-    $query = "SELECT * FROM users WHERE email = '$email'";
-    $result = $mysqli->query($query);
+// Sanitize input data
+$email = mysqli_real_escape_string($conn, $data['email']);
+$password = mysqli_real_escape_string($conn, $data['password']);
 
-    if ($result->num_rows === 1) {
-        // User found, verify password
-        $user = $result->fetch_assoc();
-        if (password_verify($password, $user['password'])) {
-            // Password correct, set session and redirect
-            $_SESSION['user_id'] = $user['id']; // Set session with user ID or any other relevant data
-            echo json_encode(['success' => true]);
-        } else {
-            // Password incorrect
-            echo json_encode(['error' => 'Invalid email or password']);
-        }
+// Query to check if the user exists with the provided email and password
+$sql = "SELECT * FROM users WHERE email = '$email'";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    $user = $result->fetch_assoc();
+    if ($user['password'] == $password) {
+        // Password matches, login successful
+        header('Content-Type: application/json');
+        echo json_encode(['success' => true, 'message' => 'Login successful']);
     } else {
-        // User not found
-        echo json_encode(['error' => 'Invalid email or password']);
+        // Password does not match
+        header('Content-Type: application/json');
+        echo json_encode(['success' => false, 'error' => 'Password does not match']);
     }
 } else {
-    // Redirect or handle other cases
+    // User not found
+    header('Content-Type: application/json');
+    echo json_encode(['success' => false, 'error' => 'User not found']);
 }
+
+$conn->close();
 ?>

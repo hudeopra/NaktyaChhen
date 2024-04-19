@@ -1,39 +1,43 @@
-document.getElementById("loginForm").addEventListener("submit", async function(event) {
-    event.preventDefault(); // Prevent default form submission
-    
-    // Get the email and password values from the form
-    let email = document.getElementById("loginEmail").value;
-    let password = document.getElementById("loginPassword").value;
-    
-    // Create an object with the login data
-    let loginData = {
-        email: email,
-        password: password
-    };
-
+// Define the function to send login data
+async function sendLoginData(data) {
+    data = JSON.stringify(data);
+    console.log("Sending login data:", data); // Check the data being sent
     try {
-        // Send login data to the login.php script using fetch
-        let response = await fetch("../Backend/login.php", {
-            method: "POST",
+        let res = await fetch("../BackEnd/login.php", {
+            method: 'POST',
             headers: {
-                "Content-Type": "application/json"
+                'Content-Type': 'application/json'
             },
-            body: JSON.stringify(loginData)
+            body: data
         });
-        
-        // Parse the JSON response from the server
-        let data = await response.json();
-        
-        // Check if login was successful
-        if (data.success) {
-            // Redirect the user to the dashboard or any other page
-            window.location.href = "about.html";
-        } else {
-            // Display an error message
-            alert(data.message);
+        if (!res.ok) {
+            throw new Error("Failed to submit login form");
         }
+        let phpRes = await res.json();
+        if (phpRes.success !== true) {
+            console.log("Login failed: " + phpRes.error); // Print error message in console
+        } else {
+            console.log("Login successful!"); // Print success message in console
+            // Optionally, redirect the user to another page or perform other actions after successful login
+        }
+        console.log(phpRes);
     } catch (error) {
-        console.error("Error:", error);
-        // Handle any errors that occur during the fetch operation
+        console.error("Error sending login data:", error);
+        // Handle any other errors that occur during the fetch operation
     }
+}
+
+// Select the login form
+document.addEventListener("DOMContentLoaded", function() {
+    let loginForm = document.querySelector("#loginForm");
+    loginForm.addEventListener("submit", async function(event) {
+        event.preventDefault(); // Prevent the default form submission behavior
+        let email = document.querySelector("#loginEmail").value;
+        let password = document.querySelector("#loginPassword").value;
+        let formData = {
+            email: email,
+            password: password
+        };
+        sendLoginData(formData);
+    });
 });
