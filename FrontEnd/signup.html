@@ -29,7 +29,6 @@
         <link rel='stylesheet' href="assets/library/bootstrap/bootstrap.css"
             type='text/css' media='all' />
         <link rel="stylesheet" href="assets/css/style.css">
-        
     </head>
     <body>
         <header class="ph-header">
@@ -203,7 +202,6 @@
                                     <h2>Signup</h2>
                                     <div class="ph-form-wrapper">                                
                                         <form id="signupForm" action="../BackEnd/signup.php" method="POST">
-                                        
                                             <div class="ph-input-wrapper">
                                                 <input type="text" name="fullname" id="signupName" placeholder="John Doe">
                                             </div>
@@ -217,14 +215,13 @@
                                             </div>
                                             <div class="ph-half">                                                
                                                 <div class="ph-input-wrapper">
-                                                    <input type="password" name="password" id="signupPassword" placeholder="********">
+                                                    <input type="password" name="password" id="signupPasswordRe" placeholder="********">
                                                 </div>
                                                 <div class="ph-input-wrapper">
-                                                    <input type="password" name="confirmpassword" id="signupPassword" placeholder="********">
+                                                    <input type="password" name="password" id="signupPassword" placeholder="********">
                                                 </div>
+                                                <div id="signup-message"></div>
                                             </div>
-                                            <div id="signup-message"></div>
-
                                             <div class="ph-input-wrapper">
                                                 <input class="ph-btn ph-btn__form" type="submit" value="Sign Up">
                                             </div>
@@ -277,7 +274,7 @@
         <!-- boottrap -->
         <script src="assets/library/bootstrap/bootstrap.min.js"></script>
         <!-- counter -->
-        <!-- <script src="assets/library/multi-animated-counter.js"></script> -->
+        <script src="assets/library/multi-animated-counter.js"></script>
         <!-- wow js -->
         <script src="assets/library/wow-js/wow.min.js"></script>
         <!-- nice select -->
