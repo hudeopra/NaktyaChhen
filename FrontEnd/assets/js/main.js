@@ -104,21 +104,22 @@ jQuery(document).ready(function ($) {
     var formData = new FormData(form);
 
     // Perform AJAX request
-    fetch(form.action, {
-      method: form.method,
-      body: formData,
-    })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Failed to submit form");
-        }
-        // Assuming response is OK, handle success here
-        console.log("Form submitted successfully");
-      })
-      .catch((error) => {
-        console.error("Error submitting form:", error.message);
-        // You can add additional error handling here
-      });
+    //   fetch(form.action, {
+    //     method: form.method,
+    //     body: formData,
+    //   })
+    //     .then((response) => {
+    //       if (!response.ok) {
+    //         throw new Error("Failed to submit form");
+    //       }
+    //       // Assuming response is OK, handle success here
+    //       console.log("Form submitted successfully");
+    //     })
+    //     .catch((error) => {
+    //       console.error("Error submitting form:", error.message);
+    //       // You can add additional error handling here
+    //     });
+    // }
   }
 
   // Attach event listener for login form

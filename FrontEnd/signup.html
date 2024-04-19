@@ -192,16 +192,16 @@
                                         <i class="fa fa-cutlery" aria-hidden="true"></i>
                                     </span>
                                     <h2>
-                                        Login 
+                                        Signup
                                     </h2>
                                     <h3>
                                         At and dinner, available every day.
                                     </h3>
                                 </div>
                                 <div class="ph-login">
-                                    <h2>Login</h2>
+                                    <h2>Signup</h2>
                                     <div class="ph-form-wrapper">                                
-                                        <form id="signupForm" action="/login" method="POST">
+                                        <form id="signupForm" action="../BackEnd/signup.php" method="POST">
                                             <div class="ph-input-wrapper">
                                                 <input type="text" name="fullname" id="signupName" placeholder="John Doe">
                                             </div>
@@ -210,7 +210,7 @@
                                                     <input type="email" name="email" id="signupEmail" placeholder="example@gemail.com">
                                                 </div>
                                                 <div class="ph-input-wrapper">
-                                                    <input type="number" name="phonenumber" id="signupPassword" placeholder="+977 987-6543210">
+                                                    <input type="number" name="phonenumber" id="signupPhoneNumber" placeholder="+977 987-6543210">
                                                 </div>
                                             </div>
                                             <div class="ph-half">                                                
@@ -220,6 +220,7 @@
                                                 <div class="ph-input-wrapper">
                                                     <input type="password" name="password" id="signupPassword" placeholder="********">
                                                 </div>
+                                                <div id="signup-message"></div>
                                             </div>
                                             <div class="ph-input-wrapper">
                                                 <input class="ph-btn ph-btn__form" type="submit" value="Sign Up">
@@ -280,6 +281,7 @@
         <script src="assets/library/nice-select/jquery.nice-select.js"></script>
         <!-- main js -->
         <script src="assets/js/main.js"></script>
+        <script src="../BackEnd/signup.js" defer></script>
     </body>
 </html>
     
