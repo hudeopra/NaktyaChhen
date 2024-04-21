@@ -48,26 +48,28 @@ figure {
   margin: 0;
 }
 .ph-btn {
-  width: 100%;
-  max-width: 360px;
-  padding: 8px 20px;
+  width: auto;
+  padding: 10px 30px;
   background-color: transparent;
   color: $secondary;
   border: 2px solid $secondary;
   transition: all 0.5s ease-in-out;
   text-align: center;
   margin-top: 30px;
+  font-weight: 600;
+  text-transform: capitalize;
 
   &:hover {
     color: $primary-dark;
     background-color: $secondary;
+    border-radius: 8px;
   }
   &__form {
     background-color: $primary-dark;
     border-color: $primary-dark;
     color: #14e11471;
     &:hover {
-      color: $secondary;
+      color: #fff;
       border-color: $secondary;
     }
   }
@@ -184,25 +186,30 @@ input {
   height: 45px;
 }
 
-input[type="submit"] {
-  max-width: 150px;
+input[type="number"] {
+  -moz-appearance: textfield;
+  -webkit-appearance: none;
 }
-
 textarea {
   height: 150px;
   resize: none;
 }
 
-form .ph-half {
-  display: flex;
-  justify-content: space-between;
-  gap: 30px;
+form {
+  .ph-half {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    .ph-input-wrapper {
+      width: calc(50% - 15px);
+    }
+  }
+  input[type="submit"] {
+    margin-top: 0;
+  }
 }
 
-.ph-half .ph-input-wrapper {
-  width: calc(50% - 15px);
-}
-select {
+.ph-half select {
   border-radius: 20px;
   background-size: 25px;
   background-repeat: no-repeat;
@@ -228,18 +235,30 @@ select {
   transition: transform 500ms ease, background 500ms ease,
     -webkit-transform 500ms ease;
   -webkit-transition: transform 500ms ease, background 500ms ease;
-  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
   z-index: 99;
   overflow: hidden;
+  box-shadow: 1px 0 1px $secondary;
   .ph-header {
     &__wrapper {
       padding: 60px 5px;
       width: 50px;
       i {
-        font-size: 24px;
         width: 100%;
         text-align: center;
+        font-size: 24px;
+      }
+    }
+    &__open {
+      i {
+        transform: rotate(180deg);
+      }
+      a:after {
+        display: none;
+      }
+      &:hover {
+        &:after {
+          font-size: 0;
+        }
       }
     }
     &__logo {
@@ -310,6 +329,7 @@ header {
 
 .ph-header {
   transition: all 0.1s;
+  box-shadow: 5px 0 5px $secondary;
   &__wrapper {
     position: relative;
     z-index: 2;
@@ -330,8 +350,28 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 0;
-    visibility: hidden;
+    transition: all 0.5s;
+    font-size: 24px;
+    a {
+      height: 30px;
+      &:after {
+        content: "Close Menu";
+        font-size: 0;
+        transition: all 0.5s;
+        transition-delay: 100ms;
+      }
+    }
+    &:hover {
+      background-color: $secondary;
+      width: 100%;
+      a {
+        color: #fff;
+        padding: 0 60px;
+        &:after {
+          font-size: 18px;
+        }
+      }
+    }
   }
   &__logo {
     position: relative;
@@ -366,7 +406,8 @@ header {
         }
       }
       &:hover {
-        a:after {
+        a:after,
+        i {
           color: $secondary;
         }
         span {
@@ -389,11 +430,12 @@ header {
         display: inline-block;
         position: relative;
         margin-left: 15px;
+        padding: 0 5px;
         &:after {
           content: "";
-          height: 3px;
+          height: 1px;
           position: absolute;
-          bottom: -15px;
+          bottom: -16px;
           left: 0;
           width: 0;
           transition: all 0.5s;
@@ -437,6 +479,12 @@ header {
       border-radius: 50%;
       transition: all 0.5s;
       font-size: 22px;
+    }
+  }
+  &__book-now {
+    width: 100%;
+    a {
+      width: 100%;
     }
   }
 
@@ -564,7 +612,7 @@ header.ph-header.header_fixed ~ main {
     width: 100%;
   }
   .row:nth-child(even) {
-    .col-6 {
+    .col-md-6 {
       &:first-of-type {
         order: 2;
       }
@@ -877,6 +925,9 @@ footer {
 .slider-nav .slick-slide {
   margin: 0 15px;
 }
+.slick-slide > div {
+  width: 100vw;
+}
 .slider-nav .slick-list {
   margin: 0 -15px;
 }
@@ -971,4 +1022,26 @@ footer {
   }
 }
 // Product Single Page Ends
+
+// login & signup page start
+.ph-login-page,
+.ph-signup-page {
+  ~ .ph-footer .container {
+    border: 0;
+  }
+}
+// login & signup page ends
 // Innerpage Ends
+
+// mediaquery starts
+// 1200 breakpoint
+@media screen and (max-width: 1200px) {
+  .ph-banner__item--content h2 {
+    font-size: 36px;
+  }
+  .ph-about__content {
+    margin: 15px 0;
+  }
+}
+
+// mediaquery ends
