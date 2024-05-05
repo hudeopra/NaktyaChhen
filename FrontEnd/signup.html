@@ -201,7 +201,7 @@
                                 <div class="ph-login">
                                     <h2>Login</h2>
                                     <div class="ph-form-wrapper">                                
-                                        <form id="signupForm" action="/login" method="POST">
+                                        <form id="signupForm" action="../Backend/signup.php" method="POST">
                                             <div class="ph-input-wrapper">
                                                 <input type="text" name="fullname" id="signupName" placeholder="John Doe">
                                             </div>
@@ -210,19 +210,19 @@
                                                     <input type="email" name="email" id="signupEmail" placeholder="example@gemail.com">
                                                 </div>
                                                 <div class="ph-input-wrapper">
-                                                    <input type="number" name="phonenumber" id="signupPassword" placeholder="+977 987-6543210">
+                                                    <input type="number" name="phonenumber" id="signupNumber" placeholder="+977 987-6543210">
                                                 </div>
                                             </div>
                                             <div class="ph-half">                                                
                                                 <div class="ph-input-wrapper">
-                                                    <input type="password" name="password" id="signupPasswordRe" placeholder="********">
+                                                    <input type="password" name="password" id="signupPassword" placeholder="********">
                                                 </div>
                                                 <div class="ph-input-wrapper">
-                                                    <input type="password" name="password" id="signupPassword" placeholder="********">
+                                                    <input type="password" name="password" id="signupPasswordRe" placeholder="********">
                                                 </div>
                                             </div>
                                             <div class="ph-input-wrapper">
-                                                <input class="ph-btn ph-btn__form" type="submit" value="Sign Up">
+                                                <input class="ph-btn ph-btn__form" type="submit" value="Sign Up" id="form-submit">
                                             </div>
                                         </form>
                                         <div class="ph-login__option">
@@ -280,6 +280,7 @@
         <script src="assets/library/nice-select/jquery.nice-select.js"></script>
         <!-- main js -->
         <script src="assets/js/main.js"></script>
+        <script src="assets/js/signup.js" type="module"></script>
     </body>
 </html>
     

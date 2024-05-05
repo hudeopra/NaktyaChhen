@@ -202,7 +202,7 @@
                                 <div class="ph-login">
                                     <h2>Login</h2>
                                     <div class="ph-form-wrapper">                                
-                                        <form id="loginForm" action="/login" method="POST">
+                                        <form id="loginForm" action="../Backend/login.php" method="POST">
                                             <div class="ph-input-wrapper">
                                                 <input type="email" name="email" id="loginEmail" placeholder="example@gemail.com">
                                             </div>
@@ -210,7 +210,7 @@
                                                 <input type="password" name="password" id="loginPassword" placeholder="********">
                                             </div>
                                             <div class="ph-input-wrapper">
-                                                <input class="ph-btn ph-btn__form" type="submit" value="Login">
+                                                <input class="ph-btn ph-btn__form" type="submit" value="Login" id="form-submit">
                                             </div>
                                         </form>
                                         <div class="ph-login__option">
@@ -270,6 +270,7 @@
         <script src="assets/library/nice-select/jquery.nice-select.js"></script>
         <!-- main js -->
         <script src="assets/js/main.js"></script>
+        <script src="assets/js/login.js" type="module"></script>
     </body>
 </html>
     

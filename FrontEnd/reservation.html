@@ -192,7 +192,7 @@
                                     At and dinner, available every day.
                                 </h3>
                             </div>
-                            <form id="bookingForm" action="/booking-submit" method="POST">
+                            <form id="bookingForm" action="../Backend/reservation.php" method="POST"></form>
                                 <div class="ph-half">
                                     <div class="ph-input-wrapper">
                                         <input type="date" name="date" id="dateBooking">
@@ -230,7 +230,7 @@
                                     <textarea placeholder="Additional notes..." name="notes" id="notesBooking"></textarea>
                                 </div>
                                 <div class="ph-input-wrapper">
-                                    <input class="ph-btn ph-btn__form" type="submit" value="Submit">
+                                    <input class="ph-btn ph-btn__form" type="submit" value="Submit" id="form-submit">
                                 </div>
                             </form>                                
                         </div>
@@ -516,5 +516,6 @@
     <script src="assets/library/nice-select/jquery.nice-select.js"></script>
     <!-- main js -->
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/reservation.js" type="module"></script>
 
 </body></html>

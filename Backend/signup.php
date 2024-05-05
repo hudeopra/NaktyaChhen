@@ -1,5 +1,6 @@
 <?php
 include 'connection.php';
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
         $jsonData = file_get_contents("php://input");
@@ -12,36 +13,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($data === null) {
             throw new Exception("Error decoding JSON data");
         }
-      
 
-        // Prepare and bind parameters to the SQL query
-        $stmt = $conn->prepare("INSERT INTO reservation (date, time, people, tableNumber, description) VALUES (?, ?, ?, ?, ?)");
-        $stmt->bind_param("ssiss", $data['date'], $data['time'], $data['people'], $data['tableNumber'], $data['description']);
-        // Execute the SQL query
-        $stmt->execute();
+        $hashedPassword = password_hash($data['password'], PASSWORD_DEFAULT);
+        $stmt = $conn->prepare("INSERT INTO user(name, email, password, number) VALUES (?, ?, ?, ?)");
+        $stmt->bind_param("ssss", $data['name'], $data['email'], $hashedPassword, $data['number']);
 
-        if($stmt){
+        if ($stmt->execute()) {
             $resdata = [
                 'status' => 200,
-                'message' => 'Reservation success',
+                'message' => 'Registrartion success',
             ];
             header("HTTP/1.0 200 ok");
             echo json_encode($resdata);
-        }
-
-        else{
+        } else {
             $resdata = [
                 'status' => 404,
-                'message' => 'Reservation failed',
+                'message' => 'cannot registor',
             ];
             header("HTTP/1.0 404 error");
             echo json_encode($resdata);
         }
 
-       
+        $stmt->close();
+        $conn->close();
     } catch (Exception $e) {
-        // Handle errors (e.g., log, return error response, etc.)
-        http_response_code(400); // Bad Request
+        // Return error message as JSON
         echo json_encode(array("error" => $e->getMessage()));
     }
 }
