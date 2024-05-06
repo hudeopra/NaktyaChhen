@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             } else {
                 $resdata = [
                     'status' => 401,
-                    'message' => 'Cannot login',
+                    'message' => 'Incorrect email or password',
                 ];
                 header("HTTP/1.0 401 error");
                 echo json_encode($resdata);

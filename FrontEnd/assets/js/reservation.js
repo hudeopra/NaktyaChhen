@@ -1,4 +1,4 @@
-import { sendData } from './fetch.js';// Adjust the path if necessary
+import { sendData } from './fetch.js';
 
 let submitButton = document.querySelector("#form-submit");
 let path = "../../../NAKTYACHHEN/Backend/reservation.php";

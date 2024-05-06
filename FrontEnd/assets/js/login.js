@@ -1,29 +1,70 @@
 import { sendData } from './fetch.js';
 
 
+const submitButton = document.querySelector("#form-submit");
+const loginEmailInput = document.querySelector("#loginEmail");
+const loginPasswordInput = document.querySelector("#loginPassword");
 
-let submitButton = document.querySelector("#form-submit");
-let path = "../../../NAKTYACHHEN/Backend/login.php";
+
+const path = "../../../NAKTYACHHEN/Backend/login.php";
 
 
-submitButton.addEventListener("click", function(event){
+let loggedIn = false;
+
+submitButton.addEventListener("click", function(event) {
     event.preventDefault();
-    let email = document.querySelector("#loginEmail").value;
-    let password = document.querySelector("#loginPassword").value;
-  
 
-    if ( email.trim() === "" || password.trim() === "") {
+   
+    const email = loginEmailInput.value;
+    const password = loginPasswordInput.value;
+
+  
+    const storedEmail = localStorage.getItem('email');
+    const storedPassword = localStorage.getItem('password');
+
+    
+    if (email === storedEmail && password === storedPassword) {
+        loggedIn = true;
+    }
+
+    if (storedEmail && storedPassword) {
+        console.log("Stored Email:", storedEmail);
+        console.log("Stored Password:", storedPassword);
+    } else {
+        console.log("No data found in local storage.");
+    }
+
+
+    if (email.trim() === "" || password.trim() === "") {
         alert("Please fill out all required fields");
         return;
     }
 
-    let formData = {
-        email:email,
-        password:password
-     };
-    
-    
-    sendData(formData, path);
-    document.getElementById("loginForm").reset();
 
+    const formData = {
+        email: email,
+        password: password
+    };
+
+ 
+    if (loggedIn) {
+        alert("Already signed in");
+        document.getElementById("loginForm").reset();
+    } else {
+       
+        sendData(formData, path)
+            .then(response => {
+                console.log(response); 
+                if (response.status === 200) {
+                    
+                    localStorage.setItem('email', email);
+                    localStorage.setItem('password', password);
+                  
+                    document.getElementById("loginForm").reset();
+                }
+            })
+            .catch(error => {
+                console.error(error); 
+            });
+    }
 });
