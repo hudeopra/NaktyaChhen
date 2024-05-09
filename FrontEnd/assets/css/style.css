@@ -209,6 +209,31 @@ textarea:focus-within:after,
   border-color: #14e114;
 }
 
+form .ph-half {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 30px;
+}
+
+form .ph-half .ph-input-wrapper {
+  width: calc(50% - 15px);
+}
+
+form input[type="submit"] {
+  margin-top: 0;
+}
+
+.ph-half select {
+  border-radius: 20px;
+  background-size: 25px;
+  background-repeat: no-repeat;
+  background-position: right 11px center;
+}
+
 .nice-select {
   padding: 0 20px;
 }
@@ -239,31 +264,6 @@ input[type="number"] {
 textarea {
   height: 150px;
   resize: none;
-}
-
-form .ph-half {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  gap: 30px;
-}
-
-form .ph-half .ph-input-wrapper {
-  width: calc(50% - 15px);
-}
-
-form input[type="submit"] {
-  margin-top: 0;
-}
-
-.ph-half select {
-  border-radius: 20px;
-  background-size: 25px;
-  background-repeat: no-repeat;
-  background-position: right 11px center;
 }
 
 /* input ends */
@@ -734,13 +734,13 @@ header.ph-header.header_fixed ~ main {
   width: 100%;
 }
 
-.ph-component .row:nth-child(even) .col-md-6:first-of-type {
+.ph-component .row:nth-child(even) .col-xl-6:first-of-type {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
 }
 
-.ph-component .row:nth-child(even) .col-md-6:last-of-type {
+.ph-component .row:nth-child(even) .col-xl-6:last-of-type {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;

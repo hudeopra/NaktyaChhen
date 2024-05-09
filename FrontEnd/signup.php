@@ -6,148 +6,10 @@
         <title>Naktya Chhen - Sign Page</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- fontawsome -->
-        <link rel='stylesheet'
-            href="assets/library/font-awesome/font-awesome.min.css"
-            type='text/css' media='all' />
-        <!-- slider -->
-        <link rel="stylesheet" href="assets/library/slick-1.8.1/slick/slick.css"
-            />
-            
-        <!-- nice select -->
-        <link rel="stylesheet" href="assets/library/nice-select/nice-select.css">
-
-        <!-- wow js -->
-        <link rel="stylesheet" href="assets/library/wow-js/animate.css">
-
-        <!-- google fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
-
-        <!-- bootstrap -->
-        <link rel='stylesheet' href="assets/library/bootstrap/bootstrap.css"
-            type='text/css' media='all' />
-        <link rel="stylesheet" href="assets/css/style.css">
+        <?php require('include/head-links.php')?>
     </head>
     <body>
-        <header class="ph-header">
-            <div class="ph-header__wrapper">
-                <div class="ph-header__wrapper--head">   
-                    <div class="ph-header__open">
-                        <a class="ph-header__open--trigger" href="javascript:void(0)">
-                            <i class="fa fa-angle-double-left" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                    <div class="ph-header__logo">
-                        <img src="assets/img/NaktyaChhenLogoFull.svg" alt="Naktya Chhen Logo full">
-                        <img src="assets/img/NaktyaChhenLogoHalf.svg" alt="Naktya Chhen Logo half">
-                    </div>
-                <nav class="ph-header__menu">
-                    <ul>
-                        <li>
-                            <a href="index.html">
-                                <i class="fa fa-user" aria-hidden="true"></i>
-                                <span class="ph-menu-title">
-                                    Home
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="about.html">
-                                <i class="fa fa-user" aria-hidden="true"></i>
-                                <span class="ph-menu-title">
-                                    About Us
-                                </span>
-                            </a>
-                        </li>
-                        <li class="ph-has-sub-menu">
-                            <a  href="menu.html" >
-                                <i class="fa fa-user" aria-hidden="true"></i>
-                                <span class="ph-menu-title">
-                                    Menu
-                                </span>
-                            </a>
-                            <ul class="ph-sub-menu">
-                                <li>
-                                    <a href="">
-                                        menu1
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        menu1
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        menu1
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="reservation.html">
-                                <i class="fa fa-user" aria-hidden="true"></i>
-                                <span class="ph-menu-title">
-                                    Reservation
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="contact.html">
-                                <i class="fa fa-user" aria-hidden="true"></i>
-                                <span class="ph-menu-title">
-                                    Contact Us
-                                </span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-                </div>
-                <div class="ph-wrapper">                    
-                    <ul  class="ph-header__social">
-                        <li>
-                            <a href="">
-                                <i class="fa fa-facebook" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <i class="fa fa-instagram" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <i class="fa fa-whatsapp" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <i class="fa fa-instagram" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <i class="fa fa-whatsapp" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="ph-header__book-now">
-                        <a href="" class="ph_header__book-now--btn ph-btn">
-                            Book Now
-                        </a>
-                    </div>
-                    <div  class="ph-header__user">
-                        <div class="ph-header__user--trigger">
-                            <a class="ph-user-trigger" href="login.html">
-                                <i class="fa fa-user" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
+        <?php require('include/header.php')?>
         <main class="ph-login-page ph-innerpage">
             <section class="ph-banner">
                 <div class="">
@@ -270,21 +132,7 @@
                 </div>
             </section>
         </footer>
-        <!-- jquery -->
-        <script src="assets/library/jquery-3.5.1.min.js"></script>
-        <!-- slick-slider -->
-        <script type="text/javascript"
-            src="assets/library/slick-1.8.1/slick/slick.js"></script>
-        <!-- boottrap -->
-        <script src="assets/library/bootstrap/bootstrap.min.js"></script>
-        <!-- counter -->
-        <script src="assets/library/multi-animated-counter.js"></script>
-        <!-- wow js -->
-        <script src="assets/library/wow-js/wow.min.js"></script>
-        <!-- nice select -->
-        <script src="assets/library/nice-select/jquery.nice-select.js"></script>
-        <!-- main js -->
-        <script src="assets/js/main.js"></script>
+        <?php require('include/script.php')?>
     </body>
 </html>
     
