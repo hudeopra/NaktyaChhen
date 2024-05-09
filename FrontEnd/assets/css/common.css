@@ -3,3 +3,7 @@
   top: 25px;
   right: 25px;
 }
+.card {
+  background-color: transparent;
+  color: #fff;
+}

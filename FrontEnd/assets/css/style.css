@@ -381,6 +381,7 @@ textarea {
   float: left;
   position: fixed;
   z-index: 5;
+  left: 0;
   -webkit-box-shadow: 5px 0 5px #14e114;
           box-shadow: 5px 0 5px #14e114;
 }
