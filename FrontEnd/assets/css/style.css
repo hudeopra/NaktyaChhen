@@ -374,22 +374,19 @@ textarea {
   }
 }
 
-header {
+.ph-header {
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
   width: 315px;
   float: left;
   position: fixed;
   z-index: 5;
-}
-
-header a {
-  color: #fff;
-}
-
-.ph-header {
-  -webkit-transition: all 0.1s;
-  transition: all 0.1s;
   -webkit-box-shadow: 5px 0 5px #14e114;
           box-shadow: 5px 0 5px #14e114;
+}
+
+.ph-header a {
+  color: #fff;
 }
 
 .ph-header__wrapper {

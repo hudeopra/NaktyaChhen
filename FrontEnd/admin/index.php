@@ -2,7 +2,17 @@
 
     require('include/db_config.php');
     require('include/essentials.php');
+
+    // Start the session to access session variables
+    session_start();
+
+    // Check if the session variable "adminLogin" is set and true
+    if (isset($_SESSION["adminLogin"]) && $_SESSION["adminLogin"] === true) {
+        redirect('dashboard.php');
+    }
+
 ?>
+
 
 <!DOCTYPE html>
 <html>
@@ -58,7 +68,7 @@
                 if (mysqli_num_rows($res) > 0) {
                     // Handle further actions (e.g., session setup, redirect)
                     $row = mysqli_fetch_assoc($res);
-                    session_start();
+
                     $_SESSION['adminLogin'] = true;
                     $_SESSION['adminId'] = $row['sr_no'];
                     redirect('dashboard.php');

@@ -318,7 +318,9 @@ textarea {
 }
 
 // header starts
-header {
+
+.ph-header {
+  transition: all 0.1s;
   width: 315px;
   float: left;
   position: fixed;
@@ -326,10 +328,6 @@ header {
   a {
     color: #fff;
   }
-}
-
-.ph-header {
-  transition: all 0.1s;
   box-shadow: 5px 0 5px $secondary;
   &__wrapper {
     position: relative;

@@ -1,13 +1,15 @@
 <?php
 
-    function adminLogin(){
+
+    // Function to check admin login status and redirect if necessary
+    function adminLogin() {
+        // Start the session to access session variables
         session_start();
-        if (!isset($_SESSION["adminLogin"]) && !isset($_SESSION["adminLogin"]==true)){
-            echo "<script>
-                windows.location.href='index.php';
-            </script>"
-        }
+        
+        redirect()
     }
+
+
 
     // Function to redirect the user to a specified URL
     function redirect($url) {
