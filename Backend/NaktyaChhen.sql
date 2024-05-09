@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `one_bite_food`
+-- Database: `Naktya_Chhen`
 --
 
 -- --------------------------------------------------------
@@ -45,29 +45,28 @@ CREATE TABLE `booking_history` (
   `date` varchar(255) NOT NULL,
   `time` varchar(255) NOT NULL,
   `table_no` int(255) NOT NULL,
-  `price` int(255) NOT NULL,
-  `special_request` varchar(510) NOT NULL,
-  `food_type` varchar(255) NOT NULL
+  `special_request` varchar(510) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `contact`
+-- Table structure for table `inquiry`
 --
 
-CREATE TABLE `contact` (
-  `id` int(11) NOT NULL,
+CREATE TABLE `inquiry` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `message` text NOT NULL
+  `message` text NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `contact`
+-- Dumping data for table `inquiry`
 --
 
-INSERT INTO `contact` (`id`, `name`, `email`, `message`) VALUES
+INSERT INTO `inquiry` (`id`, `name`, `email`, `message`) VALUES
 (1, 'aasd', 'asd@gmail.com', 'asd'),
 (2, 'aasd', 'asd@gmail.com', 'asd'),
 (3, 'asd', 'asd@gmail.com', 'asd'),
@@ -89,11 +88,11 @@ INSERT INTO `contact` (`id`, `name`, `email`, `message`) VALUES
 --
 
 CREATE TABLE `customer` (
-  `id` int(11) NOT NULL,
-  `name` varchar(255) NOT NULL,
   `phone` int(255) NOT NULL,
+  `name` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL
+  `password` varchar(255) NOT NULL,
+  PRIMARY KEY (`phone`,`email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -103,16 +102,16 @@ CREATE TABLE `customer` (
 --
 
 CREATE TABLE `menu_list` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `food_code` int(255) NOT NULL,
   `food_name` varchar(255) NOT NULL,
-  `description` varchar(255) NOT NULL,
+  `description` varchar(1000) NOT NULL,
   `price` int(255) NOT NULL,
   `portion` int(255) NOT NULL,
   `category` varchar(255) NOT NULL,
   `reward_point` int(255) NOT NULL,
-  `food_type` varchar(255) NOT NULL,
   `preparation_time` varchar(255) NOT NULL,
-  `flavour` varchar(255) NOT NULL
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -123,7 +122,7 @@ CREATE TABLE `menu_list` (
 
 CREATE TABLE `notification` (
   `email` varchar(255) NOT NULL,
-  `phone_number` varchar(255) NOT NULL
+  `message` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -133,7 +132,7 @@ CREATE TABLE `notification` (
 --
 
 CREATE TABLE `private_event` (
-  `id` int(11) NOT NULL,
+  `email` varchar(255) NOT NULL PRIMARY KEY,
   `time_duration` varchar(255) NOT NULL,
   `function_type` varchar(255) NOT NULL,
   `guest_expectation` int(255) NOT NULL,
@@ -143,93 +142,31 @@ CREATE TABLE `private_event` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `reservation`
---
-
-CREATE TABLE `reservation` (
-  `id` int(11) NOT NULL,
-  `date` date NOT NULL,
-  `time` varchar(255) NOT NULL,
-  `people` int(11) NOT NULL,
-  `tableNumber` varchar(255) NOT NULL,
-  `description` text DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `reservation`
---
-
-INSERT INTO `reservation` (`id`, `date`, `time`, `people`, `tableNumber`, `description`) VALUES
-(1, '0000-00-00', '5PM', 1, 'Table 1', 'asd'),
-(2, '2024-04-10', '6PM', 2, 'Table 3', 'asdvgsxkjnckhdilsaxk,c '),
-(3, '2024-04-10', '6PM', 2, 'Table 3', 'asdvgsxkjnckhdilsaxk,c '),
-(4, '2024-04-10', '6PM', 2, 'Table 3', 'asdvgsxkjnckhdilsaxk,c '),
-(5, '2024-04-10', '6PM', 2, 'Table 3', 'asdvgsxkjnckhdilsaxk,c '),
-(6, '2024-04-10', '6PM', 2, 'Table 3', 'asdvgsxkjnckhdilsaxk,c '),
-(7, '2024-04-18', '7PM', 2, 'Table 2', 'cghvhb'),
-(8, '2024-04-03', '6PM', 4, 'Table 4', 'qwerty werttyu');
-
---
 -- Indexes for dumped tables
 --
-
---
--- Indexes for table `contact`
---
-ALTER TABLE `contact`
-  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `customer`
 --
 ALTER TABLE `customer`
-  ADD PRIMARY KEY (`id`,`phone`);
-
---
--- Indexes for table `menu_list`
---
-ALTER TABLE `menu_list`
-  ADD PRIMARY KEY (`food_name`);
-
---
--- Indexes for table `private_event`
---
-ALTER TABLE `private_event`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `reservation`
---
-ALTER TABLE `reservation`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`phone`,`email`);
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT for table `contact`
+-- AUTO_INCREMENT for table `inquiry`
 --
-ALTER TABLE `contact`
+ALTER TABLE `inquiry`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `customer`
 --
 ALTER TABLE `customer`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `phone` int(11) NOT NULL AUTO_INCREMENT;
 
---
--- AUTO_INCREMENT for table `private_event`
---
-ALTER TABLE `private_event`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `reservation`
---
-ALTER TABLE `reservation`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

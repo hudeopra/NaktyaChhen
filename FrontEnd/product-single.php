@@ -6,177 +6,10 @@
         <title>Naktya Chhen - ProductName</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- fontawsome -->
-        <link rel='stylesheet'
-            href="assets/library/font-awesome/font-awesome.min.css"
-            type='text/css' media='all' />
-        <!-- slider -->
-        <link rel="stylesheet" href="assets/library/slick-1.8.1/slick/slick.css"
-            />
-            
-        <!-- nice select -->
-        <link rel="stylesheet" href="assets/library/nice-select/nice-select.css">
-
-        <!-- wow js -->
-        <link rel="stylesheet" href="assets/library/wow-js/animate.css">
-
-        <!-- google fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
-
-        <!-- bootstrap -->
-        <link rel='stylesheet' href="assets/library/bootstrap/bootstrap.css"
-            type='text/css' media='all' />
-        <link rel="stylesheet" href="assets/css/style.css">
+        <?php require('include/head-links.php')?>
     </head>
     <body>
-        <header class="ph-header">
-            <div class="ph-header__wrapper">
-                <div class="ph-header__wrapper--head">
-                    <div class="ph-header__open">
-                        <a class="ph-header__open--trigger" href="javascript:void(0)">
-                            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                        </a>
-
-                    </div>                    
-                    <div class="ph-header__logo">
-                        <img src="assets/img/NaktyaChhenLogoFull.svg" alt="Naktya Chhen Logo full">
-                        <img src="assets/img/NaktyaChhenLogoHalf.svg" alt="Naktya Chhen Logo half">
-                    </div>
-                    <nav class="ph-header__menu">
-                        <ul>
-                            <li>
-                                <a href="index.html">
-                                    <i class="fa fa-user" aria-hidden="true"></i>
-                                    <span class="ph-menu-title">
-                                        Home
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="about.html">
-                                    <i class="fa fa-user" aria-hidden="true"></i>
-                                    <span class="ph-menu-title">
-                                        About Us
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="ph-has-sub-menu">
-                                <a  href="menu.html" >
-                                    <i class="fa fa-user" aria-hidden="true"></i>
-                                    <span class="ph-menu-title">
-                                        Menu
-                                    </span>
-                                </a>
-                                <ul class="ph-sub-menu">
-                                    <li>
-                                        <a href="">
-                                            menu1
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="">
-                                            menu1
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="">
-                                            menu1
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="reservation.html">
-                                    <i class="fa fa-user" aria-hidden="true"></i>
-                                    <span class="ph-menu-title">
-                                        Reservation
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="contact.html">
-                                    <i class="fa fa-user" aria-hidden="true"></i>
-                                    <span class="ph-menu-title">
-                                        Contact Us
-                                    </span>
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                    </div>
-                    <div class="ph-wrapper">                    
-                        <ul  class="ph-header__social">
-                            <li>
-                                <a href="">
-                                    <i class="fa fa-facebook" aria-hidden="true"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <i class="fa fa-instagram" aria-hidden="true"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <i class="fa fa-whatsapp" aria-hidden="true"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <i class="fa fa-instagram" aria-hidden="true"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <i class="fa fa-whatsapp" aria-hidden="true"></i>
-                                </a>
-                            </li>
-                        </ul>
-                        <div class="ph-header__book-now">
-                            <a href="" class="ph_header__book-now--btn ph-btn">
-                                Book Now
-                            </a>
-                        </div>
-
-                        <div  class="ph-header__user">
-                            <div class="ph-header__user--trigger">
-                                <a class="ph-user-trigger" href="javascript:void(0)">
-                                    <i class="fa fa-user" aria-hidden="true"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ph-login">
-                        <h2>Login</h2>
-                        <div class="ph-form-wrapper">                                
-                            <form id="loginForm" action="login.php" method="POST">
-                                <div class="ph-input-wrapper">
-                                    <input type="email" name="email" id="loginEmail" placeholder="example@gemail.com">
-                                </div>
-                                <div class="ph-input-wrapper">
-                                    <input type="password" name="password" id="loginPassword" placeholder="********">
-                                </div>
-                                <div class="ph-input-wrapper">
-                                    <input class="ph-btn ph-btn__form" type="submit" value="Login">
-                                </div>
-                            </form>
-                            <div class="ph-login__option">
-                                <ul>
-                                    <li>
-                                        <a href="">Forgot Password?</a>
-                                    </li>
-                                    <li>
-                                        <a href="">Sign Up</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
+        <?php require('include/header.php')?>
         <main class="ph-menu-page ph-innerpage">
             <section class="ph-banner">
                 <div class="">
@@ -385,14 +218,14 @@
             <section class="ph-component">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-6 g-0">
+                        <div class="col-12 col-xl-6 g-0">
                             <div class="ph-component__img">
                                 <figure>
                                     <img src="assets/img/banner-2.jpg" alt="">
                                 </figure>
                             </div>
                         </div>
-                        <div class="col-6 g-0">
+                        <div class="col-12 col-xl-6 g-0">
                             <div class="ph-component__content">
                                 <div class="ph-section__title">
                                     <span class="ph-section__icon">
@@ -1137,137 +970,7 @@
                 </div>
             </section>
         </main>
-        <footer class="ph-footer ">
-            <section class="ph-quick-menu ph-section__padding-lg--tb">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 col-md-6 col-lg-3">
-                            <div class="ph-quick-menu__item">
-                                <h3>Information</h3>
-                                <ul>
-                                    <li>
-                                        <a href="">About Us</a>
-                                    </li>
-                                    <li>
-                                        <a href="">Our Menu</a>
-                                    </li>
-                                    <li>
-                                        <a href="">Contact Us</a>
-                                    </li>
-                                    <li>
-                                        <a href="">Events</a>
-                                    </li>
-                                    <li>
-                                        <a href="">Terms &amp; Conditions</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 col-lg-3">
-                            <div class="ph-quick-menu__item">
-                                <h3>Support</h3>
-                                <ul>
-                                    <li>
-                                        <a href="">Help Center</a>
-                                    </li>
-                                    <li>
-                                        <a href="">Refund Policy</a>
-                                    </li>
-                                    <li>
-                                        <a href="">Report</a>
-                                    </li>
-                                    <li>
-                                        <a href="">FAQ’s</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 col-lg-3">
-                            <div class="ph-quick-menu__item">
-                                <h3>My Account</h3>
-                                <ul>
-                                    <li>
-                                        <a href="">My Account</a>
-                                    </li>
-                                    <li>
-                                        <a href="">Order History</a>
-                                    </li>
-                                    <li>
-                                        <a href="">Account Details</a>
-                                    </li>
-                                    <li>
-                                        <a href="">Logout</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 col-lg-3">
-                            <div class="ph-quick-menu__item">
-                                <h3>Get In Touch</h3>
-                                <ul class="ph-contact-info">
-                                    <li>
-                                        <a href="#googlemap">
-                                            <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                            <span>Google Map Location</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="mailto:sales@yourcompany.com">
-                                            <i class="fa fa-envelope" aria-hidden="true"></i>
-                                            <span>sales@yourcompany.com</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="tel:+977 9864-1234565">
-                                            <i class="fa fa-phone" aria-hidden="true"></i>
-                                            <span>+977 9864-1234565</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="tel:+977 9864-1234565">
-                                            <i class="fa fa-fax" aria-hidden="true"></i>
-                                            <span>+977 9864-1234565</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <p>Service hours: 8:30am - 9:00pm</p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="ph-bottom-footer">
-                <div class="ph-bottom-footer__wrapper text-center">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-12">
-                                <p>
-                                    © Naktya Chhen, All
-                                    rights
-                                    reserved.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </footer>
-        <!-- jquery -->
-        <script src="assets/library/jquery-3.5.1.min.js"></script>
-        <!-- slick-slider -->
-        <script type="text/javascript"
-            src="assets/library/slick-1.8.1/slick/slick.js"></script>
-        <!-- boottrap -->
-        <script src="assets/library/bootstrap/bootstrap.min.js"></script>
-        <!-- counter -->
-        <script src="assets/library/multi-animated-counter.js"></script>
-        <!-- wow js -->
-        <script src="assets/library/wow-js/wow.min.js"></script>
-        <!-- nice select -->
-        <script src="assets/library/nice-select/jquery.nice-select.js"></script>
-        <!-- main js -->
-        <script src="assets/js/main.js"></script>
+        <?php require('include/footer.php')?>
+        <?php require('include/script.php')?>
     </body>
 </html>
