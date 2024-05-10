@@ -14,7 +14,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <?php 
         
-            require('../include/head-links.php');
+            require('include/admin-head-links.php');
         ?>
     </head>
     <body>

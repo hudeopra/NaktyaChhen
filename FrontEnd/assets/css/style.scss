@@ -73,6 +73,15 @@ figure {
       border-color: $secondary;
     }
   }
+  &__text {
+    border-color: transparent;
+    color: #fff;
+    &:hover {
+      border-bottom-color: $secondary;
+      color: $secondary;
+      background-color: transparent;
+    }
+  }
 }
 
 /* section default stats */
@@ -1045,3 +1054,16 @@ footer {
 }
 
 // mediaquery ends
+// overriding bootstrap backend
+.custom-alert {
+  position: fixed;
+  top: 50px;
+  right: 50px;
+  width: 250px;
+}
+
+.card,
+.modal-content {
+  background-color: $primary-dark;
+  color: #fff;
+}

@@ -77,6 +77,17 @@ figure {
   border-color: #14e114;
 }
 
+.ph-btn__text {
+  border-color: transparent;
+  color: #fff;
+}
+
+.ph-btn__text:hover {
+  border-bottom-color: #14e114;
+  color: #14e114;
+  background-color: transparent;
+}
+
 /* section default stats */
 .ph-section__padding-lg--t {
   padding-top: 120px;
@@ -1232,5 +1243,18 @@ footer .ph-quick-menu li a {
   .ph-about__content {
     margin: 15px 0;
   }
+}
+
+.custom-alert {
+  position: fixed;
+  top: 50px;
+  right: 50px;
+  width: 250px;
+}
+
+.card,
+.modal-content {
+  background-color: #021d2a;
+  color: #fff;
 }
 /*# sourceMappingURL=style.css.map */
