@@ -61,20 +61,20 @@
                                         <h1 class="modal-title" >general setting</h1>
                                     </div>
                                     <div class="modal-body">
-                                        <form action="">
+                                        <form id="general_s_form" >
                                             <div class="ph-input-wrapper">
                                                 <label for="">text 1</label>
-                                                <input type="text" name="site_title" id="site_title_input" placeholder="Site Title" >
+                                                <input type="text" name="site_title" id="site_title_input" placeholder="Site Title" required>
                                             </div>
                                             <div class="ph-input-wrapper">
                                                 <label for="">text 2</label>
-                                                <textarea name="Site About" name="site_content"  id="site_content_input" placeholder="sadsf"></textarea>
+                                                <textarea  name="site_content"  id="site_content_input" placeholder="Site Content" required></textarea>
                                             </div>
                                         </form>
                                     </div>
                                     <div class="modal-footer">
                                         <button onclick="site_title.value = general_data.site_title, site_content.value = general_data.site_content" type="button" class="ph-btn ph-btn__text" data-bs-dismiss="modal">cancel</button>
-                                        <button onclick="upd_general(site_title_input.value, site_content_input.value)" type="button" class="ph-btn ">save</button>
+                                        <input type="submit" class="ph-btn " value="save">
                                     </div>
                                 </div>
                         </div>
@@ -106,12 +106,17 @@
         <script>
             let general_data;
 
+            let general_s_form = document.getElementById('general_s_form');
+            
+            let site_title_input = document.getElementById('site_title_input');
+            let site_content_input = document.getElementById('site_content_input');
+
             function get_general() {
                 let site_title = document.getElementById('site_title');
                 let site_content = document.getElementById('site_content');
 
-                let site_title_input = document.getElementById('site_title_input');
-                let site_content_input = document.getElementById('site_content_input');
+                // let site_title_input = document.getElementById('site_title_input');
+                // let site_content_input = document.getElementById('site_content_input');
 
                 // Correcting the variable name to match the element ID
                 let shutdown_toggle = document.getElementById('shutdown_toggle');  // Ensure the element ID matches the variable name
@@ -142,8 +147,15 @@
                 xhr.send('get_general');
             }
 
+            general_s_form.addEventListener('submit', function(e){
+                e.preventDefault();
+                upd_general(site_title_input.value, site_content_input.value);
+            });
 
             function upd_general(site_title_value, site_content_value){
+                console.log('Inside upd_general function');
+                console.log('site_title_value:', site_title_value);
+                console.log('site_content_value:', site_content_value);
 
                 let xhr = new XMLHttpRequest();
                 xhr.open("POST", "ajax/settings_curd.php", true);
