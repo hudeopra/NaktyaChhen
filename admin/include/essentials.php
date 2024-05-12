@@ -8,6 +8,7 @@ function adminLogin() {
     // Check if the session variable "adminLogin" is not set or not true
     if (!isset($_SESSION["adminLogin"]) || $_SESSION["adminLogin"] !== true) {
         redirect('index.php');
+        exit;
     }
 }
 

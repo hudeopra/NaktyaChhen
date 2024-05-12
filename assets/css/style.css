@@ -13,12 +13,33 @@ h4,
 h5,
 h6 {
   font-family: "Roboto Slab", serif;
+  text-transform: capitalize;
 }
 
 h2 ~ h3,
 h3 ~ h4,
 h4 ~ h5 {
   font-family: "Josefin Sans", sans-serif;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h2 ~ p {
+  font-size: 22px;
+}
+
+h3 {
+  font-size: 28px;
+}
+
+h4 {
+  font-size: 20px;
 }
 
 ul {
@@ -44,6 +65,33 @@ a:hover {
 
 figure {
   margin: 0;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.container,
+.container-fluid,
+.container-lg,
+.container-md,
+.container-xl,
+.container-xxl {
+  padding: 0 60px;
+}
+
+.container-sm {
+  padding: 0 15px;
+}
+
+::-moz-selection {
+  /* Code for Firefox */
+  color: #14e114;
+  background: #021d2a;
+}
+
+::selection {
+  color: #14e114;
+  background: #021d2a;
 }
 
 .ph-btn {
@@ -641,7 +689,8 @@ textarea {
   padding: 15px 30px;
 }
 
-main {
+main,
+footer {
   width: calc(100% - 315px);
   position: relative;
   float: right;
@@ -649,7 +698,8 @@ main {
   transition: all 0.1s;
 }
 
-header.ph-header.header_fixed ~ main {
+header.ph-header.header_fixed ~ main,
+header.ph-header.header_fixed ~ footer {
   width: calc(100% - 50px);
 }
 
@@ -680,6 +730,7 @@ header.ph-header.header_fixed ~ main {
   max-width: 750px;
   padding: 30px;
   text-align: center;
+  width: 100%;
 }
 
 .ph-banner__item--content h2 {
@@ -727,7 +778,7 @@ header.ph-header.header_fixed ~ main {
 }
 
 .ph-about__content img {
-  min-height: 400px;
+  height: 400px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -739,7 +790,9 @@ header.ph-header.header_fixed ~ main {
 .ph-component__img,
 .ph-component figure,
 .ph-component img {
-  height: 100%;
+  max-height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100%;
 }
 
@@ -757,6 +810,27 @@ header.ph-header.header_fixed ~ main {
 
 .ph-component__content {
   padding: 60px;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  height: 100%;
+}
+
+.ph-component h2 {
+  margin-bottom: 10px;
+}
+
+.ph-component h3 {
+  margin-bottom: 15px;
+}
+
+.ph-menu-tab h3,
+.ph-menu-tab p {
+  margin-bottom: 0;
+}
+
+.ph-menu-tab figure {
+  width: auto;
+  overflow: visible;
 }
 
 .ph-menu-tab .nav-tabs {
@@ -777,7 +851,7 @@ header.ph-header.header_fixed ~ main {
   background-color: #14e114;
   position: absolute;
   right: -3px;
-  top: calc(50% - 3px);
+  top: 13px;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
@@ -787,7 +861,7 @@ header.ph-header.header_fixed ~ main {
   padding: 5px;
   color: #fff;
   border: none !important;
-  margin: 30px;
+  margin: 0 30px 30px;
 }
 
 .ph-menu-tab .nav-link.active {
@@ -828,6 +902,10 @@ header.ph-header.header_fixed ~ main {
   margin: 15px 0;
 }
 
+.ph-menu-tab__item--content {
+  width: 100%;
+}
+
 .ph-menu-tab__item:hover img {
   -webkit-animation: rotateOnce 1s linear forwards;
           animation: rotateOnce 1s linear forwards;
@@ -861,10 +939,14 @@ header.ph-header.header_fixed ~ main {
   margin-bottom: 15px;
 }
 
-.ph-menu-tab__item--title h3 {
+.ph-menu-tab__item--title a {
   font-size: inherit;
   max-width: 80%;
   margin-bottom: 0;
+}
+
+.ph-menu-tab__item--title h3 {
+  font-weight: 400;
 }
 
 .ph-menu-tab__item--title .ph-dots {
@@ -872,7 +954,7 @@ header.ph-header.header_fixed ~ main {
       -ms-flex-positive: 1;
           flex-grow: 1;
   border-bottom: 1px dashed;
-  margin: 0 10px 5px 10px;
+  margin: 0 10px 7px 10px;
   border-color: #14e114;
 }
 
@@ -920,13 +1002,16 @@ header.ph-header.header_fixed ~ main {
   }
 }
 
-.ph-highlight__item {
+.ph-blog__item {
   position: relative;
-  min-height: 200px;
   overflow: hidden;
 }
 
-.ph-highlight__item figure::before {
+.ph-blog__item figure {
+  position: relative;
+}
+
+.ph-blog__item figure::before {
   content: "";
   position: absolute;
   top: 0;
@@ -936,24 +1021,41 @@ header.ph-header.header_fixed ~ main {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-.ph-highlight__item:hover .ph-highlight__item--details {
+.ph-blog__item img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.ph-blog__item:hover .ph-blog__item--details {
+  bottom: 30px;
   opacity: 1;
   visibility: visible;
 }
 
-.ph-highlight__item--details {
+.ph-blog__item--details {
   position: absolute;
-  bottom: 30px;
+  bottom: -100px;
   left: 30px;
   right: 30px;
   visibility: hidden;
   opacity: 0;
-  -webkit-transition: all 0.5ss;
-  transition: all 0.5ss;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
-.ph-highlight__item--details p {
+.ph-blog__item--details h3 {
+  font-size: 20px;
+  font-weight: 400;
   margin-bottom: 0;
+}
+
+.ph-blog__slider {
+  margin: 0 -30px;
+}
+
+.ph-blog__slider .ph-blog__item {
+  margin: 0 15px;
+  width: auto !important;
 }
 
 .ph-newsletter {
@@ -1023,9 +1125,13 @@ footer .ph-quick-menu li a {
   top: 0px;
 }
 
+.ph-innerpage .ph-banner__item--content h2 {
+  font-size: 36px;
+}
+
 .ph-innerpage .ph-banner,
 .ph-innerpage .ph-banner img {
-  max-height: 600px;
+  max-height: 350px;
 }
 
 .ph-breadcrums {
@@ -1076,11 +1182,21 @@ footer .ph-quick-menu li a {
 }
 
 .ph-frame__item--img img {
-  height: 150px;
-  width: 150px;
+  height: 200px;
+  width: 200px;
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.ph-frame__item--content h4 {
+  margin-bottom: 15px;
+}
+
+.ph-reservation__image {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 30px;
 }
 
 .slider-for .slick-arrow {
@@ -1111,15 +1227,15 @@ footer .ph-quick-menu li a {
 }
 
 .slider-nav .slick-slide {
-  margin: 0 15px;
+  margin: 0 5px;
 }
 
-.slick-slide > div {
-  width: 100vw;
+.slider-nav .slick-slide img {
+  width: 100;
 }
 
 .slider-nav .slick-list {
-  margin: 0 -15px;
+  margin: 0 -5px;
 }
 
 .slider-for:hover .slick-arrow:before {
@@ -1138,6 +1254,39 @@ footer .ph-quick-menu li a {
 
 .slider-for .slick-next::before {
   content: "\f105";
+}
+
+.ph-product__tab--list,
+.ph-blog__tab--list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background-color: #021d2a;
+  padding: 30px;
+}
+
+.ph-product__tab--list li,
+.ph-blog__tab--list li {
+  width: calc(50% - 30px);
+  padding: 5px 15px;
+  margin: 10px 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid #002b40;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.ph-product__tab--list li:hover,
+.ph-blog__tab--list li:hover {
+  color: #14e114;
+  opacity: 0.8;
 }
 
 .ph-product__content--price {
@@ -1201,39 +1350,71 @@ footer .ph-quick-menu li a {
   margin-top: -10px;
 }
 
-.ph-product__tab--list {
+.ph-product__tab--info li {
+  border-bottom: 0;
+  width: 100%;
+  position: relative;
+}
+
+.ph-product__tab--info li:before {
+  content: "";
+  height: 6px;
+  width: 6px;
+  position: absolute;
+  left: 0;
+  top: 12px;
+  background-color: #fff;
+}
+
+.ph-blog-page .ph-blog__item {
+  margin-bottom: 30px;
+}
+
+.ph-blog__tab--list {
+  padding: 10px;
+}
+
+.ph-blog__tab--list li {
+  width: 100%;
+}
+
+.ph-blog-single__banner {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 30px;
+}
+
+.ph-contact__details--content {
+  margin-top: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  background-color: #021d2a;
-  padding: 30px;
 }
 
-.ph-product__tab--list li {
-  width: calc(50% - 30px);
-  padding: 5px 15px;
-  margin: 10px 15px;
+.ph-contact__details--content h4 {
+  width: 100px;
+}
+
+.ph-contact__details--content ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  border-bottom: 1px solid #002b40;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  margin-left: 20px;
+  gap: 20px;
 }
 
-.ph-product__tab--list li:hover {
-  color: #14e114;
-  opacity: 0.8;
+.ph-contact__details--content li {
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 .ph-login-page ~ .ph-footer .container,
 .ph-signup-page ~ .ph-footer .container {
   border: 0;
+}
+
+.ph-reservation-page .ph-newsletter .row:before {
+  display: none;
 }
 
 @media screen and (max-width: 1200px) {

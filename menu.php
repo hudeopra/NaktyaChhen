@@ -34,7 +34,7 @@
                                 <div class="ph-breadcrums"><div class="container">
                                     <ul class="ph-breadcrums__list justify-content-center">
                                         <li class="item">
-                                            <a href="" title="Go to Home
+                                            <a href="index.php" title="Go to Home
                                                 Page">
                                                 Home </a>
                                         </li>
@@ -53,699 +53,21 @@
             <section class="ph-menu-tab ph-section__padding-lg--tb">
                 <div class="container">
                     <div class="row">
-                        <div class="col-6 m-auto text-center">
-                            <div class="ph-section__title ph-section__padding-md--b">
+                        <div class="col-10 m-auto text-center">
+                            <div class="ph-section__title ph-section__padding-sm--b">
                                 <span class="ph-section__icon">
                                     <i class="fa fa-cutlery" aria-hidden="true"></i>
                                 </span>
                                 <h2>
-                                    ALL DAY EXPERIENCE
+                                    Discover Culinary Bliss at Naktya Chhen
                                 </h2>
-                                <h3>
-                                    At Naktya Chhen we offer a varied menu of appetisers, lunches and dinner, available every day.
-                                </h3>
+                                <p>
+                                    Embark on a flavor-packed adventure with our menu, bursting with exquisite dishes crafted from the freshest ingredients where every bite is a journey of culinary delight.
+                                </p>
                             </div>
                         </div>
                     </div>
-                    <ul class="nav nav-tabs" id="myTab" role="tablist">
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="appetizer-tab" data-bs-toggle="tab" data-bs-target="#appetizer" type="button" role="tab" aria-controls="appetizer" aria-selected="true">Appetizer </button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="main-course-tab" data-bs-toggle="tab" data-bs-target="#main-course" type="button" role="tab" aria-controls="main-course" aria-selected="false" tabindex="-1">Main Course</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="desserts-tab" data-bs-toggle="tab" data-bs-target="#desserts" type="button" role="tab" aria-controls="desserts" aria-selected="false" tabindex="-1">Desserts</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="beverages-tab" data-bs-toggle="tab" data-bs-target="#beverages" type="button" role="tab" aria-controls="beverages" aria-selected="false" tabindex="-1">Beverages</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="specialty-tab" data-bs-toggle="tab" data-bs-target="#specialty" type="button" role="tab" aria-controls="specialty" aria-selected="false" tabindex="-1">Specialty Selections</button>
-                        </li>
-                    </ul>
-                    <div class="tab-content" id="myTabContent">
-                        <div class="tab-pane fade show active" id="appetizer" role="tabpanel" aria-labelledby="appetizer-tab">
-                            <div class="ph-menu-tab__wrapper">
-                                <div class="row justify-content-between">
-                                    <div class="col-12 col-lg-5">
-                                        <div class="ph-menu-tab__item">
-                                            <figure>
-                                                <img src="assets/img/banner.jpg" alt="">
-                                            </figure>
-                                            <div class="ph-menu-tab__item--content">
-                                                <div class="ph-menu-tab__item--title">
-                                                    <h3>
-                                                        French Fries
-                                                    </h3>
-                                                    <span class="ph-dots">
-
-                                                    </span>
-                                                    <small>$123</small>
-                                                </div>
-                                                <p>
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed exercitationem ullam et. Fugiat, officia debitis.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-lg-5">
-                                        <div class="ph-menu-tab__item">
-                                            <figure>
-                                                <img src="assets/img/banner.jpg" alt="">
-                                            </figure>
-                                            <div class="ph-menu-tab__item--content">
-                                                <div class="ph-menu-tab__item--title">
-                                                    <h3>
-                                                        French Fries
-                                                    </h3>
-                                                    <span class="ph-dots">
-
-                                                    </span>
-                                                    <small>$123</small>
-                                                </div>
-                                                <p>
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed exercitationem ullam et. Fugiat, officia debitis.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-lg-5">
-                                        <div class="ph-menu-tab__item">
-                                            <figure>
-                                                <img src="assets/img/banner.jpg" alt="">
-                                            </figure>
-                                            <div class="ph-menu-tab__item--content">
-                                                <div class="ph-menu-tab__item--title">
-                                                    <h3>
-                                                        French Fries
-                                                    </h3>
-                                                    <span class="ph-dots">
-
-                                                    </span>
-                                                    <small>$123</small>
-                                                </div>
-                                                <p>
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed exercitationem ullam et. Fugiat, officia debitis.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-lg-5">
-                                        <div class="ph-menu-tab__item">
-                                            <figure>
-                                                <img src="assets/img/banner.jpg" alt="">
-                                            </figure>
-                                            <div class="ph-menu-tab__item--content">
-                                                <div class="ph-menu-tab__item--title">
-                                                    <h3>
-                                                        French Fries
-                                                    </h3>
-                                                    <span class="ph-dots">
-
-                                                    </span>
-                                                    <small>$123</small>
-                                                </div>
-                                                <p>
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed exercitationem ullam et. Fugiat, officia debitis.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-lg-5">
-                                        <div class="ph-menu-tab__item">
-                                            <figure>
-                                                <img src="assets/img/banner.jpg" alt="">
-                                            </figure>
-                                            <div class="ph-menu-tab__item--content">
-                                                <div class="ph-menu-tab__item--title">
-                                                    <h3>
-                                                        French Fries
-                                                    </h3>
-                                                    <span class="ph-dots">
-
-                                                    </span>
-                                                    <small>$123</small>
-                                                </div>
-                                                <p>
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed exercitationem ullam et. Fugiat, officia debitis.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-lg-5">
-                                        <div class="ph-menu-tab__item">
-                                            <figure>
-                                                <img src="assets/img/banner.jpg" alt="">
-                                            </figure>
-                                            <div class="ph-menu-tab__item--content">
-                                                <div class="ph-menu-tab__item--title">
-                                                    <h3>
-                                                        French Fries
-                                                    </h3>
-                                                    <span class="ph-dots">
-
-                                                    </span>
-                                                    <small>$123</small>
-                                                </div>
-                                                <p>
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed exercitationem ullam et. Fugiat, officia debitis.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="main-course" role="tabpanel" aria-labelledby="main-course-tab">
-                            <div class="ph-menu-tab__wrapper">
-                                <div class="row justify-content-between">
-                                    <div class="col-12 col-lg-5">
-                                        <div class="ph-menu-tab__item">
-                                            <figure>
-                                                <img src="assets/img/banner.jpg" alt="">
-                                            </figure>
-                                            <div class="ph-menu-tab__item--content">
-                                                <div class="ph-menu-tab__item--title">
-                                                    <h3>
-                                                        French Fries
-                                                    </h3>
-                                                    <span class="ph-dots">
-
-                                                    </span>
-                                                    <small>$123</small>
-                                                </div>
-                                                <p>
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed exercitationem ullam et. Fugiat, officia debitis.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-lg-5">
-                                        <div class="ph-menu-tab__item">
-                                            <figure>
-                                                <img src="assets/img/banner.jpg" alt="">
-                                            </figure>
-                                            <div class="ph-menu-tab__item--content">
-                                                <div class="ph-menu-tab__item--title">
-                                                    <h3>
-                                                        French Fries
-                                                    </h3>
-                                                    <span class="ph-dots">
-
-                                                    </span>
-                                                    <small>$123</small>
-                                                </div>
-                                                <p>
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed exercitationem ullam et. Fugiat, officia debitis.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-lg-5">
-                                        <div class="ph-menu-tab__item">
-                                            <figure>
-                                                <img src="assets/img/banner.jpg" alt="">
-                                            </figure>
-                                            <div class="ph-menu-tab__item--content">
-                                                <div class="ph-menu-tab__item--title">
-                                                    <h3>
-                                                        French Fries
-                                                    </h3>
-                                                    <span class="ph-dots">
-
-                                                    </span>
-                                                    <small>$123</small>
-                                                </div>
-                                                <p>
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed exercitationem ullam et. Fugiat, officia debitis.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-lg-5">
-                                        <div class="ph-menu-tab__item">
-                                            <figure>
-                                                <img src="assets/img/banner.jpg" alt="">
-                                            </figure>
-                                            <div class="ph-menu-tab__item--content">
-                                                <div class="ph-menu-tab__item--title">
-                                                    <h3>
-                                                        French Fries
-                                                    </h3>
-                                                    <span class="ph-dots">
-
-                                                    </span>
-                                                    <small>$123</small>
-                                                </div>
-                                                <p>
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed exercitationem ullam et. Fugiat, officia debitis.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-lg-5">
-                                        <div class="ph-menu-tab__item">
-                                            <figure>
-                                                <img src="assets/img/banner.jpg" alt="">
-                                            </figure>
-                                            <div class="ph-menu-tab__item--content">
-                                                <div class="ph-menu-tab__item--title">
-                                                    <h3>
-                                                        French Fries
-                                                    </h3>
-                                                    <span class="ph-dots">
-
-                                                    </span>
-                                                    <small>$123</small>
-                                                </div>
-                                                <p>
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed exercitationem ullam et. Fugiat, officia debitis.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-lg-5">
-                                        <div class="ph-menu-tab__item">
-                                            <figure>
-                                                <img src="assets/img/banner.jpg" alt="">
-                                            </figure>
-                                            <div class="ph-menu-tab__item--content">
-                                                <div class="ph-menu-tab__item--title">
-                                                    <h3>
-                                                        French Fries
-                                                    </h3>
-                                                    <span class="ph-dots">
-
-                                                    </span>
-                                                    <small>$123</small>
-                                                </div>
-                                                <p>
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed exercitationem ullam et. Fugiat, officia debitis.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="desserts" role="tabpanel" aria-labelledby="desserts-tab">
-                            <div class="ph-menu-tab__wrapper">
-                                <div class="row justify-content-between">
-                                    <div class="col-12 col-lg-5">
-                                        <div class="ph-menu-tab__item">
-                                            <figure>
-                                                <img src="assets/img/banner.jpg" alt="">
-                                            </figure>
-                                            <div class="ph-menu-tab__item--content">
-                                                <div class="ph-menu-tab__item--title">
-                                                    <h3>
-                                                        French Fries
-                                                    </h3>
-                                                    <span class="ph-dots">
-
-                                                    </span>
-                                                    <small>$123</small>
-                                                </div>
-                                                <p>
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed exercitationem ullam et. Fugiat, officia debitis.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-lg-5">
-                                        <div class="ph-menu-tab__item">
-                                            <figure>
-                                                <img src="assets/img/banner.jpg" alt="">
-                                            </figure>
-                                            <div class="ph-menu-tab__item--content">
-                                                <div class="ph-menu-tab__item--title">
-                                                    <h3>
-                                                        French Fries
-                                                    </h3>
-                                                    <span class="ph-dots">
-
-                                                    </span>
-                                                    <small>$123</small>
-                                                </div>
-                                                <p>
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed exercitationem ullam et. Fugiat, officia debitis.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-lg-5">
-                                        <div class="ph-menu-tab__item">
-                                            <figure>
-                                                <img src="assets/img/banner.jpg" alt="">
-                                            </figure>
-                                            <div class="ph-menu-tab__item--content">
-                                                <div class="ph-menu-tab__item--title">
-                                                    <h3>
-                                                        French Fries
-                                                    </h3>
-                                                    <span class="ph-dots">
-
-                                                    </span>
-                                                    <small>$123</small>
-                                                </div>
-                                                <p>
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed exercitationem ullam et. Fugiat, officia debitis.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-lg-5">
-                                        <div class="ph-menu-tab__item">
-                                            <figure>
-                                                <img src="assets/img/banner.jpg" alt="">
-                                            </figure>
-                                            <div class="ph-menu-tab__item--content">
-                                                <div class="ph-menu-tab__item--title">
-                                                    <h3>
-                                                        French Fries
-                                                    </h3>
-                                                    <span class="ph-dots">
-
-                                                    </span>
-                                                    <small>$123</small>
-                                                </div>
-                                                <p>
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed exercitationem ullam et. Fugiat, officia debitis.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-lg-5">
-                                        <div class="ph-menu-tab__item">
-                                            <figure>
-                                                <img src="assets/img/banner.jpg" alt="">
-                                            </figure>
-                                            <div class="ph-menu-tab__item--content">
-                                                <div class="ph-menu-tab__item--title">
-                                                    <h3>
-                                                        French Fries
-                                                    </h3>
-                                                    <span class="ph-dots">
-
-                                                    </span>
-                                                    <small>$123</small>
-                                                </div>
-                                                <p>
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed exercitationem ullam et. Fugiat, officia debitis.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-lg-5">
-                                        <div class="ph-menu-tab__item">
-                                            <figure>
-                                                <img src="assets/img/banner.jpg" alt="">
-                                            </figure>
-                                            <div class="ph-menu-tab__item--content">
-                                                <div class="ph-menu-tab__item--title">
-                                                    <h3>
-                                                        French Fries
-                                                    </h3>
-                                                    <span class="ph-dots">
-
-                                                    </span>
-                                                    <small>$123</small>
-                                                </div>
-                                                <p>
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed exercitationem ullam et. Fugiat, officia debitis.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="beverages" role="tabpanel" aria-labelledby="beverages-tab">
-                            <div class="ph-menu-tab__wrapper">
-                                <div class="row justify-content-between">
-                                    <div class="col-12 col-lg-5">
-                                        <div class="ph-menu-tab__item">
-                                            <figure>
-                                                <img src="assets/img/banner.jpg" alt="">
-                                            </figure>
-                                            <div class="ph-menu-tab__item--content">
-                                                <div class="ph-menu-tab__item--title">
-                                                    <h3>
-                                                        French Fries
-                                                    </h3>
-                                                    <span class="ph-dots">
-
-                                                    </span>
-                                                    <small>$123</small>
-                                                </div>
-                                                <p>
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed exercitationem ullam et. Fugiat, officia debitis.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-lg-5">
-                                        <div class="ph-menu-tab__item">
-                                            <figure>
-                                                <img src="assets/img/banner.jpg" alt="">
-                                            </figure>
-                                            <div class="ph-menu-tab__item--content">
-                                                <div class="ph-menu-tab__item--title">
-                                                    <h3>
-                                                        French Fries
-                                                    </h3>
-                                                    <span class="ph-dots">
-
-                                                    </span>
-                                                    <small>$123</small>
-                                                </div>
-                                                <p>
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed exercitationem ullam et. Fugiat, officia debitis.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-lg-5">
-                                        <div class="ph-menu-tab__item">
-                                            <figure>
-                                                <img src="assets/img/banner.jpg" alt="">
-                                            </figure>
-                                            <div class="ph-menu-tab__item--content">
-                                                <div class="ph-menu-tab__item--title">
-                                                    <h3>
-                                                        French Fries
-                                                    </h3>
-                                                    <span class="ph-dots">
-
-                                                    </span>
-                                                    <small>$123</small>
-                                                </div>
-                                                <p>
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed exercitationem ullam et. Fugiat, officia debitis.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-lg-5">
-                                        <div class="ph-menu-tab__item">
-                                            <figure>
-                                                <img src="assets/img/banner.jpg" alt="">
-                                            </figure>
-                                            <div class="ph-menu-tab__item--content">
-                                                <div class="ph-menu-tab__item--title">
-                                                    <h3>
-                                                        French Fries
-                                                    </h3>
-                                                    <span class="ph-dots">
-
-                                                    </span>
-                                                    <small>$123</small>
-                                                </div>
-                                                <p>
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed exercitationem ullam et. Fugiat, officia debitis.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-lg-5">
-                                        <div class="ph-menu-tab__item">
-                                            <figure>
-                                                <img src="assets/img/banner.jpg" alt="">
-                                            </figure>
-                                            <div class="ph-menu-tab__item--content">
-                                                <div class="ph-menu-tab__item--title">
-                                                    <h3>
-                                                        French Fries
-                                                    </h3>
-                                                    <span class="ph-dots">
-
-                                                    </span>
-                                                    <small>$123</small>
-                                                </div>
-                                                <p>
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed exercitationem ullam et. Fugiat, officia debitis.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-lg-5">
-                                        <div class="ph-menu-tab__item">
-                                            <figure>
-                                                <img src="assets/img/banner.jpg" alt="">
-                                            </figure>
-                                            <div class="ph-menu-tab__item--content">
-                                                <div class="ph-menu-tab__item--title">
-                                                    <h3>
-                                                        French Fries
-                                                    </h3>
-                                                    <span class="ph-dots">
-
-                                                    </span>
-                                                    <small>$123</small>
-                                                </div>
-                                                <p>
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed exercitationem ullam et. Fugiat, officia debitis.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="specialty" role="tabpanel" aria-labelledby="specialty-tab">
-                            <div class="ph-menu-tab__wrapper">
-                                <div class="row justify-content-between">
-                                    <div class="col-12 col-lg-5">
-                                        <div class="ph-menu-tab__item">
-                                            <figure>
-                                                <img src="assets/img/banner.jpg" alt="">
-                                            </figure>
-                                            <div class="ph-menu-tab__item--content">
-                                                <div class="ph-menu-tab__item--title">
-                                                    <h3>
-                                                        French Fries
-                                                    </h3>
-                                                    <span class="ph-dots">
-
-                                                    </span>
-                                                    <small>$123</small>
-                                                </div>
-                                                <p>
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed exercitationem ullam et. Fugiat, officia debitis.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-lg-5">
-                                        <div class="ph-menu-tab__item">
-                                            <figure>
-                                                <img src="assets/img/banner.jpg" alt="">
-                                            </figure>
-                                            <div class="ph-menu-tab__item--content">
-                                                <div class="ph-menu-tab__item--title">
-                                                    <h3>
-                                                        French Fries
-                                                    </h3>
-                                                    <span class="ph-dots">
-
-                                                    </span>
-                                                    <small>$123</small>
-                                                </div>
-                                                <p>
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed exercitationem ullam et. Fugiat, officia debitis.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-lg-5">
-                                        <div class="ph-menu-tab__item">
-                                            <figure>
-                                                <img src="assets/img/banner.jpg" alt="">
-                                            </figure>
-                                            <div class="ph-menu-tab__item--content">
-                                                <div class="ph-menu-tab__item--title">
-                                                    <h3>
-                                                        French Fries
-                                                    </h3>
-                                                    <span class="ph-dots">
-
-                                                    </span>
-                                                    <small>$123</small>
-                                                </div>
-                                                <p>
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed exercitationem ullam et. Fugiat, officia debitis.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-lg-5">
-                                        <div class="ph-menu-tab__item">
-                                            <figure>
-                                                <img src="assets/img/banner.jpg" alt="">
-                                            </figure>
-                                            <div class="ph-menu-tab__item--content">
-                                                <div class="ph-menu-tab__item--title">
-                                                    <h3>
-                                                        French Fries
-                                                    </h3>
-                                                    <span class="ph-dots">
-
-                                                    </span>
-                                                    <small>$123</small>
-                                                </div>
-                                                <p>
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed exercitationem ullam et. Fugiat, officia debitis.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-lg-5">
-                                        <div class="ph-menu-tab__item">
-                                            <figure>
-                                                <img src="assets/img/banner.jpg" alt="">
-                                            </figure>
-                                            <div class="ph-menu-tab__item--content">
-                                                <div class="ph-menu-tab__item--title">
-                                                    <h3>
-                                                        French Fries
-                                                    </h3>
-                                                    <span class="ph-dots">
-
-                                                    </span>
-                                                    <small>$123</small>
-                                                </div>
-                                                <p>
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed exercitationem ullam et. Fugiat, officia debitis.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-lg-5">
-                                        <div class="ph-menu-tab__item">
-                                            <figure>
-                                                <img src="assets/img/banner.jpg" alt="">
-                                            </figure>
-                                            <div class="ph-menu-tab__item--content">
-                                                <div class="ph-menu-tab__item--title">
-                                                    <h3>
-                                                        French Fries
-                                                    </h3>
-                                                    <span class="ph-dots">
-
-                                                    </span>
-                                                    <small>$123</small>
-                                                </div>
-                                                <p>
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed exercitationem ullam et. Fugiat, officia debitis.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <?php require('include/menu-tab.php') ?>
                 </div>
             </section>
             <section class="ph-component">
@@ -754,30 +76,24 @@
                         <div class="col-12 col-xl-6 g-0">
                             <div class="ph-component__img">
                                 <figure>
-                                    <img src="assets/img/banner-2.jpg" alt="">
+                                    <img src="assets/img/menu-feature.jpg" alt="">
                                 </figure>
                             </div>
                         </div>
                         <div class="col-12 col-xl-6 g-0">
                             <div class="ph-component__content">
                                 <div class="ph-section__title">
-                                    <span class="ph-section__icon">
-                                        <i class="fa fa-cutlery" aria-hidden="true"></i>
-                                    </span>
                                     <h2>
-                                        ALL DAY EXPERIENCE
+                                    A Date Night to Remember
                                     </h2>
                                     <h3>
-                                        At Naktya Chhen we offer a varied menu of appetisers, lunches and dinner, available every day.
+                                        Elevate Your Romance with Exquisite dining
                                     </h3>
                                 </div>
                                 <div class="ph-section__content">
                                     <p>
-                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore vel aspernatur dicta odio optio, odit impedit laborum ratione quisquam expedita enim debitis similique asperiores soluta autem itaque dolore? Alias ipsam id quos eveniet adipisci. Aperiam accusantium dignissimos exercitationem ullam. A nostrum quod mollitia soluta amet, fuga tempora repellat quisquam repellendus?
+                                        Our intimate ambiance, combined with delectable dishes prepared with love, sets the perfect stage for an unforgettable date night. Share moments of joy and culinary delight as you create cherished memories together.
                                     </p>
-                                    <div class="ph-btn-wrapper">
-                                        <a href="" class="ph-btn">button</a>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -788,7 +104,7 @@
                 <div class="container">
                     <div class="row justify-content-center">
                         
-                        <div class="col-6 ph-section__padding-lg--b">
+                        <div class="col-6 ph-section__padding-sm--b">
                             <div class="ph-section__title">
                                 <span class="ph-section__icon">
                                     <i class="fa fa-cutlery" aria-hidden="true"></i>
@@ -807,15 +123,15 @@
                             <div class="ph-frame__item">
                                 <div class="ph-frame__item--img">
                                     <figure>
-                                        <img src="assets/img/banner.jpg" alt="">
+                                        <img src="assets/img/menu-content-1.jpg" alt="">
                                     </figure>
                                 </div>
                                 <div class="ph-frame__item--content">
-                                    <h3>
-                                        Lorem ipsum dolor
-                                    </h3>
+                                    <h4>
+                                    Farm-to-Table Freshness
+                                    </h4>
                                     <p>
-                                        Lorem ipsum dolor sit amet consectetur.
+                                    We prioritize using fresh, locally sourced ingredients to ensure the highest quality in every dish.
                                     </p>
                                 </div>
                             </div>
@@ -824,15 +140,15 @@
                             <div class="ph-frame__item">
                                 <div class="ph-frame__item--img">
                                     <figure>
-                                        <img src="assets/img/banner.jpg" alt="">
+                                        <img src="assets/img/menu-content-2.jpg" alt="">
                                     </figure>
                                 </div>
                                 <div class="ph-frame__item--content">
-                                    <h3>
-                                        Lorem ipsum dolor
-                                    </h3>
+                                    <h4>
+                                    Worldly Culinary Delights
+                                    </h4>
                                     <p>
-                                        Lorem ipsum dolor sit amet consectetur.
+                                    Explore a diverse range of global flavors that will tantalize your taste buds and take you on a culinary journey around the world.
                                     </p>
                                 </div>
                             </div>
@@ -841,15 +157,15 @@
                             <div class="ph-frame__item">
                                 <div class="ph-frame__item--img">
                                     <figure>
-                                        <img src="assets/img/banner.jpg" alt="">
+                                        <img src="assets/img/menu-content-3.jpg" alt="">
                                     </figure>
                                 </div>
                                 <div class="ph-frame__item--content">
-                                    <h3>
-                                        Lorem ipsum dolor
-                                    </h3>
+                                    <h4>
+                                    Where Every Bite Brings you Back
+                                    </h4>
                                     <p>
-                                        Lorem ipsum dolor sit amet consectetur.
+                                    Our loyal customers keep coming back for more, drawn by our delicious food, friendly service, and inviting atmosphere.
                                     </p>
                                 </div>
                             </div>
@@ -858,15 +174,15 @@
                             <div class="ph-frame__item">
                                 <div class="ph-frame__item--img">
                                     <figure>
-                                        <img src="assets/img/banner.jpg" alt="">
+                                        <img src="assets/img/menu-content-4.jpg" alt="">
                                     </figure>
                                 </div>
                                 <div class="ph-frame__item--content">
-                                    <h3>
-                                        Lorem ipsum dolor
-                                    </h3>
+                                    <h4>
+                                    Gourmet Taste, Affordable Price
+                                    </h4>
                                     <p>
-                                        Lorem ipsum dolor sit amet consectetur.
+                                    Enjoy gourmet dining at affordable prices, making it accessible for everyone to savor exceptional cuisine.
                                     </p>
                                 </div>
                             </div>
@@ -874,62 +190,7 @@
                     </div>
                 </div>
             </section>
-            <section class="ph-component">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-12 col-xl-6 g-0">
-                            <div class="ph-component__img">
-                                <figure>
-                                    <img src="assets/img/banner-2.jpg" alt="">
-                                </figure>
-                            </div>
-                        </div>
-                        <div class="col-12 col-xl-6 g-0">
-                            <div class="ph-component__content">
-                                <div class="ph-section__title">
-                                    <span class="ph-section__icon">
-                                        <i class="fa fa-cutlery" aria-hidden="true"></i>
-                                    </span>
-                                    <h2>
-                                        ALL DAY EXPERIENCE
-                                    </h2>
-                                    <h3>
-                                        At Naktya Chhen we offer a varied menu of appetisers, lunches and dinner, available every day.
-                                    </h3>
-                                </div>
-                                <div class="ph-section__content">
-                                    <p>
-                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore vel aspernatur dicta odio optio, odit impedit laborum ratione quisquam expedita enim debitis similique asperiores soluta autem itaque dolore? Alias ipsam id quos eveniet adipisci. Aperiam accusantium dignissimos exercitationem ullam. A nostrum quod mollitia soluta amet, fuga tempora repellat quisquam repellendus?
-                                    </p>
-                                    <div class="ph-btn-wrapper">
-                                        <a href="" class="ph-btn">button</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="ph-newsletter ph-section__padding-sm--tb">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 col-md-6">
-                            <div class="ph-newsletter__content">
-                                <h2>Lorem ipsum dolor, sit amet.</h2>
-                                <p>Lorem ipsum dolor sit amet. Voluptas dolorum  inventore quae qui? Optio.</p>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <div class="ph-newsletter__form ph-input-wrapper">
-                                <form id="newsletterForm" action="newsletter.php" method="POST">
-                                    <input type="email" placeholder="example@email.com" name="email" id="newsletterEmail">
-                                    <input class="ph-btn ph-btn__form" type="submit" value="Submit">
-                                </form>
-                            </div>                            
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <?php require('include/newsletter.php')?>
         </main>
         <?php require('include/footer.php')?>
         <?php require('include/script.php')?>

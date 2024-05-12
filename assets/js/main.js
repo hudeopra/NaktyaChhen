@@ -39,31 +39,25 @@ jQuery(document).ready(function ($) {
     speed: 500,
     fade: true,
     arrows: false,
-    autoplay: false,
+    autoplay: true,
     focusOnSelect: false,
     cssEase: "linear",
   });
-
-  // Initialize slick slider for product single page
-  $(".mt-other-products-slider").slick({
-    dots: false,
-    infinite: true,
-    speed: 7000,
+  // Initialize slick slider for blog
+  $(".ph-blog__slider").slick({
+    dots: true,
+    infinite: false,
+    speed: 500,
+    fade: false,
     arrows: false,
-    slidesToShow: 5,
-    slidesToScroll: 3,
     autoplay: true,
+    slidesToShow: 3,
+    slidesToScroll: 3,
     responsive: [
-      {
-        breakpoint: 992,
-        settings: {
-          slidesToShow: 4,
-        },
-      },
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 4,
+          slidesToShow: 2,
         },
       },
       {

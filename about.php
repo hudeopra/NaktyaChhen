@@ -26,16 +26,16 @@
                                     <i class="fa fa-cutlery" aria-hidden="true"></i>
                                 </span>
                                 <h2>
-                                    Taste Authentic Flavours
+                                    Our Culinary Maestros
                                 </h2>
                                 <p>
-                                    Serving food with harmony since 1991
+                                Behind every exquisite dish, there's a passion-driven story
                                 </p>
                                 </div>
                                 <div class="ph-breadcrums"><div class="container">
                                     <ul class="ph-breadcrums__list justify-content-center">
                                         <li class="item">
-                                            <a href="" title="Go to Home
+                                            <a href="index.php" title="Go to Home
                                                 Page">
                                                 Home </a>
                                         </li>
@@ -54,17 +54,17 @@
                 <div class="container">
                     <div class="row justify-content-center">
                         
-                        <div class="col-6 ph-section__padding-lg--b">
+                        <div class="col-6 ph-section__padding-sm--b">
                             <div class="ph-section__title">
                                 <span class="ph-section__icon">
                                     <i class="fa fa-cutlery" aria-hidden="true"></i>
                                 </span>
                                 <h2>
-                                    ALL DAY EXPERIENCE
+                                A Symphony of Culinary Talent
                                 </h2>
-                                <h3>
-                                    At Naktya Chhen we offer a varied menu of appetisers, lunches and dinner, available every day.
-                                </h3>
+                                <p>
+                                Get to know the masterminds shaping your dining experience
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -73,15 +73,15 @@
                             <div class="ph-frame__item">
                                 <div class="ph-frame__item--img">
                                     <figure>
-                                        <img src="assets/img/banner.jpg" alt="">
+                                        <img src="assets/img/about-chef-1.png" alt="">
                                     </figure>
                                 </div>
                                 <div class="ph-frame__item--content">
-                                    <h3>
-                                        Lorem ipsum dolor
-                                    </h3>
+                                    <h4>
+                                    Greetings! I'm Brian, your Manager
+                                    </h4>
                                     <p>
-                                        Lorem ipsum dolor sit amet consectetur.
+                                        I ensure a seamless dining experience, overseeing operations to make your visit memorable
                                     </p>
                                 </div>
                             </div>
@@ -90,15 +90,15 @@
                             <div class="ph-frame__item">
                                 <div class="ph-frame__item--img">
                                     <figure>
-                                        <img src="assets/img/banner.jpg" alt="">
+                                        <img src="assets/img/about-chef-2.png" alt="">
                                     </figure>
                                 </div>
                                 <div class="ph-frame__item--content">
-                                    <h3>
-                                        Lorem ipsum dolor
-                                    </h3>
+                                    <h4>
+                                    Welcome! I'm Chef Daniel
+                                    </h4>
                                     <p>
-                                        Lorem ipsum dolor sit amet consectetur.
+                                        I leading the kitchen with passion and creativity, crafting delectable dishes to delight your palate
                                     </p>
                                 </div>
                             </div>
@@ -107,15 +107,15 @@
                             <div class="ph-frame__item">
                                 <div class="ph-frame__item--img">
                                     <figure>
-                                        <img src="assets/img/banner.jpg" alt="">
+                                        <img src="assets/img/about-chef-3.png" alt="">
                                     </figure>
                                 </div>
                                 <div class="ph-frame__item--content">
-                                    <h3>
-                                        Lorem ipsum dolor
-                                    </h3>
+                                    <h4>
+                                    Hello! I'm Sarah, your Front House Manager
+                                    </h4>
                                     <p>
-                                        Lorem ipsum dolor sit amet consectetur.
+                                        I ensure exceptional service and ambiance, making your dining experience enjoyable and memorable
                                     </p>
                                 </div>
                             </div>
@@ -124,15 +124,15 @@
                             <div class="ph-frame__item">
                                 <div class="ph-frame__item--img">
                                     <figure>
-                                        <img src="assets/img/banner.jpg" alt="">
+                                        <img src="assets/img/about-chef-4.png" alt="">
                                     </figure>
                                 </div>
                                 <div class="ph-frame__item--content">
-                                    <h3>
-                                        Lorem ipsum dolor
-                                    </h3>
+                                    <h4>
+                                    Cheers! I'm Emily, your Bartender
+                                    </h4>
                                     <p>
-                                        Lorem ipsum dolor sit amet consectetur.
+                                        Crafting exquisite cocktails and providing friendly service to enhance your time at our bar
                                     </p>
                                 </div>
                             </div>
@@ -146,26 +146,23 @@
                         <div class="col-12 col-xl-6 g-0">
                             <div class="ph-component__img">
                                 <figure>
-                                    <img src="assets/img/banner-2.jpg" alt="">
+                                    <img src="assets/img/about-feature.jpg" alt="">
                                 </figure>
                             </div>
                         </div>
                         <div class="col-12 col-xl-6 g-0">
                             <div class="ph-component__content">
                                 <div class="ph-section__title">
-                                    <span class="ph-section__icon">
-                                        <i class="fa fa-cutlery" aria-hidden="true"></i>
-                                    </span>
                                     <h2>
-                                        ALL DAY EXPERIENCE
+                                    We Are Experienced Restaurant.
                                     </h2>
                                     <h3>
-                                        At Naktya Chhen we offer a varied menu of appetisers, lunches and dinner, available every day.
+                                        Welcome our restaurant! Our Restaurant is the best as like delicious food, nutrition food etc in world-wide.
                                     </h3>
                                 </div>
                                 <div class="ph-section__content">
                                     <p>
-                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore vel aspernatur dicta odio optio, odit impedit laborum ratione quisquam expedita enim debitis similique asperiores soluta autem itaque dolore? Alias ipsam id quos eveniet adipisci. Aperiam accusantium dignissimos exercitationem ullam. A nostrum quod mollitia soluta amet, fuga tempora repellat quisquam repellendus?
+                                        It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                                     </p>
                                     <div class="ph-btn-wrapper">
                                         <a href="" class="ph-btn">button</a>
@@ -182,40 +179,46 @@
                         <div class="container">
                             <div class="row text-center">
                                 <div class="col-10 mx-auto text-center">
-                                    <div class="ph-section__title ph-section__padding-md--b">
+                                    <div class="ph-section__title ph-section__padding-sm--b">
                                         <span class="ph-section__icon">
                                             <i class="fa fa-cutlery" aria-hidden="true"></i>
                                         </span>
                                         <h2>
-                                            ALL DAY EXPERIENCE
+                                        Embark on a Culinary Journey with Us
                                         </h2>
                                         <h3>
-                                            At Naktya Chhen we offer a varied menu of appetisers, lunches and dinner, available every day.
+                                        Discover Unmatched Hospitality, Culinary Excellence, and Captivating Ambiance
                                         </h3>
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-6 col-xl-4">
                                     <div class="ph-about__content">
                                         <figure>
-                                            <img src="assets/img/banner-2.jpg" alt="">
+                                            <img src="assets/img/about-content-1.jpg" alt="">
                                         </figure>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam ipsam quod fugit maxime repellat accusantium ullam reiciendis esse veritatis, debitis, mollitia eligendi tempore at deleniti.</p>
+                                        <p>
+                                        Our restaurant is not just a place to eat; it's a vibrant hub where friends gather for quick bites and meaningful conversations. Whether it's a casual catch-up or a cozy hangout, our welcoming atmosphere is perfect for every occasion.
+                                        </p>
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-6 col-xl-4">
                                     <div class="ph-about__content">
                                         <figure>
-                                            <img src="assets/img/banner-2.jpg" alt="">
+                                            <img src="assets/img/about-content-2.jpg" alt="">
                                         </figure>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam ipsam quod fugit maxime repellat accusantium ullam reiciendis esse veritatis, debitis, mollitia eligendi tempore at deleniti.</p>
+                                        <p>
+                                        Explore a diverse range of food options that promise to tantalize your senses. From delectable appetizers to mouthwatering main courses and irresistible desserts, each dish is a masterpiece that reflects our commitment to culinary excellence.
+                                        </p>
                                     </div>
                                 </div>
                                 <div class="col-12 col-lg-4">
                                     <div class="ph-about__content">
                                         <figure>
-                                            <img src="assets/img/banner-2.jpg" alt="">
+                                            <img src="assets/img/about-content-3.jpg" alt="">
                                         </figure>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam ipsam quod fugit maxime repellat obcaecati, facilis sapiente deserunt illum ipsum dicta quia? Quia id placeat error in saepe dignissimos .</p>
+                                        <p>
+                                        Experience the magic of our restaurant at night, where the ambiance comes alive with a mesmerizing charm that complements your dining experience, making every visit truly unforgettable.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -223,26 +226,7 @@
                     </div>
                 </div>
             </section>
-            <section class="ph-newsletter ph-section__padding-sm--tb">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 col-md-6">
-                            <div class="ph-newsletter__content">
-                                <h2>Lorem ipsum dolor, sit amet.</h2>
-                                <p>Lorem ipsum dolor sit amet. Voluptas dolorum  inventore quae qui? Optio.</p>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <div class="ph-newsletter__form ph-input-wrapper">
-                                <form id="newsletterForm" action="newsletter.php" method="POST">
-                                    <input type="email" placeholder="example@email.com" name="email" id="newsletterEmail">
-                                    <input class="ph-btn ph-btn__form" type="submit" value="Submit">
-                                </form>
-                            </div>                            
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <?php require('include/newsletter.php')?>
         </main>
         <?php require('include/footer.php')?>
         <?php require('include/script.php')?>

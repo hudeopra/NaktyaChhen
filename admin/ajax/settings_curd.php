@@ -36,5 +36,12 @@
         echo $res;
     }
     
-
+    if(isset($_POST['get_contacts'])){
+        $query = "SELECT * FROM `contact_details` WHERE `sr_no`=?";
+        $values = [1];
+        $res = select($query,$values,"i");
+        $data = mysqli_fetch_assoc($res);
+        $json_data = json_encode($data);
+        echo $json_data;
+    }
 ?>

@@ -18,11 +18,27 @@ h4,
 h5,
 h6 {
   font-family: $font-secondary;
+  text-transform: capitalize;
 }
 h2 ~ h3,
 h3 ~ h4,
 h4 ~ h5 {
   font-family: "Josefin Sans", sans-serif;
+}
+h1 {
+  font-size: 60px;
+}
+h2 {
+  font-size: 36px;
+  ~ p {
+    font-size: 22px;
+  }
+}
+h3 {
+  font-size: 28px;
+}
+h4 {
+  font-size: 20px;
 }
 ul {
   list-style: none;
@@ -46,6 +62,30 @@ a {
 }
 figure {
   margin: 0;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.container,
+.container-fluid,
+.container-lg,
+.container-md,
+.container-xl,
+.container-xxl {
+  padding: 0 60px;
+}
+.container-sm {
+  padding: 0 15px;
+}
+::-moz-selection {
+  /* Code for Firefox */
+  color: $secondary;
+  background: $primary-dark;
+}
+
+::selection {
+  color: $secondary;
+  background: $primary-dark;
 }
 .ph-btn {
   width: auto;
@@ -533,13 +573,15 @@ textarea {
 // header ends
 
 // homepage main starts
-main {
+main,
+footer {
   width: calc(100% - 315px);
   position: relative;
   float: right;
   transition: all 0.1s;
 }
-header.ph-header.header_fixed ~ main {
+header.ph-header.header_fixed ~ main,
+header.ph-header.header_fixed ~ footer {
   width: calc(100% - 50px);
 }
 .ph-banner {
@@ -567,6 +609,7 @@ header.ph-header.header_fixed ~ main {
       max-width: 750px;
       padding: 30px;
       text-align: center;
+      width: 100%;
       h2 {
         font-size: 66px;
       }
@@ -607,7 +650,7 @@ header.ph-header.header_fixed ~ main {
   }
   &__content {
     img {
-      min-height: 400px;
+      height: 400px;
       object-fit: cover;
     }
   }
@@ -617,7 +660,8 @@ header.ph-header.header_fixed ~ main {
   &__img,
   figure,
   img {
-    height: 100%;
+    max-height: 500px;
+    object-fit: cover;
     width: 100%;
   }
   .row:nth-child(even) {
@@ -632,10 +676,26 @@ header.ph-header.header_fixed ~ main {
   }
   &__content {
     padding: 60px;
+    align-content: center;
+    height: 100%;
+  }
+  h2 {
+    margin-bottom: 10px;
+  }
+  h3 {
+    margin-bottom: 15px;
   }
 }
 
 .ph-menu-tab {
+  h3,
+  p {
+    margin-bottom: 0;
+  }
+  figure {
+    width: auto;
+    overflow: visible;
+  }
   .nav-tabs {
     justify-content: center;
     border: 0;
@@ -649,7 +709,7 @@ header.ph-header.header_fixed ~ main {
       background-color: $secondary;
       position: absolute;
       right: -3px;
-      top: calc(50% - 3px);
+      top: 13px;
       transform: rotate(45deg);
     }
   }
@@ -658,7 +718,7 @@ header.ph-header.header_fixed ~ main {
     padding: 5px;
     color: #fff;
     border: none !important;
-    margin: 30px;
+    margin: 0 30px 30px;
     &.active {
       background-color: transparent;
       color: $secondary;
@@ -688,7 +748,9 @@ header.ph-header.header_fixed ~ main {
   &__item {
     display: flex;
     margin: 15px 0;
-
+    &--content {
+      width: 100%;
+    }
     &:hover {
       img {
         animation: rotateOnce 1s linear forwards; /* Apply animation for one full rotation */
@@ -710,15 +772,19 @@ header.ph-header.header_fixed ~ main {
       font-family: $font-secondary;
       font-size: 24px;
       margin-bottom: 15px;
-      h3 {
+
+      a {
         font-size: inherit;
         max-width: 80%;
         margin-bottom: 0;
       }
+      h3 {
+        font-weight: 400;
+      }
       .ph-dots {
         flex-grow: 1;
         border-bottom: 1px dashed;
-        margin: 0 10px 5px 10px;
+        margin: 0 10px 7px 10px;
         border-color: $secondary;
       }
       small {
@@ -749,12 +815,12 @@ header.ph-header.header_fixed ~ main {
   }
 }
 
-.ph-highlight {
+.ph-blog {
   &__item {
     position: relative;
-    min-height: 200px;
     overflow: hidden;
     figure {
+      position: relative;
       &::before {
         content: "";
         position: absolute;
@@ -765,24 +831,37 @@ header.ph-header.header_fixed ~ main {
         background-color: rgba(0, 0, 0, 0.4);
       }
     }
+    img {
+      object-fit: cover;
+    }
     &:hover {
-      .ph-highlight__item--details {
+      .ph-blog__item--details {
+        bottom: 30px;
         opacity: 1;
         visibility: visible;
       }
     }
     &--details {
       position: absolute;
-      bottom: 30px;
+      bottom: -100px;
       left: 30px;
       right: 30px;
       visibility: hidden;
       opacity: 0;
-      transition: all 0.5ss;
+      transition: all 0.5s;
 
-      p {
+      h3 {
+        font-size: 20px;
+        font-weight: 400;
         margin-bottom: 0;
       }
+    }
+  }
+  &__slider {
+    margin: 0 -30px;
+    .ph-blog__item {
+      margin: 0 15px;
+      width: auto !important;
     }
   }
 }
@@ -848,10 +927,13 @@ footer {
 // Innerpage Starts
 .ph-innerpage {
   .ph-banner__item--content {
+    h2 {
+      font-size: 36px;
+    }
   }
   .ph-banner,
   .ph-banner img {
-    max-height: 600px;
+    max-height: 350px;
   }
 }
 .ph-breadcrums {
@@ -893,18 +975,30 @@ footer {
     &--img {
       margin-bottom: 30px;
       img {
-        height: 150px;
-        width: 150px;
+        height: 200px;
+        width: 200px;
         border-radius: 50%;
         object-fit: cover;
       }
     }
     &--content {
+      h4 {
+        margin-bottom: 15px;
+      }
     }
   }
 }
 // About Us ends
-
+// reservation page starts
+.ph-reservation {
+  &__image {
+    position: sticky;
+    top: 30px;
+    figure {
+    }
+  }
+}
+// reservation page ends
 // Product Single Page Starts
 .slider-for .slick-arrow {
   font-size: 0;
@@ -932,13 +1026,13 @@ footer {
 }
 
 .slider-nav .slick-slide {
-  margin: 0 15px;
-}
-.slick-slide > div {
-  width: 100vw;
+  margin: 0 5px;
+  img {
+    width: 100;
+  }
 }
 .slider-nav .slick-list {
-  margin: 0 -15px;
+  margin: 0 -5px;
 }
 .slider-for:hover .slick-arrow:before {
   font-size: 40px;
@@ -954,6 +1048,30 @@ footer {
 }
 .slider-for .slick-next::before {
   content: "\f105";
+}
+.ph-product,
+.ph-blog {
+  &__tab {
+    &--list {
+      display: flex;
+      flex-wrap: wrap;
+      background-color: $primary-dark;
+      padding: 30px;
+      li {
+        width: calc(50% - 30px);
+        padding: 5px 15px;
+        margin: 10px 15px;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid $primary-light;
+        transition: all 0.3s;
+        &:hover {
+          color: $secondary;
+          opacity: 0.8;
+        }
+      }
+    }
+  }
 }
 .ph-product {
   &__content {
@@ -1009,29 +1127,59 @@ footer {
     margin-top: -10px;
   }
   &__tab {
-    &--list {
-      display: flex;
-      flex-wrap: wrap;
-      background-color: $primary-dark;
-      padding: 30px;
+    &--info {
       li {
-        width: calc(50% - 30px);
-        padding: 5px 15px;
-        margin: 10px 15px;
-        display: flex;
-        justify-content: space-between;
-        border-bottom: 1px solid $primary-light;
-        transition: all 0.3s;
-        &:hover {
-          color: $secondary;
-          opacity: 0.8;
+        border-bottom: 0;
+        width: 100%;
+        position: relative;
+        &:before {
+          content: "";
+          height: 6px;
+          width: 6px;
+          position: absolute;
+          left: 0;
+          top: 12px;
+          background-color: #fff;
         }
       }
     }
   }
 }
 // Product Single Page Ends
-
+.ph-blog-page {
+  .ph-blog__item {
+    margin-bottom: 30px;
+  }
+}
+.ph-blog__tab--list {
+  padding: 10px;
+  li {
+    width: 100%;
+  }
+}
+.ph-blog-single {
+  &__banner {
+    position: sticky;
+    top: 30px;
+  }
+}
+.ph-contact__details {
+  &--content {
+    margin-top: 15px;
+    display: flex;
+    h4 {
+      width: 100px;
+    }
+    ul {
+      display: flex;
+      margin-left: 20px;
+      gap: 20px;
+    }
+    li {
+      align-content: center;
+    }
+  }
+}
 // login & signup page start
 .ph-login-page,
 .ph-signup-page {
@@ -1040,6 +1188,11 @@ footer {
   }
 }
 // login & signup page ends
+.ph-reservation-page {
+  .ph-newsletter .row:before {
+    display: none;
+  }
+}
 // Innerpage Ends
 
 // mediaquery starts

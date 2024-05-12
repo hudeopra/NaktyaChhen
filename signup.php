@@ -34,12 +34,12 @@
                                 <div class="ph-breadcrums"><div class="container">
                                     <ul class="ph-breadcrums__list justify-content-center">
                                         <li class="item">
-                                            <a href="" title="Go to Home
+                                            <a href="index.php" title="Go to Home
                                                 Page">
                                                 Home </a>
                                         </li>
                                         <li class="item mt_page">
-                                            <strong>Our Menu</strong>
+                                            <strong>Sign Up</strong>
                                         </li>
                                     </ul>
                                 </div>
