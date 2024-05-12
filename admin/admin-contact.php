@@ -4,7 +4,6 @@
     require('include/essentials.php');
     adminLogin();
 ?>
-<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
@@ -284,7 +283,7 @@
                         // Check if the element exists and set innerText to the corresponding value
                         if (element && contacts_data[key] !== undefined) {
                             element.innerText = contacts_data[key];
-                            console.log(contacts_data[key]);
+                            // console.log(contacts_data[key]);
                         }
                     }
                 };
@@ -293,11 +292,30 @@
             }
 
 
+            function get_abc() {
+                let xhr = new XMLHttpRequest();
+                xhr.open("POST", "ajax/settings_curd.php", true);
+                xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+                xhr.onload = function() {
+                    let general_data = JSON.parse(this.responseText);
+                    console.log(general_data);
+
+                    // Now you can access the data fields and update your HTML elements accordingly
+                    // For example:
+                    // document.getElementById('site_title').innerText = general_data.name;
+                    // document.getElementById('site_content').innerText = general_data.email;
+                };
+
+                xhr.send('get_abc');
+            }
+
 
 
             window.onload = function() {
                 get_general();
                 get_contacts();
+                get_abc();
             }
 
 
