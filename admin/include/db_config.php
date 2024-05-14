@@ -77,7 +77,7 @@ function insert($sql, $values, $datatypes) {
 
 
 
-
+   // hello
     
     // Function to execute a update query
     function update($sql, $values, $datatypes) {
