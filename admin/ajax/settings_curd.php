@@ -44,4 +44,15 @@
         $json_data = json_encode($data);
         echo $json_data;
     }
+
+    
+    if(isset($_POST['action']) && $_POST['action'] === 'get_abc'){
+        $query = "SELECT * FROM `abc` WHERE `sr_no`=?";
+        $values = [1];
+        $res = select($query,$values,"i");
+        $data = mysqli_fetch_assoc($res);
+        $json_data = json_encode($data);
+        echo $json_data;
+    }
+    
 ?>

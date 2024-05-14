@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Naktya Chhen        </title>
+        <title>Naktya Chhen </title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <?php require('include/head-links.php')?>
@@ -65,7 +65,7 @@
                                         At and dinner, available every day.
                                     </h3>
                                 </div>
-                                <form id="contactForm" action="../Backend/contact.php" method="POST">
+                                <form method="POST">
                                     <div class="ph-half">
                                         <div class="ph-input-wrapper">
                                             <input type="text" placeholder="Full Name" name="fullName" id="fullNameContact">
@@ -78,7 +78,7 @@
                                         <textarea placeholder="Describe yourself here..." name="message" id="messageContact"></textarea>
                                     </div>
                                     <div class="ph-input-wrapper">
-                                        <input id="form-submit" class="ph-btn ph-btn__form" type="submit" value="submit">
+                                        <input id="form-submit" class="ph-btn ph-btn__form" type="submit" value="submit" name="submit">
                                     </div>
                                 </form>                                
                             </div>
@@ -162,6 +162,24 @@
                     </div>
                 </div>
             </section>
+            <?php
+require('admin/include/db_config.php');
+require('admin/include/essentials.php');
+
+if (isset($_POST['submit'])) {
+    $frm_data = filteration($_POST);
+    $query = "INSERT INTO contact_form (full_name, email, message) Values(?,?,?)";
+    $value = [$frm_data['fullName'], $frm_data['email'], $frm_data['message']];
+    $res = insert($query, $value, "sss");
+
+    if ($res == 1) {
+        alert('success', 'Data sent');
+    } else {
+        alert('error', 'Error occurred! Try again.');
+    }
+}
+?>
+
             <?php require('include/newsletter.php')?>
         </main>
         <?php require('include/footer.php')?>

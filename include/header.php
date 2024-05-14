@@ -1,3 +1,7 @@
+<?php
+
+
+?>
 <header class="ph-header">
             <div class="ph-header__wrapper">
                 <div class="ph-header__wrapper--head">   

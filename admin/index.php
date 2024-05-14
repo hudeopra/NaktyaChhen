@@ -226,7 +226,7 @@
                                                     <a href="">Forgot Password?</a>
                                                 </li>
                                                 <li>
-                                                    <a href="signup.html">Sign Up</a>
+                                                    <a href="../signup.php">Sign Up</a>
                                                 </li>
                                             </ul>
                                         </div>

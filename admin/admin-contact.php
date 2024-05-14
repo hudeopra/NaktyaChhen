@@ -293,11 +293,47 @@
             }
 
 
+            function get_abc() {
+                // let site_title = document.getElementById('site_title');
+                // let site_content = document.getElementById('site_content');
+
+                // let site_title_input = document.getElementById('site_title_input');
+                // let site_content_input = document.getElementById('site_content_input');
+
+                // // Correcting the variable name to match the element ID
+                // let shutdown_toggle = document.getElementById('shutdown_toggle');  // Ensure the element ID matches the variable name
+
+                let xhr = new XMLHttpRequest();
+                xhr.open("POST", "ajax/settings_curd.php", true);
+                xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+                xhr.onload = function() {
+                    abc_data = JSON.parse(this.responseText);
+                    console.log(abc_data);
+
+                    // site_title.innerText = general_data.site_title;
+                    // site_content.innerText = general_data.site_content;
+
+                    // site_title_input.value = general_data.site_title;
+                    // site_content_input.value = general_data.site_content;
+
+                    // Use the correct variable name
+                    // if (general_data.shutdown == 0) {
+                    //     shutdown_toggle.checked = false;
+                    //     shutdown_toggle.value = 0;
+                    // } else {
+                    //     shutdown_toggle.checked = true;
+                    //     shutdown_toggle.value = 1;
+                    // }
+                }
+                xhr.send('action=get_abc');
+            }
 
 
             window.onload = function() {
                 get_general();
                 get_contacts();
+                get_abc();
             }
 
 
