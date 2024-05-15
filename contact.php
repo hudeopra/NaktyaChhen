@@ -168,15 +168,20 @@ require('admin/include/essentials.php');
 
 if (isset($_POST['submit'])) {
     $frm_data = filteration($_POST);
+    if (empty($frm_data['fullName']) || empty($frm_data['email']) || empty($frm_data['message'])) {
+        alert('error', 'Please fill out all the fields.');
+    }else{
     $query = "INSERT INTO contact_form (full_name, email, message) Values(?,?,?)";
     $value = [$frm_data['fullName'], $frm_data['email'], $frm_data['message']];
     $res = insert($query, $value, "sss");
+
 
     if ($res == 1) {
         alert('success', 'Data sent');
     } else {
         alert('error', 'Error occurred! Try again.');
     }
+}
 }
 ?>
 
