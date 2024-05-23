@@ -1,19 +1,22 @@
 <?php
-    // Defining variables
-    $hname = 'localhost';
-    $uname = 'root';
-    $pass = '';
-    $db = 'naktya_chhen';
+$servername = "localhost"; // Change this to your server name if different
+$username = "root";        // Change this to your MySQL username
+$password = "";            // Change this to your MySQL password
+$dbname = "naktya_chhen";  // Change this to your database name
 
-    // Establishing a database connection
-    $con = mysqli_connect($hname, $uname, $pass, $db);
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
 
-    // Check if the connection was successful
-    if (!$con) {
-        die("Cannot connect to database: " . mysqli_connect_error());
-    }
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
 
-    // Function to filter data
+// Function to filter data
+
+// Check if the function exists before declaring it
+if (!function_exists('filteration')) {
+    // Declare the filteration() function
     function filteration($data) {
         foreach ($data as $key => $value) {
             $data[$key] = trim($value);
@@ -23,39 +26,65 @@
         }
         return $data;
     }
-
-    // Function to execute a select query
-    function select($sql, $values, $datatypes) {
-        global $con; // Fetching the global $con variable
-
-        // Prepare the statement
-        if ($stmt = mysqli_prepare($con, $sql)) {
-            // Bind parameters to the prepared statement
-            mysqli_stmt_bind_param($stmt, $datatypes, ...$values); // Spread operator
-            
-            // Execute the statement
-            if (mysqli_stmt_execute($stmt)) {
-                $res = mysqli_stmt_get_result($stmt);
-                return $res; // Return result set
-            } else {
-                // If execution fails, close statement and handle error
-                mysqli_stmt_close($stmt);
-                die("Query cannot be executed - Select");
-            }
-        } else {
-            // If statement cannot be prepared, handle error
-            die("Query cannot be prepared - Select");
-        }
-    }
+}
 
 
 
-    
-function insert($sql, $values, $datatypes) {
-    global $con; // Fetching the global $con variable
+// Function to execute a select query
+function select($sql, $values, $datatypes) {
+    global $conn; // Fetching the global $conn variable
 
     // Prepare the statement
-    if ($stmt = mysqli_prepare($con, $sql)) {
+    if ($stmt = mysqli_prepare($conn, $sql)) {
+        // Bind parameters to the prepared statement
+        mysqli_stmt_bind_param($stmt, $datatypes, ...$values); // Spread operator
+        
+        // Execute the statement
+        if (mysqli_stmt_execute($stmt)) {
+            $res = mysqli_stmt_get_result($stmt);
+            return $res; // Return result set
+        } else {
+            // If execution fails, close statement and handle error
+            mysqli_stmt_close($stmt);
+            die("Query cannot be executed - Select");
+        }
+    } else {
+        // If statement cannot be prepared, handle error
+        die("Query cannot be prepared - Select");
+    }
+}
+
+// Function to execute an insert query
+function insert($sql, $values, $datatypes) {
+    global $conn; // Fetching the global $conn variable
+
+    // Prepare the statement
+    if ($stmt = mysqli_prepare($conn, $sql)) {
+        // Bind parameters to the prepared statement
+        mysqli_stmt_bind_param($stmt, $datatypes, ...$values); // Spread operator
+        
+        // Execute the statement
+        if (mysqli_stmt_execute($stmt)) {
+            $res = mysqli_stmt_affected_rows($stmt);
+            mysqli_stmt_close($stmt);
+            return $res; // Return result set
+        } else {
+            // If execution fails, close statement and handle error
+            mysqli_stmt_close($stmt);
+            die("Query cannot be executed - Insert");
+        }
+    } else {
+        // If statement cannot be prepared, handle error
+        die("Query cannot be prepared - Insert");
+    }
+}
+
+// Function to execute an update query
+function update($sql, $values, $datatypes) {
+    global $conn; // Fetching the global $conn variable
+
+    // Prepare the statement
+    if ($stmt = mysqli_prepare($conn, $sql)) {
         // Bind parameters to the prepared statement
         mysqli_stmt_bind_param($stmt, $datatypes, ...$values); // Spread operator
         
@@ -74,31 +103,4 @@ function insert($sql, $values, $datatypes) {
         die("Query cannot be prepared - Update");
     }
 }
-
-    
-    // Function to execute a update query
-    function update($sql, $values, $datatypes) {
-        global $con; // Fetching the global $con variable
-
-        // Prepare the statement
-        if ($stmt = mysqli_prepare($con, $sql)) {
-            // Bind parameters to the prepared statement
-            mysqli_stmt_bind_param($stmt, $datatypes, ...$values); // Spread operator
-            
-            // Execute the statement
-            if (mysqli_stmt_execute($stmt)) {
-                $res = mysqli_stmt_affected_rows($stmt);
-                mysqli_stmt_close($stmt);
-                return $res; // Return result set
-            } else {
-                // If execution fails, close statement and handle error
-                mysqli_stmt_close($stmt);
-                die("Query cannot be executed - Update");
-            }
-        } else {
-            // If statement cannot be prepared, handle error
-            die("Query cannot be prepared - Update");
-        }
-    }
-
 ?>

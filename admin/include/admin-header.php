@@ -55,7 +55,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="reservation.html">
+                    <a href="admin_reservation.php">
                         <i class="fa fa-user" aria-hidden="true"></i>
                         <span class="ph-menu-title">
                             Reservation

@@ -1,14 +1,17 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
-    require('include/db_config.php');
-    require('include/essentials.php');
+
+    require('admin/include/db_config.php');
+    require('admin/include/essentials.php');
 
     // Start the session to access session variables
     session_start();
 
     // Check if the session variable "adminLogin" is set and true
     if (isset($_SESSION["adminLogin"]) && $_SESSION["adminLogin"] === true) {
-        redirect('dashboard.php');
+        redirect('index.php');
     }
 
 ?>
@@ -24,9 +27,12 @@
         <title>Naktya Chhen - Login Page</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <?php require('include/admin-head-links.php')?>
+        <?php require('include/head-links.php') ?>
+
     </head>
-    <body><header class="ph-header">
+    <body>
+        
+    <header class="ph-header">
             <div class="ph-header__wrapper">
                 <div class="ph-header__wrapper--head">   
                     <div class="ph-header__open">
@@ -226,7 +232,7 @@
                                                     <a href="">Forgot Password?</a>
                                                 </li>
                                                 <li>
-                                                    <a href="signup.html">Sign Up</a>
+                                                    <a href="../signup.php">Sign Up</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -269,8 +275,8 @@
             if(isset($_POST['login']))
             {
                 $frm_data = filteration($_POST);
-                $query = "SELECT * FROM `admin_cred` WHERE `admin_name`=? AND `admin_pass`=?";
-                $value = [$frm_data['admin_name'], $frm_data['admin_pass']];
+                $query = "SELECT * FROM `user` WHERE `email`=? AND `password`=?";
+                $value = [$frm_data['email'], $frm_data['password']];
 
                 $res = select($query, $value,"ss" );
 
@@ -282,14 +288,14 @@
 
                     $_SESSION['adminLogin'] = true;
                     $_SESSION['adminId'] = $row['sr_no'];
-                    redirect('dashboard.php');
+                    redirect('index.php');
                 } else {
                     // Login failed
                     alert('error', 'Login Failed - Invalid Credentials');
                 }
             }
         ?>
-        <?php require('../include/script.php')?>
+        <?php require('include/script.php')?>
     </body>
 </html>
     

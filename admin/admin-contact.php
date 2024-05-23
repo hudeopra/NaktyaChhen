@@ -329,7 +329,7 @@
                 xhr.send('action=get_abc');
             }
 
-
+.
             window.onload = function() {
                 get_general();
                 get_contacts();

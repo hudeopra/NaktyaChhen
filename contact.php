@@ -157,6 +157,9 @@
                 </div>
             </section>
             <?php
+            ini_set('display_errors', 1);
+            ini_set('display_startup_errors', 1);
+            error_reporting(E_ALL);
 require('admin/include/db_config.php');
 require('admin/include/essentials.php');
 

@@ -86,7 +86,7 @@
                                     </form>
                                     <div class="ph-login__option">
                                         <ul>
-                                            <li>Already a User? <a href="login.html">Login In</a></li>
+                                            <li>Already a User? <a href="admin/index.php">Login In</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -116,9 +116,63 @@
                 </div>
             </div>
         </section>
+        <?php
+            ini_set('display_errors', 1);
+            ini_set('display_startup_errors', 1);
+            error_reporting(E_ALL);
+            require('admin/include/db_config.php');
+            require('admin/include/essentials.php');
 
-        <script>
-        // Function to display a message
+
+
+            if (isset($_POST['submit'])) {
+                $frm_data = filteration($_POST);
+
+                if (empty($frm_data['fullname']) || empty($frm_data['email']) || empty($frm_data['phonenumber']) || empty($frm_data['password']) || empty($frm_data['confirm_password'])) {
+                    alert('error', 'Please fill out all the fields.');
+                } elseif ($frm_data['password'] !== $frm_data['confirm_password']) {
+                    alert('error', 'Passwords do not match.');
+                } else {
+                    $checkUser = "SELECT * FROM user WHERE email = ?";
+                    $stmt = $conn->prepare($checkUser);
+                    if ($stmt === false) {
+                        alert('error', 'Prepare statement failed: ' . htmlspecialchars($conn->error));
+                        exit();
+                    }
+
+                    $stmt->bind_param("s", $frm_data['email']);
+                    $stmt->execute();
+                    $result = $stmt->get_result();
+                    $count = $result->num_rows;
+                    $stmt->close();
+                    
+                    if ($count > 0) {
+                        alert('error', 'User already signed up. Please log in instead.');
+                    } else {
+                        $password_hashed = password_hash($frm_data['password'], PASSWORD_BCRYPT);
+                        $query = "INSERT INTO user (name, email, number, password) VALUES (?, ?, ?, ?)";
+                        $stmt = $conn->prepare($query);
+                        if ($stmt === false) {
+                            alert('error', 'Prepare statement failed: ' . htmlspecialchars($conn->error));
+                            exit();
+                        }
+                        $stmt->bind_param("ssss", $frm_data['fullname'], $frm_data['email'], $frm_data['phonenumber'], $password_hashed);
+                        $res = $stmt->execute();
+
+                        if ($res) {
+                            alert('success', 'Signup successful.');
+                        } else {
+                            alert('error', 'Error occurred! Please try again.');
+                        }
+                        $stmt->close();
+                    }
+                }
+            }
+?>
+
+    </footer>
+    <?php require('include/script.php') ?>
+    <script>
         function showMessage(message, type) {
             let messageBox = document.createElement('div');
             messageBox.classList.add('alert');
@@ -134,49 +188,6 @@
             }, 3000);
         }
 
-        // PHP code to check if the email already exists
-        <?php
-        require('admin/include/db_config.php');
-        require('admin/include/essentials.php');
-
-        if (isset($_POST['submit'])) {
-            $frm_data = filteration($_POST);
-            if (empty($frm_data['fullname']) || empty($frm_data['email']) || empty($frm_data['phonenumber']) || empty($frm_data['password'])) {
-                showMessage('Please fill out all the fields.', 'error');
-            } else {
-                $checkUser = "SELECT * FROM user WHERE email = ?";
-                $stmt = $conn->prepare($checkUser);
-                $stmt->bind_param("s", $frm_data['email']);
-                $stmt->execute();
-                $result = $stmt->get_result();
-                $count = $result->num_rows;
-                $stmt->close();
-                
-                if ($count > 0) {
-                    // User already exists, show error message
-                    showMessage('User already signed up. Please log in instead.', 'error');
-                } else {
-                    // User doesn't exist, proceed with signup
-                    $password_hashed = password_hash($frm_data['password'], PASSWORD_BCRYPT);
-                    $query = "INSERT INTO user (name, email, number, password) VALUES (?, ?, ?, ?)";
-                    $values = [$frm_data['fullname'], $frm_data['email'], $frm_data['phonenumber'], $password_hashed];
-                    $res = insert($query, $values, "ssss");
-
-                    if ($res == 1) {
-                        showMessage('Signup successful.', 'success');
-                    } else {
-                        showMessage('Error occurred! Please try again.', 'error');
-                    }
-                }
-            }
-        }
-        ?>
-</script>
-
-    </footer>
-    <?php require('include/script.php') ?>
-
-    <script>
         function validateForm() {
             let name = document.getElementById('signupName').value.trim();
             let email = document.getElementById('signupEmail').value.trim();
