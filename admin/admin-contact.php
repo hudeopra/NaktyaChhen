@@ -328,15 +328,36 @@
                 }
                 xhr.send('action=get_abc');
             }
+            
+function get_reservation() {
+    let xhr = new XMLHttpRequest();
+    xhr.open("POST", "ajax/settings_curd.php", true);
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
+    xhr.onload = function() {
+        let reservation_data = JSON.parse(this.responseText);
+        console.log(reservation_data);
 
-            window.onload = function() {
-                get_general();
-                get_contacts();
-                get_abc();
-            }
+        // Update your HTML elements with the reservation data
+        document.getElementById('res_fname').innerText = reservation_data['res_fname'];
+        document.getElementById('res_email').innerText = reservation_data['res_email'];
+        document.getElementById('res_phone').innerText = reservation_data['res_phone'];
+        document.getElementById('date').innerText = reservation_data['date'];
+        document.getElementById('arrivalTime').innerText = reservation_data['arrivalTime'];
+        document.getElementById('numberOfPeople').innerText = reservation_data['numberOfPeople'];
+        document.getElementById('tableNumber').innerText = reservation_data['tableNumber'];
+        document.getElementById('notes').innerText = reservation_data['notes'];
+    };
 
+    xhr.send('get_reservation');
+}
 
+    window.onload = function() {
+        get_general();
+        get_contacts();
+        get_reservation();
+        get_abc();
+    }
         </script>
     </body>
 </html>

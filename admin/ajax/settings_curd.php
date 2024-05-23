@@ -44,4 +44,13 @@
         $json_data = json_encode($data);
         echo $json_data;
     }
+
+    if(isset($_POST['get_reservations'])){
+        $query = "SELECT * FROM `reservation` WHERE `sr_no`=?";
+        $values = [1]; // You might need to adjust this based on your specific requirements
+        $res = select($query, $values, "i");
+        $data = mysqli_fetch_assoc($res);
+        $json_data = json_encode($data);
+        echo $json_data;
+    }
 ?>
