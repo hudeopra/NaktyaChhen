@@ -25,6 +25,6 @@ if (mysqli_stmt_execute($stmt)) {
     echo "<script>alert('Failed to delete data');</script>";
 }
 
-echo "<script>window.location.href = 'admin_user.php';</script>";
+echo "<script>window.location.href = 'admin_reservation.php';</script>";
 exit();
 ?>

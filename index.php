@@ -1,3 +1,9 @@
+<?php
+
+    require('include/db_config.php');
+    require('include/essentials.php');
+    adminLogin();
+?>
 <!DOCTYPE html><html><head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">

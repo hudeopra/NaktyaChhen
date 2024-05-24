@@ -63,7 +63,7 @@ if (isset($_POST['edit'])) {
     if (mysqli_stmt_execute($stmt)) {
         echo "<script>alert('Data updated successfully');</script>";
         // Redirect based on type
-        $redirect_url = $type === 'reservation' ? 'admin_dashboard.php' : 'admin_user.php';
+        $redirect_url = $type === 'reservation' ? 'admin_reservation.php' : 'admin_user.php';
         echo "<script>window.location.href = '$redirect_url';</script>";
         exit();
     } else {
