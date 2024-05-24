@@ -1,9 +1,3 @@
-<?php
-
-    require('include/db_config.php');
-    require('include/essentials.php');
-    adminLogin();
-?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -27,9 +21,6 @@
                             <div class="ph-banner__item--content">
                                 <div class="ph-banner__item--details">
                                     
-                                <span class="ph-section__icon">
-                                    <i class="fa fa-cutlery" aria-hidden="true"></i>
-                                </span>
                                 <h2>
                                     Taste Authentic Flavours
                                 </h2>
@@ -40,8 +31,7 @@
                                 <div class="ph-breadcrums"><div class="container">
                                     <ul class="ph-breadcrums__list justify-content-center">
                                         <li class="item">
-                                            <a href="index.php" title="Go to Home
-                                                Page">
+                                            <a href="index.php" title="Go to Home Page">
                                                 Home </a>
                                         </li>
                                         <li class="item mt_page">
@@ -187,14 +177,14 @@
             <section class="ph-component">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-12 col-xl-6 g-0">
+                        <div class="col-12 col-md-6 g-0">
                             <div class="ph-component__img">
                                 <figure>
                                     <img src="assets/img/banner-2.jpg" alt="">
                                 </figure>
                             </div>
                         </div>
-                        <div class="col-12 col-xl-6 g-0">
+                        <div class="col-12 col-md-6 g-0">
                             <div class="ph-component__content">
                                 <div class="ph-section__title">
                                     <span class="ph-section__icon">
@@ -225,9 +215,6 @@
                     <div class="row">
                         <div class="col-6 m-auto text-center">
                             <div class="ph-section__title ph-section__padding-md--b">
-                                <span class="ph-section__icon">
-                                    <i class="fa fa-cutlery" aria-hidden="true"></i>
-                                </span>
                                 <h2>
                                     ALL DAY EXPERIENCE
                                 </h2>

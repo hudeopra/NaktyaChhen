@@ -1,10 +1,3 @@
-
-<?php
-
-    require('include/db_config.php');
-    require('include/essentials.php');
-    adminLogin();
-?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -28,9 +21,6 @@
                             <div class="ph-banner__item--content">
                                 <div class="ph-banner__item--details">
                                     
-                                <span class="ph-section__icon">
-                                    <i class="fa fa-cutlery" aria-hidden="true"></i>
-                                </span>
                                 <h2>
                                     Taste Authentic Flavours
                                 </h2>
