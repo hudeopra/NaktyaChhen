@@ -21,9 +21,6 @@
                             <div class="ph-banner__item--content">
                                 <div class="ph-banner__item--details">
                                     
-                                <span class="ph-section__icon">
-                                    <i class="fa fa-cutlery" aria-hidden="true"></i>
-                                </span>
                                 <h2>
                                     Taste Authentic Flavours
                                 </h2>
@@ -34,8 +31,7 @@
                                 <div class="ph-breadcrums"><div class="container">
                                     <ul class="ph-breadcrums__list justify-content-center">
                                         <li class="item">
-                                            <a href="index.php" title="Go to Home
-                                                Page">
+                                            <a href="index.php" title="Go to Home Page">
                                                 Home </a>
                                         </li>
                                         <li class="item mt_page">
@@ -53,11 +49,8 @@
             <section class="ph-menu-tab ph-section__padding-lg--tb">
                 <div class="container">
                     <div class="row">
-                        <div class="col-10 m-auto text-center">
+                        <div class="col-12 col-md-10 mx-auto text-center">
                             <div class="ph-section__title ph-section__padding-sm--b">
-                                <span class="ph-section__icon">
-                                    <i class="fa fa-cutlery" aria-hidden="true"></i>
-                                </span>
                                 <h2>
                                     Discover Culinary Bliss at Naktya Chhen
                                 </h2>
@@ -73,14 +66,14 @@
             <section class="ph-component">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-12 col-xl-6 g-0">
+                        <div class="col-12 col-md-6 g-0">
                             <div class="ph-component__img">
                                 <figure>
                                     <img src="assets/img/menu-feature.jpg" alt="">
                                 </figure>
                             </div>
                         </div>
-                        <div class="col-12 col-xl-6 g-0">
+                        <div class="col-12 col-md-6 g-0">
                             <div class="ph-component__content">
                                 <div class="ph-section__title">
                                     <h2>
@@ -106,9 +99,6 @@
                         
                         <div class="col-6 ph-section__padding-sm--b">
                             <div class="ph-section__title">
-                                <span class="ph-section__icon">
-                                    <i class="fa fa-cutlery" aria-hidden="true"></i>
-                                </span>
                                 <h2>
                                     ALL DAY EXPERIENCE
                                 </h2>

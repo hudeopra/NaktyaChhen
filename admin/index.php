@@ -163,9 +163,6 @@
                             <div class="ph-banner__item--content">
                                 <div class="ph-banner__item--details">
                                     
-                                <span class="ph-section__icon">
-                                    <i class="fa fa-cutlery" aria-hidden="true"></i>
-                                </span>
                                 <h2>
                                     Taste Authentic Flavours
                                 </h2>
@@ -226,7 +223,7 @@
                                                     <a href="">Forgot Password?</a>
                                                 </li>
                                                 <li>
-                                                    <a href="signup.html">Sign Up</a>
+                                                    <a href="../signup.php">Sign Up</a>
                                                 </li>
                                             </ul>
                                         </div>

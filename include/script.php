@@ -5,8 +5,6 @@
         <script type="text/javascript" src="assets/library/slick-1.8.1/slick/slick.js"></script>
         <!-- boottrap -->
         <script src="assets/library/bootstrap/bootstrap.min.js"></script>
-        <!-- counter -->
-        <script src="assets/library/multi-animated-counter.js"></script>
         <!-- wow js -->
         <script src="assets/library/wow-js/wow.min.js"></script>
         <!-- nice select -->

@@ -47,7 +47,7 @@
                                 <p id="site_title">asdsfdg</p>
                             </div>
                             <div class="ph-card-wrapper">
-                                <h3>Sasdf</h3>
+                                <h3>Site Content</h3>
                                 <p id="site_content">asdsfdg</p>
                             </div>
                         </div>

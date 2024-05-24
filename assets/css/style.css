@@ -345,7 +345,6 @@ textarea {
   transition: background 500ms ease, -webkit-transform 500ms ease;
   transition: transform 500ms ease, background 500ms ease;
   transition: transform 500ms ease, background 500ms ease, -webkit-transform 500ms ease;
-  transition: transform 500ms ease, background 500ms ease, -webkit-transform 500ms ease;
   -webkit-transition: transform 500ms ease, background 500ms ease;
   z-index: 99;
   overflow: hidden;
@@ -729,7 +728,7 @@ header.ph-header.header_fixed ~ footer {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  max-width: 750px;
+  max-width: 1000px;
   padding: 30px;
   text-align: center;
   width: 100%;
@@ -785,22 +784,31 @@ header.ph-header.header_fixed ~ footer {
 
 .ph-component {
   background-color: #021d2a;
+  padding: 120px 0;
 }
 
 .ph-component__img,
 .ph-component figure,
 .ph-component img {
-  max-height: 500px;
-  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  max-height: 50vw;
 }
 
-.ph-component .row:nth-child(even) .col-xl-6:first-of-type {
+.ph-component__img {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 30px;
+}
+
+.ph-component .row:nth-child(even) .col-md-6:first-of-type {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
 }
 
-.ph-component .row:nth-child(even) .col-xl-6:last-of-type {
+.ph-component .row:nth-child(even) .col-md-6:last-of-type {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
@@ -1018,7 +1026,7 @@ header.ph-header.header_fixed ~ footer {
 }
 
 .ph-blog__item:hover .ph-blog__item--details {
-  bottom: 30px;
+  bottom: 0px;
   opacity: 1;
   visibility: visible;
 }
@@ -1055,6 +1063,9 @@ header.ph-header.header_fixed ~ footer {
 
 .ph-newsletter .row {
   position: relative;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .ph-newsletter .row:before {
@@ -1122,7 +1133,7 @@ footer .ph-quick-menu li a {
 
 .ph-innerpage .ph-banner,
 .ph-innerpage .ph-banner img {
-  max-height: 350px;
+  height: 350px;
 }
 
 .ph-breadcrums {
@@ -1131,11 +1142,14 @@ footer .ph-quick-menu li a {
 }
 
 .ph-breadcrums__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  display: inline;
+  background-color: rgba(0, 0, 0, 0.45);
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.ph-breadcrums .item {
+  display: inline-block;
 }
 
 .ph-breadcrums a,
@@ -1145,7 +1159,7 @@ footer .ph-quick-menu li a {
 }
 
 .ph-breadcrums a {
-  color: #0e86c0;
+  color: #fff;
 }
 
 .ph-breadcrums a:hover {
@@ -1243,6 +1257,63 @@ footer .ph-quick-menu li a {
 
 .slider-for .slick-next::before {
   content: "\f105";
+}
+
+.slick-dots {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+}
+
+.slick-dots li button:before {
+  display: none;
+}
+
+.slick-dots button:focus-visible,
+.slick-dots button:focus {
+  outline: 0;
+}
+
+.slick-dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  bottom: -42px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  position: absolute;
+}
+
+.slick-dots li {
+  margin-right: 10px;
+}
+
+.slick-dots li button {
+  font-size: 0;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  outline: none;
+}
+
+.slick-dots li button:before {
+  content: "";
+  height: 12px;
+  width: 12px;
+  background-color: #007f41;
+  border-radius: 50%;
+  display: block;
+}
+
+.slick-dots li.slick-active button:before {
+  background-color: #14e114;
 }
 
 .ph-product__tab--list,
@@ -1406,12 +1477,126 @@ footer .ph-quick-menu li a {
   display: none;
 }
 
+.ph-list-page ol {
+  counter-reset: section;
+  list-style-type: none;
+  padding: 0;
+}
+
+.ph-list-page ol h2 {
+  margin-bottom: 20px;
+}
+
+.ph-list-page li {
+  margin-left: 15px;
+  position: relative;
+}
+
+.ph-list-page li li:before {
+  position: absolute;
+  content: "-";
+  left: -10px;
+}
+
+.ph-list-page li li:not(:last-of-type) {
+  margin-bottom: 10px;
+}
+
+.ph-list-page ol {
+  margin-bottom: 30px;
+}
+
+.ph-list-page .ph-content__detail h4 {
+  margin-top: 30px;
+}
+
+.accordion-item,
+.accordion-button {
+  background-color: #021d2a;
+  color: #fff;
+}
+
+.accordion-button::after {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.accordion-button:not(.collapsed),
+.accordion-button:focus,
+.accordion-button:hover {
+  background-color: #007f41;
+  color: #fff;
+}
+
 @media screen and (max-width: 1200px) {
+  h2 {
+    font-size: 28px;
+  }
+  h2 ~ p {
+    font-size: 18px;
+  }
+  h3 {
+    font-size: 22px;
+  }
+  .ph-section__padding-lg--tb {
+    padding: 90px 0;
+  }
   .ph-banner__item--content h2 {
     font-size: 36px;
   }
   .ph-about__content {
     margin: 15px 0;
+  }
+  .ph-frame .col-md-6:not(last-of-type) {
+    margin-bottom: 30px;
+  }
+  .container-fluid,
+  .container {
+    padding: 0 30px;
+  }
+  .ph-component {
+    padding: 90px 0;
+  }
+  .ph-component__content {
+    padding: 30px;
+  }
+  .ph-menu-tab__item {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 20px;
+  }
+  .ph-newsletter__form {
+    max-width: 450px;
+    margin-top: 10px;
+  }
+  .ph-footer .col-12:not(last-of-type) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .ph-component .row:nth-child(even) .col-md-6:first-of-type {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .ph-component .row:nth-child(even) .col-md-6:last-of-type {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .ph-about .col-12:nth-child(odd) .ph-about__content figure {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .ph-about .col-12:nth-child(odd) .ph-about__content p {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .ph-menu-tab .nav-link {
+    margin: 0 15px 10px;
   }
 }
 

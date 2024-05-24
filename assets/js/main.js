@@ -35,7 +35,7 @@ jQuery(document).ready(function ($) {
   // Initialize slick slider for banner
   $(".ph-banner__slider").slick({
     dots: false,
-    infinite: false,
+    infinite: true,
     speed: 500,
     fade: true,
     arrows: false,
@@ -46,7 +46,7 @@ jQuery(document).ready(function ($) {
   // Initialize slick slider for blog
   $(".ph-blog__slider").slick({
     dots: true,
-    infinite: false,
+    infinite: true,
     speed: 500,
     fade: false,
     arrows: false,
@@ -55,7 +55,7 @@ jQuery(document).ready(function ($) {
     slidesToScroll: 3,
     responsive: [
       {
-        breakpoint: 768,
+        breakpoint: 1200,
         settings: {
           slidesToShow: 2,
         },
@@ -91,4 +91,6 @@ jQuery(document).ready(function ($) {
     asNavFor: ".slider-for",
     focusOnSelect: true,
   });
+  // initializing wow js
+  new WOW().init();
 });
