@@ -7,10 +7,8 @@ require_once('include/db_config.php');
 require_once('include/essentials.php');
 
 // Check if the admin is logged in
-session_start();
-if (!isset($_SESSION['adminLogin']) || $_SESSION['adminLogin'] !== true) {
-    redirect('login.php');
-}
+adminLogin();
+
 
 // Fetch user data from the database
 $query = "SELECT * FROM user";

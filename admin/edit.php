@@ -2,11 +2,6 @@
 require_once('include/db_config.php');
 require_once('include/essentials.php');
 
-session_start();
-if (!isset($_SESSION['adminLogin']) || $_SESSION['adminLogin'] !== true) {
-    redirect('login.php');
-}
-
 // Determine the type of edit: reservation or user
 $type = isset($_GET['type']) ? $_GET['type'] : 'reservation';
 $id = isset($_GET['id']) ? $_GET['id'] : null;
@@ -27,7 +22,7 @@ $data = mysqli_fetch_assoc($result);
 
 if (!$data) {
     // Redirect based on type
-    $redirect_url = $type === 'reservation' ? 'admin_dashboard.php' : 'admin_user.php';
+    $redirect_url = $type === 'reservation' ? 'edit.php' : 'admin_user.php';
     echo "<script>window.location.href = '$redirect_url';</script>";
     exit();
 }
@@ -47,7 +42,7 @@ if (isset($_POST['edit'])) {
         
         $update_query = "UPDATE reservation SET date=?, arrival_time=?, number_of_people=?, table_number=?, notes=?, full_name=?, email=?, phone=? WHERE id=?";
         $stmt = mysqli_prepare($conn, $update_query);
-        mysqli_stmt_bind_param($stmt, "ssiiisssi", $date, $time, $people, $tableNumber, $description, $name, $email, $phone, $id);
+        mysqli_stmt_bind_param($stmt, "ssiissssi", $date, $time, $people, $tableNumber, $description, $name, $email, $phone, $id);
     } else {
         // Process form data and update user
         $fullName = $_POST['full_name'];
