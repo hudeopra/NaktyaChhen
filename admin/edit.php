@@ -1,45 +1,64 @@
 <?php
 require_once('include/db_config.php');
 
-// Check if the ID parameter is set in the URL
-if (!isset($_GET['id'])) {
-    // Redirecting back to admin_reservation.php if ID is not provided
-    echo "<script>window.location.href = 'admin_reservation.php';</script>";
-    exit();
+session_start();
+if (!isset($_SESSION['adminLogin']) || $_SESSION['adminLogin'] !== true) {
+    redirect('login.php');
 }
 
-// Fetch booking data based on ID
-$id = $_GET['id'];
-$query = "SELECT * FROM reservation WHERE id = ?";
+// Determine the type of edit: reservation or user
+$type = isset($_GET['type']) ? $_GET['type'] : 'reservation';
+$id = isset($_GET['id']) ? $_GET['id'] : null;
+
+if ($type === 'reservation') {
+    // Fetch reservation data based on ID
+    $query = "SELECT * FROM reservation WHERE id = ?";
+} else {
+    // Fetch user data based on ID
+    $query = "SELECT * FROM user WHERE id = ?";
+}
+
 $stmt = mysqli_prepare($conn, $query);
 mysqli_stmt_bind_param($stmt, "i", $id);
 mysqli_stmt_execute($stmt);
 $result = mysqli_stmt_get_result($stmt);
 $booking = mysqli_fetch_assoc($result);
 
-// Check if booking exists
-if (!$booking) {
-    // Redirecting back to dashboard.php if booking not found
-    echo "<script>window.location.href = 'dashboard.php';</script>";
+if (!$data) {
+    // Redirect based on type
+    $redirect_url = $type === 'reservation' ? 'edit.php' : 'admin_user.php';
+    echo "<script>window.location.href = '$redirect_url';</script>";
     exit();
 }
 
 // Handling form submission for editing
 if (isset($_POST['edit'])) {
-    // Process form data here
-    // Update the booking record in the database
-    $date = $_POST['date'];
-    $time = $_POST['time'];
-    $people = $_POST['people'];
-    $tableNumber = $_POST['tableNumber'];
-    $description = $_POST['description'];
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $phone = $_POST['phone'];
-    
-    $update_query = "UPDATE reservation SET date=?, arrival_time=?, number_of_people=?, table_number=?, notes=?, full_name=?, email=?, phone=? WHERE id=?";
-    $stmt = mysqli_prepare($conn, $update_query);
-    mysqli_stmt_bind_param($stmt, "ssiissssi", $date, $time, $people, $tableNumber, $description, $name, $email, $phone, $id);
+    if ($type === 'reservation') {
+        // Process form data and update reservation
+        $date = $_POST['date'];
+        $time = $_POST['time'];
+        $people = $_POST['people'];
+        $tableNumber = $_POST['tableNumber'];
+        $description = $_POST['description'];
+        $name = $_POST['name'];
+        $email = $_POST['email'];
+        $phone = $_POST['phone'];
+        
+        $update_query = "UPDATE reservation SET date=?, arrival_time=?, number_of_people=?, table_number=?, notes=?, full_name=?, email=?, phone=? WHERE id=?";
+        $stmt = mysqli_prepare($conn, $update_query);
+        mysqli_stmt_bind_param($stmt, "ssiissssi", $date, $time, $people, $tableNumber, $description, $name, $email, $phone, $id);
+    } else {
+        // Process form data and update user
+        $fullName = $_POST['full_name'];
+        $email = $_POST['email'];
+        $phone = $_POST['phone'];
+        $password = $_POST['password'] ? password_hash($_POST['password'], PASSWORD_DEFAULT) : $data['password']; // Hash the password if provided, otherwise keep the current one
+
+        $update_query = "UPDATE user SET full_name=?, email=?, phone=?, password=? WHERE id=?";
+        $stmt = mysqli_prepare($conn, $update_query);
+        mysqli_stmt_bind_param($stmt, "ssssi", $fullName, $email, $phone, $password, $id);
+    }
+
     if (mysqli_stmt_execute($stmt)) {
         echo "<script>alert('Data updated successfully');</script>";
         // Redirect based on type
@@ -59,15 +78,6 @@ if (isset($_POST['edit'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Booking</title>
     <link rel="stylesheet" href="../FrontEnd/assets/library/bootstrap/bootstrap.css" type="text/css" media="all">
-    <style>
-        /* Add your custom CSS styles here */
-        .container {
-            margin-top: 50px;
-        }
-        .form-group {
-            margin-bottom: 20px;
-        }
-    </style>
 </head>
 <body>
     <div class="container">

@@ -117,7 +117,7 @@
                     </div>
                     <div  class="ph-header__user">
                         <div class="ph-header__user--trigger">
-                            <a class="ph-user-trigger" href="admin/index.php">
+                            <a class="ph-user-trigger" href="">
                                 <i class="fa fa-user" aria-hidden="true"></i>
                             </a>
                         </div>
