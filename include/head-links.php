@@ -23,6 +23,4 @@
 <link rel="stylesheet" href="assets/library/bootstrap/bootstrap.css" type="text/css" media="all">
 
 <!-- Main css -->
-
 <link rel="stylesheet" href="assets/css/style.css">
-<link rel="stylesheet" href="assets/css/common.css">

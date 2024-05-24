@@ -1,4 +1,4 @@
-<header class="ph-header">
+<header class="ph-header ">
             <div class="ph-header__wrapper">
                 <div class="ph-header__wrapper--head">   
                     <div class="ph-header__open">
@@ -119,6 +119,7 @@
                         <div class="ph-header__user--trigger">
                             <a class="ph-user-trigger" href="admin/index.php">
                                 <i class="fa fa-user" aria-hidden="true"></i>
+                                <span class="ml-2">Login</span>
                             </a>
                         </div>
                     </div>

@@ -1,23 +1,22 @@
 jQuery(document).ready(function ($) {
-  var nav_offset_top = $("header").height() - window.innerHeight * 0.95; // Adjusted to 10vh scroll
+  // var nav_offset_top = $("header").height() - window.innerHeight * 0.95; // Adjusted to 10vh scroll
 
+  // function navbarFixed() {
+  //   if ($(".ph-header").length) {
+  //     $(window).scroll(function () {
+  //       var scroll = $(window).scrollTop();
+  //       if (scroll >= nav_offset_top) {
+  //         $(".ph-header").addClass("header_fixed");
+  //         $(".ph-login").removeClass("ph-active");
+  //       } else {
+  //         $(".ph-header").removeClass("header_fixed");
+  //         $(".ph-login").removeClass("ph-active");
+  //       }
+  //     });
+  //   }
+  // }
 
-   function navbarFixed() {
-    if ($(".ph-header").length) {
-      $(window).scroll(function () {
-        var scroll = $(window).scrollTop();
-        if (scroll >= nav_offset_top) {
-          $(".ph-header").addClass("header_fixed");
-     $(".ph-login").removeClass("ph-active");
-      } else {
-        $(".ph-header").removeClass("header_fixed");
-        $(".ph-login").removeClass("ph-active");
-       }
-     });
-    }
-   }
-
-   navbarFixed();
+  // navbarFixed();
 
   // Toggle meny form visibility
   $(document).on("click", ".ph-header__open--trigger", function () {
@@ -36,7 +35,7 @@ jQuery(document).ready(function ($) {
   // Initialize slick slider for banner
   $(".ph-banner__slider").slick({
     dots: false,
-    infinite: false,
+    infinite: true,
     speed: 500,
     fade: true,
     arrows: false,
@@ -47,7 +46,7 @@ jQuery(document).ready(function ($) {
   // Initialize slick slider for blog
   $(".ph-blog__slider").slick({
     dots: true,
-    infinite: false,
+    infinite: true,
     speed: 500,
     fade: false,
     arrows: false,
@@ -56,7 +55,7 @@ jQuery(document).ready(function ($) {
     slidesToScroll: 3,
     responsive: [
       {
-        breakpoint: 768,
+        breakpoint: 1200,
         settings: {
           slidesToShow: 2,
         },
@@ -92,4 +91,6 @@ jQuery(document).ready(function ($) {
     asNavFor: ".slider-for",
     focusOnSelect: true,
   });
+  // initializing wow js
+  new WOW().init();
 });

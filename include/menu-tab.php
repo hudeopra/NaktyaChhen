@@ -18,8 +18,8 @@
 <div class="tab-content" id="myTabContent">
     <div class="tab-pane fade show active" id="appetizer" role="tabpanel" aria-labelledby="starters_menu_tab">
         <div class="ph-menu-tab__wrapper">
-            <div class="row justify-content-between">
-                <div class="col-12 col-lg-5">
+            <div class="row justify-content-around">
+                <div class="col-12 col-md-6 col-lg-5">
                     <div class="ph-menu-tab__item">
                         <figure>
                             <img src="assets/img/menu/starters_menu_1.jpg" alt="">
@@ -40,7 +40,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-5">
+                <div class="col-12 col-md-6 col-lg-5">
                     <div class="ph-menu-tab__item">
                         <figure>
                             <img src="assets/img/menu/starters_menu_2.jpg" alt="">
@@ -61,7 +61,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-5">
+                <div class="col-12 col-md-6 col-lg-5">
                     <div class="ph-menu-tab__item">
                         <figure>
                             <img src="assets/img/menu/starters_menu_3.jpg" alt="">
@@ -82,7 +82,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-5">
+                <div class="col-12 col-md-6 col-lg-5">
                     <div class="ph-menu-tab__item">
                         <figure>
                             <img src="assets/img/menu/starters_menu_4.jpg" alt="">
@@ -103,7 +103,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-5">
+                <div class="col-12 col-md-6 col-lg-5">
                     <div class="ph-menu-tab__item">
                         <figure>
                             <img src="assets/img/menu/starters_menu_5.jpg" alt="">
@@ -124,7 +124,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-5">
+                <div class="col-12 col-md-6 col-lg-5">
                     <div class="ph-menu-tab__item">
                         <figure>
                             <img src="assets/img/menu/starters_menu_6.jpg" alt="">
@@ -150,8 +150,8 @@
     </div>
     <div class="tab-pane fade" id="main-course" role="tabpanel" aria-labelledby="main-course-tab">
         <div class="ph-menu-tab__wrapper">
-            <div class="row justify-content-between">
-                <div class="col-12 col-lg-5">
+            <div class="row justify-content-around">
+                <div class="col-12 col-md-6 col-lg-5">
                     <div class="ph-menu-tab__item">
                         <figure>
                             <img src="assets/img/menu/main_dishes_2.jpg" alt="">
@@ -172,7 +172,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-5">
+                <div class="col-12 col-md-6 col-lg-5">
                     <div class="ph-menu-tab__item">
                         <figure>
                             <img src="assets/img/menu/main_dishes_3.jpg" alt="">
@@ -193,7 +193,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-5">
+                <div class="col-12 col-md-6 col-lg-5">
                     <div class="ph-menu-tab__item">
                         <figure>
                             <img src="assets/img/menu/main_dishes_4.jpg" alt="">
@@ -214,7 +214,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-5">
+                <div class="col-12 col-md-6 col-lg-5">
                     <div class="ph-menu-tab__item">
                         <figure>
                             <img src="assets/img/menu/main_dishes_1.jpg" alt="">
@@ -235,7 +235,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-5">
+                <div class="col-12 col-md-6 col-lg-5">
                     <div class="ph-menu-tab__item">
                         <figure>
                             <img src="assets/img/menu/main_dishes_5.jpg" alt="">
@@ -256,7 +256,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-5">
+                <div class="col-12 col-md-6 col-lg-5">
                     <div class="ph-menu-tab__item">
                         <figure>
                             <img src="assets/img/menu/main_dishes_6.jpg" alt="">
@@ -282,8 +282,8 @@
     </div>
     <div class="tab-pane fade" id="desserts" role="tabpanel" aria-labelledby="desserts-tab">
         <div class="ph-menu-tab__wrapper">
-            <div class="row justify-content-between">
-                <div class="col-12 col-lg-5">
+            <div class="row justify-content-around">
+                <div class="col-12 col-md-6 col-lg-5">
                     <div class="ph-menu-tab__item">
                         <figure>
                             <img src="assets/img/menu/desserts_menu_1.jpg" alt="">
@@ -305,7 +305,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-5">
+                <div class="col-12 col-md-6 col-lg-5">
                     <div class="ph-menu-tab__item">
                         <figure>
                             <img src="assets/img/menu/desserts_menu_2.jpg" alt="">
@@ -327,7 +327,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-5">
+                <div class="col-12 col-md-6 col-lg-5">
                     <div class="ph-menu-tab__item">
                         <figure>
                             <img src="assets/img/menu/desserts_menu_3.jpg" alt="">
@@ -350,7 +350,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-5">
+                <div class="col-12 col-md-6 col-lg-5">
                     <div class="ph-menu-tab__item">
                         <figure>
                             <img src="assets/img/menu/desserts_menu_4.jpg" alt="">
@@ -372,7 +372,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-5">
+                <div class="col-12 col-md-6 col-lg-5">
                     <div class="ph-menu-tab__item">
                         <figure>
                             <img src="assets/img/menu/desserts_menu_6.jpg" alt="">
@@ -395,7 +395,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-5">
+                <div class="col-12 col-md-6 col-lg-5">
                     <div class="ph-menu-tab__item">
                         <figure>
                             <img src="assets/img/menu/desserts_menu_5.jpg" alt="">
@@ -421,8 +421,8 @@
     </div>
     <div class="tab-pane fade" id="beverages" role="tabpanel" aria-labelledby="beverages-tab">
         <div class="ph-menu-tab__wrapper">
-            <div class="row justify-content-between">
-                <div class="col-12 col-lg-5">
+            <div class="row justify-content-around">
+                <div class="col-12 col-md-6 col-lg-5">
                     <div class="ph-menu-tab__item">
                         <figure>
                             <img src="assets/img/menu/drink_1.jpg" alt="">
@@ -445,7 +445,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-5">
+                <div class="col-12 col-md-6 col-lg-5">
                     <div class="ph-menu-tab__item">
                         <figure>
                             <img src="assets/img/menu/drink_2.jpg" alt="">
@@ -468,7 +468,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-5">
+                <div class="col-12 col-md-6 col-lg-5">
                     <div class="ph-menu-tab__item">
                         <figure>
                             <img src="assets/img/menu/drink_3.jpg" alt="">
@@ -491,7 +491,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-5">
+                <div class="col-12 col-md-6 col-lg-5">
                     <div class="ph-menu-tab__item">
                         <figure>
                             <img src="assets/img/menu/drink_4.jpg" alt="">
@@ -514,7 +514,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-5">
+                <div class="col-12 col-md-6 col-lg-5">
                     <div class="ph-menu-tab__item">
                         <figure>
                             <img src="assets/img/menu/drink_5.jpg" alt="">
@@ -537,7 +537,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-5">
+                <div class="col-12 col-md-6 col-lg-5">
                     <div class="ph-menu-tab__item">
                         <figure>
                             <img src="assets/img/menu/drink_6.jpg" alt="">
@@ -565,8 +565,8 @@
     </div>
     <div class="tab-pane fade" id="specialty" role="tabpanel" aria-labelledby="specialty-tab">
         <div class="ph-menu-tab__wrapper">
-            <div class="row justify-content-between">
-                <div class="col-12 col-lg-5">
+            <div class="row justify-content-around">
+                <div class="col-12 col-md-6 col-lg-5">
                     <div class="ph-menu-tab__item">
                         <figure>
                             <img src="assets/img/menu/speciality-1.jpg" alt="">
@@ -588,7 +588,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-5">
+                <div class="col-12 col-md-6 col-lg-5">
                     <div class="ph-menu-tab__item">
                         <figure>
                             <img src="assets/img/menu/speciality-2.png" alt="">
@@ -610,7 +610,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-5">
+                <div class="col-12 col-md-6 col-lg-5">
                     <div class="ph-menu-tab__item">
                         <figure>
                             <img src="assets/img/menu/speciality-3.png" alt="">
@@ -632,7 +632,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-5">
+                <div class="col-12 col-md-6 col-lg-5">
                     <div class="ph-menu-tab__item">
                         <figure>
                             <img src="assets/img/menu/speciality-4.png" alt="">
@@ -654,7 +654,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-5">
+                <div class="col-12 col-md-6 col-lg-5">
                     <div class="ph-menu-tab__item">
                         <figure>
                             <img src="assets/img/menu/speciality-5.png" alt="">
@@ -676,7 +676,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-5">
+                <div class="col-12 col-md-6 col-lg-5">
                     <div class="ph-menu-tab__item">
                         <figure>
                             <img src="assets/img/menu/speciality-6.png" alt="">
