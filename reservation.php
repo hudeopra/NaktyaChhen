@@ -65,14 +65,14 @@
                                         At and dinner, available every day.
                                     </h3>
                                 </div>
-                                <form id="bookingForm" action="/booking-submit" method="POST">
+                                <form method="POST">
                                     <div class="ph-input-wrapper">
                                         <input type="text" name="res_fname" id="res_fname" placeholder="John Doe" required>
                                     </div>
                                     <div class="ph-half">
                                         <div class="ph-input-wrapper">
                                             <input type="email" name="res_email" id="res_email" placeholder="example@email.com">
-                                        </div>
+                                        </div> 
                                         <div class="ph-input-wrapper">
                                             <input type="phone" name="res_phone" id="res_phone" placeholder="+977 9876-543210">
                                         </div>                                        
@@ -114,7 +114,7 @@
                                         <textarea placeholder="Additional notes..." name="notes" id="notesBooking"></textarea>
                                     </div>
                                     <div class="ph-input-wrapper">
-                                        <input class="ph-btn ph-btn__form" type="submit" value="Submit">
+                                        <input class="ph-btn ph-btn__form" type="submit" value="Submit" name="submit">
                                     </div>
                                 </form>                                
                             </div>
@@ -158,9 +158,73 @@
                     </div>
                 </div>
             </section>
+            <?php
+require('admin/include/db_config.php');
+require('admin/include/essentials.php');
+
+if (isset($_POST['submit'])) {
+    $frm_data = filteration($_POST);
+    if (empty($frm_data['res_fname']) || empty($frm_data['res_email']) || empty($frm_data['res_phone']) || empty($frm_data['date']) || empty($frm_data['arrivalTime']) || empty($frm_data['numberOfPeople']) || empty($frm_data['tableNumber']) || empty($frm_data['notes'])) {
+        alert('error', 'Please fill out all the fields.');
+    } else {
+        $query = "INSERT INTO reservation (full_name, email, phone, date, arrival_time, number_of_people, table_number, notes) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+        $values = [
+            $frm_data['res_fname'],
+            $frm_data['res_email'],
+            $frm_data['res_phone'],
+            $frm_data['date'],
+            $frm_data['arrivalTime'],
+            $frm_data['numberOfPeople'],
+            $frm_data['tableNumber'],
+            $frm_data['notes']
+        ];
+        $res = insert($query, $values, "ssssssss");
+
+        if ($res == 1) {
+            alert('success', 'Reservation successful! Your table has been booked.');
+        } else {
+            alert('error', 'Error occurred! Please try again.');
+        }
+    }
+}
+?>
+
             <?php require('include/newsletter.php')?>
         </main>
         <?php require('include/footer.php')?>
         <?php require('include/script.php')?>
+
+        <script>
+        function validateReservationForm() {
+            var resFname = document.getElementById('res_fname').value.trim();
+            var resEmail = document.getElementById('res_email').value.trim();
+            var resPhone = document.getElementById('res_phone').value.trim();
+            var dateBooking = document.getElementById('dateBooking').value;
+            var arrivalTimeBooking = document.getElementById('arrivalTimeBooking').value;
+            var numberOfPeopleBooking = document.getElementById('numberOfPeopleBooking').value;
+            var tableNumberBooking = document.getElementById('tableNumberBooking').value;
+            var notesBooking = document.getElementById('notesBooking').value.trim();
+
+            if (resFname === '' || resEmail === '' || resPhone === '' || dateBooking === '' || arrivalTimeBooking === '' || numberOfPeopleBooking === '' || tableNumberBooking === '') {
+                alert('Please fill out all the fields.');
+                return false;
+            }
+
+            var emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+            if (!resEmail.match(emailPattern)) {
+                alert('Please enter a valid email address.');
+                return false;
+            }
+
+            var phonePattern = /^\+?[0-9]{1,4}?[-.\s\(\)]{0,2}?\(?[0-9]{1,3}?\)?[-.\s]{0,2}?[0-9]{1,4}[-.\s]?[0-9]{1,9}$/;
+            if (!resPhone.match(phonePattern)) {
+                alert('Please enter a valid phone number.');
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+        
     </body>
 </html>

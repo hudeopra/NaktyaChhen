@@ -14,7 +14,7 @@
         <nav class="ph-header__menu">
             <ul>
                 <li>
-                    <a href="index.html">
+                    <a href="dashboard.php">
                         <i class="fa fa-user" aria-hidden="true"></i>
                         <span class="ph-menu-title">
                             Dashboard
@@ -22,10 +22,10 @@
                     </a>
                 </li>
                 <li>
-                    <a href="about.html">
+                    <a href="admin_user.php">
                         <i class="fa fa-user" aria-hidden="true"></i>
                         <span class="ph-menu-title">
-                            About Us
+                            Users Details 
                         </span>
                     </a>
                 </li>
@@ -55,7 +55,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="reservation.html">
+                    <a href="admin_reservation.php">
                         <i class="fa fa-user" aria-hidden="true"></i>
                         <span class="ph-menu-title">
                             Reservation
@@ -63,7 +63,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="contact.html">
+                    <a href="admin-contact.php">
                         <i class="fa fa-user" aria-hidden="true"></i>
                         <span class="ph-menu-title">
                             Contact Us
@@ -108,7 +108,7 @@
             </div>
             <div  class="ph-header__user">
                 <div class="ph-header__user--trigger">
-                    <a class="ph-user-trigger" href="login.html">
+                    <a class="ph-user-trigger" href="index.php">
                         <i class="fa fa-user" aria-hidden="true"></i>
                     </a>
                 </div>

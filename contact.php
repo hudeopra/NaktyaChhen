@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Naktya Chhen        </title>
+        <title>Naktya Chhen</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <?php require('include/head-links.php')?>
@@ -20,30 +20,28 @@
                             </div>
                             <div class="ph-banner__item--content">
                                 <div class="ph-banner__item--details">
-                                    
-                                <span class="ph-section__icon">
-                                    <i class="fa fa-cutlery" aria-hidden="true"></i>
-                                </span>
-                                <h2>
-                                    Taste Authentic Flavours
-                                </h2>
-                                <p>
-                                    Serving food with harmony since 1991
-                                </p>
+                                    <span class="ph-section__icon">
+                                        <i class="fa fa-cutlery" aria-hidden="true"></i>
+                                    </span>
+                                    <h2>
+                                        Taste Authentic Flavours
+                                    </h2>
+                                    <p>
+                                        Serving food with harmony since 1991
+                                    </p>
                                 </div>
-                                <div class="ph-breadcrums"><div class="container">
-                                    <ul class="ph-breadcrums__list justify-content-center">
-                                        <li class="item">
-                                            <a href="index.php" title="Go to Home
-                                                Page">
-                                                Home </a>
-                                        </li>
-                                        <li class="item mt_page">
-                                            <strong>Contact</strong>
-                                        </li>
-                                    </ul>
+                                <div class="ph-breadcrums">
+                                    <div class="container">
+                                        <ul class="ph-breadcrums__list justify-content-center">
+                                            <li class="item">
+                                                <a href="index.php" title="Go to Home Page">Home</a>
+                                            </li>
+                                            <li class="item mt_page">
+                                                <strong>Contact</strong>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
-                            </div>
                             </div>
                         </div>
                     </div>
@@ -58,14 +56,10 @@
                                     <span class="ph-section__icon">
                                         <i class="fa fa-cutlery" aria-hidden="true"></i>
                                     </span>
-                                    <h2>
-                                        Contact Us
-                                    </h2>
-                                    <h3>
-                                        At and dinner, available every day.
-                                    </h3>
+                                    <h2>Contact Us</h2>
+                                    <h3>At and dinner, available every day.</h3>
                                 </div>
-                                <form id="contactForm" action="../Backend/contact.php" method="POST">
+                                <form method="POST" onsubmit="return validateContactForm()">
                                     <div class="ph-half">
                                         <div class="ph-input-wrapper">
                                             <input type="text" placeholder="Full Name" name="fullName" id="fullNameContact">
@@ -78,7 +72,7 @@
                                         <textarea placeholder="Describe yourself here..." name="message" id="messageContact"></textarea>
                                     </div>
                                     <div class="ph-input-wrapper">
-                                        <input id="form-submit" class="ph-btn ph-btn__form" type="submit" value="submit">
+                                        <input id="form-submit" class="ph-btn ph-btn__form" type="submit" value="submit" name="submit">
                                     </div>
                                 </form>                                
                             </div>
@@ -162,11 +156,55 @@
                     </div>
                 </div>
             </section>
+            <?php
+            ini_set('display_errors', 1);
+            ini_set('display_startup_errors', 1);
+            error_reporting(E_ALL);
+require('admin/include/db_config.php');
+require('admin/include/essentials.php');
+
+if (isset($_POST['submit'])) {
+    $frm_data = filteration($_POST);
+    if (empty($frm_data['fullName']) || empty($frm_data['email']) || empty($frm_data['message'])) {
+        alert('error', 'Please fill out all the fields.');
+    } else {
+        $query = "INSERT INTO contact_form (full_name, email, message) VALUES (?,?,?)";
+        $values = [$frm_data['fullName'], $frm_data['email'], $frm_data['message']];
+        $res = insert($query, $values, "sss");
+
+        if ($res == 1) {
+            alert('success', 'Data sent');
+        } else {
+            alert('error', 'Error occurred! Try again.');
+        }
+    }
+}
+?>
+
             <?php require('include/newsletter.php')?>
         </main>
         <?php require('include/footer.php')?>
         <?php require('include/script.php')?>
+        
+        <script>
+            function validateContactForm() {
+                let fullName = document.getElementById('fullNameContact').value.trim();
+                let email = document.getElementById('emailContact').value.trim();
+                let message = document.getElementById('messageContact').value.trim();
+
+                if (fullName === "" || email === "" || message === "") {
+                    alert("Please fill out all required fields");
+                    return false;
+                }
+
+                let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email)) {
+                    alert("Please enter a valid email address");
+                    return false;
+                }
+
+                return true;
+            }
+        </script>
     </body>
 </html>
-    
-    

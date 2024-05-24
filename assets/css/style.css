@@ -51,8 +51,6 @@ ul {
 img {
   width: 100%;
   height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 a {
@@ -781,6 +779,8 @@ header.ph-header.header_fixed ~ footer {
 
 .ph-about__content img {
   height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .ph-component {
@@ -791,6 +791,8 @@ header.ph-header.header_fixed ~ footer {
 .ph-component figure,
 .ph-component img {
   max-height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100%;
 }
 
@@ -918,6 +920,8 @@ header.ph-header.header_fixed ~ footer {
   width: 100px;
   height: 100px;
   border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .ph-menu-tab__item--title {
@@ -1015,6 +1019,11 @@ header.ph-header.header_fixed ~ footer {
   height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.4);
+}
+
+.ph-blog__item img {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .ph-blog__item:hover .ph-blog__item--details {
@@ -1176,6 +1185,8 @@ footer .ph-quick-menu li a {
   height: 200px;
   width: 200px;
   border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .ph-frame__item--content h4 {
