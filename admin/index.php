@@ -163,6 +163,9 @@
                             <div class="ph-banner__item--content">
                                 <div class="ph-banner__item--details">
                                     
+                                <span class="ph-section__icon">
+                                    <i class="fa fa-cutlery" aria-hidden="true"></i>
+                                </span>
                                 <h2>
                                     Taste Authentic Flavours
                                 </h2>
@@ -223,7 +226,7 @@
                                                     <a href="">Forgot Password?</a>
                                                 </li>
                                                 <li>
-                                                    <a href="../signup.php">Sign Up</a>
+                                                    <a href="signup.html">Sign Up</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -262,30 +265,42 @@
         
         <!-- checking the data is being submitted -->
         <?php
-        
-            if(isset($_POST['login']))
-            {
+            // Handle both admin and user login
+            if (isset($_POST['login'])) {
                 $frm_data = filteration($_POST);
-                $query = "SELECT * FROM `admin_cred` WHERE `admin_name`=? AND `admin_pass`=?";
-                $value = [$frm_data['admin_name'], $frm_data['admin_pass']];
+                
+                // Admin login
+                $admin_query = "SELECT * FROM `admin_cred` WHERE `admin_name`=? AND `admin_pass`=?";
+                $admin_value = [$frm_data['admin_name'], $frm_data['admin_pass']];
+                $admin_res = select($admin_query, $admin_value, "ss");
 
-                $res = select($query, $value,"ss" );
-
-                // testing login
-                // Check if a record is found
-                if (mysqli_num_rows($res) > 0) {
-                    // Handle further actions (e.g., session setup, redirect)
-                    $row = mysqli_fetch_assoc($res);
-
+                if (mysqli_num_rows($admin_res) > 0) {
+                    $admin_row = mysqli_fetch_assoc($admin_res);
                     $_SESSION['adminLogin'] = true;
-                    $_SESSION['adminId'] = $row['sr_no'];
+                    $_SESSION['adminId'] = $admin_row['sr_no'];
                     redirect('dashboard.php');
-                } else {
-                    // Login failed
-                    alert('error', 'Login Failed - Invalid Credentials');
                 }
+
+                    // User login
+                    $user_query = "SELECT * FROM `user` WHERE `email`=? AND `password`=?";
+                    $user_value = [$frm_data['admin_name'], $frm_data['admin_pass']];
+                    echo "User Query: $user_query\n"; // Echo the query for debugging purposes
+                    $user_res = select($user_query, $user_value, "ss");
+
+
+                if (mysqli_num_rows($user_res) > 0) {
+                    $user_row = mysqli_fetch_assoc($user_res);
+                    $_SESSION['adminLogin'] = true;
+                    $_SESSION['userId'] = $user_row['sr_no'];
+                    redirect('../index.php');
+                }
+
+                // If neither admin nor user login succeeds, display error message
+                alert('error', 'Login Failed - Invalid Credentials');
             }
-        ?>
+
+            ?>
+
         <?php require('../include/script.php')?>
     </body>
 </html>

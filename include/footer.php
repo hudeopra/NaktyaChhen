@@ -3,67 +3,67 @@
             <section class="ph-quick-menu ph-section__padding-lg--tb">
                 <div class="container">
                     <div class="row">
-                        <div class="col-12 col-md-6 col-xl-3">
+                        <div class="col-12 col-md-6 col-lg-3">
                             <div class="ph-quick-menu__item">
                                 <h3>Information</h3>
                                 <ul>
                                     <li>
-                                        <a href="about.php">About Us</a>
+                                        <a href="">About Us</a>
                                     </li>
                                     <li>
-                                        <a href="menu.php">Our Menu</a>
+                                        <a href="">Our Menu</a>
                                     </li>
                                     <li>
-                                        <a href="contact.php">Contact Us</a>
+                                        <a href="">Contact Us</a>
                                     </li>
                                     <li>
-                                        <a href="blog.php">Events</a>
+                                        <a href="">Events</a>
                                     </li>
                                     <li>
-                                        <a href="terms.php">Terms &amp; Conditions</a>
+                                        <a href="">Terms &amp; Conditions</a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-12 col-md-6 col-xl-3">
+                        <div class="col-12 col-md-6 col-lg-3">
                             <div class="ph-quick-menu__item">
                                 <h3>Support</h3>
                                 <ul>
                                     <li>
-                                        <a href="help-center.php">Help Center</a>
+                                        <a href="">Help Center</a>
                                     </li>
                                     <li>
-                                        <a href="refund.php">Refund Policy</a>
+                                        <a href="">Refund Policy</a>
                                     </li>
                                     <li>
-                                        <a href="contact.php">Report</a>
+                                        <a href="">Report</a>
                                     </li>
                                     <li>
-                                        <a href="terms.php">FAQ’s</a>
+                                        <a href="">FAQ’s</a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-12 col-md-6 col-xl-3">
+                        <div class="col-12 col-md-6 col-lg-3">
                             <div class="ph-quick-menu__item">
                                 <h3>My Account</h3>
                                 <ul>
                                     <li>
-                                        <a href="admin/dashboard.php">My Account</a>
+                                        <a href="">My Account</a>
                                     </li>
                                     <li>
-                                        <a href="admin/dashboard.php">Order History</a>
+                                        <a href="">Order History</a>
                                     </li>
                                     <li>
-                                        <a href="admin/dashboard.php">Account Details</a>
+                                        <a href="">Account Details</a>
                                     </li>
                                     <li>
-                                        <a href="admin/dashboard.php">Logout</a>
+                                        <a href="">Logout</a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-12 col-md-6 col-xl-3">
+                        <div class="col-12 col-md-6 col-lg-3">
                             <div class="ph-quick-menu__item">
                                 <h3>Get In Touch</h3>
                                 <ul class="ph-contact-info">
@@ -74,9 +74,9 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="mailto:naktyachhen@gmail.com">
+                                        <a href="mailto:sales@yourcompany.com">
                                             <i class="fa fa-envelope" aria-hidden="true"></i>
-                                            <span>naktyachhen@gmail.com</span>
+                                            <span>sales@yourcompany.com</span>
                                         </a>
                                     </li>
                                     <li>

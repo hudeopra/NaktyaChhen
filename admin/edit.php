@@ -41,9 +41,10 @@ if (isset($_POST['edit'])) {
     $stmt = mysqli_prepare($conn, $update_query);
     mysqli_stmt_bind_param($stmt, "ssiissssi", $date, $time, $people, $tableNumber, $description, $name, $email, $phone, $id);
     if (mysqli_stmt_execute($stmt)) {
-        echo "<script>alert('Booking updated successfully');</script>";
-        // Redirect back to admin_reservation.php after updating
-        echo "<script>window.location.href = 'admin_reservation.php';</script>";
+        echo "<script>alert('Data updated successfully');</script>";
+        // Redirect based on type
+        $redirect_url = $type === 'reservation' ? 'admin_dashboard.php' : 'admin_user.php';
+        echo "<script>window.location.href = '$redirect_url';</script>";
         exit();
     } else {
         echo "<script>alert('Failed to update booking');</script>";
