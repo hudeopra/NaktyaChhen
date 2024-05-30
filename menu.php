@@ -46,23 +46,24 @@
                 </div>
             </section>
             
-            <section class="ph-menu-tab ph-section__padding-lg--tb">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 col-md-10 mx-auto text-center">
-                            <div class="ph-section__title ph-section__padding-sm--b">
-                                <h2>
-                                    Discover Culinary Bliss at Naktya Chhen
-                                </h2>
-                                <p>
-                                    Embark on a flavor-packed adventure with our menu, bursting with exquisite dishes crafted from the freshest ingredients where every bite is a journey of culinary delight.
-                                </p>
-                            </div>
+            
+        <section class="ph-menu-tab ph-section__padding-lg--tb">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-10 mx-auto text-center">
+                        <div class="ph-section__title ph-section__padding-sm--b">
+                            <h2 class="wow  fadeInUpBig">
+                                Discover Culinary Bliss at Naktya Chhen
+                            </h2>
+                            <p class="wow  fadeInUpBig"  data-wow-delay="0.2s">
+                                Embark on a flavor-packed adventure with our menu, bursting with exquisite dishes crafted from the freshest ingredients where every bite is a journey of culinary delight.
+                            </p>
                         </div>
                     </div>
-                    <?php require('include/menu-tab.php') ?>
                 </div>
-            </section>
+                <?php require('include/menu-tab.php') ?>
+            </div>
+        </section>
             <section class="ph-component">
                 <div class="container-fluid">
                     <div class="row">
@@ -74,7 +75,7 @@
                             </div>
                         </div>
                         <div class="col-12 col-md-6 g-0">
-                            <div class="ph-component__content">
+                            <div class="ph-component__content wow fadeInRightBig">
                                 <div class="ph-section__title">
                                     <h2>
                                     A Date Night to Remember
@@ -98,7 +99,7 @@
                     <div class="row justify-content-center">
                         
                         <div class="col-6 ph-section__padding-sm--b">
-                            <div class="ph-section__title">
+                            <div class="ph-section__title wow  fadeInUpBig">
                                 <h2>
                                     ALL DAY EXPERIENCE
                                 </h2>
@@ -110,7 +111,7 @@
                     </div>
                     <div class="row">
                         <div class="col-12 col-md-6 col-lg-3">
-                            <div class="ph-frame__item">
+                            <div class="ph-frame__item wow  fadeInUpBig" data-wow-delay="0.1s">
                                 <div class="ph-frame__item--img">
                                     <figure>
                                         <img src="assets/img/menu-content-1.jpg" alt="">
@@ -127,7 +128,7 @@
                             </div>
                         </div>
                         <div class="col-12 col-md-6 col-lg-3">
-                            <div class="ph-frame__item">
+                            <div class="ph-frame__item wow  fadeInUpBig" data-wow-delay="0.2s">
                                 <div class="ph-frame__item--img">
                                     <figure>
                                         <img src="assets/img/menu-content-2.jpg" alt="">
@@ -144,7 +145,7 @@
                             </div>
                         </div>
                         <div class="col-12 col-md-6 col-lg-3">
-                            <div class="ph-frame__item">
+                            <div class="ph-frame__item wow  fadeInUpBig" data-wow-delay="0.3s">
                                 <div class="ph-frame__item--img">
                                     <figure>
                                         <img src="assets/img/menu-content-3.jpg" alt="">
@@ -161,7 +162,7 @@
                             </div>
                         </div>
                         <div class="col-12 col-md-6 col-lg-3">
-                            <div class="ph-frame__item">
+                            <div class="ph-frame__item wow  fadeInUpBig" data-wow-delay="0.4s">
                                 <div class="ph-frame__item--img">
                                     <figure>
                                         <img src="assets/img/menu-content-4.jpg" alt="">

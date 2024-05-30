@@ -7,13 +7,13 @@ function adminLogin() {
     
     // Check if the session variable "adminLogin" is not set or not true
     if (!isset($_SESSION["adminLogin"]) || $_SESSION["adminLogin"] !== true) {
-        redirect('index.php');
+        redirect('../NaktyaChhen/admin/index.php');
         exit;
     }
 }
 
 // Function to redirect the user to a specified URL
-function redirect($url = 'index.php') {
+function redirect($url = '../NaktyaChhen/admin/index.php') {
     // Output a JavaScript snippet that sets the window location to the provided URL
     echo "
     <script>

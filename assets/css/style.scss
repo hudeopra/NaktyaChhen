@@ -363,7 +363,7 @@ textarea {
   }
 
   .ph-half .ph-input-wrapper {
-    width: 100%;
+    width: 100% !important;
   }
 }
 
@@ -1130,6 +1130,7 @@ footer {
         justify-content: space-between;
         border-bottom: 1px solid $primary-light;
         transition: all 0.3s;
+        flex-wrap: wrap;
         &:hover {
           color: $secondary;
           opacity: 0.8;
@@ -1394,4 +1395,27 @@ footer {
 .modal-content {
   background-color: $primary-dark;
   color: #fff;
+}
+
+.table-responsive {
+  margin-top: 30px;
+  th,
+  td,
+  tr {
+    background-color: $primary-dark;
+    color: #fff;
+    border: unset !important;
+  }
+  thead {
+    th {
+      color: $secondary;
+    }
+  }
+  tbody {
+    tr:hover {
+      td {
+        color: #cccccc;
+      }
+    }
+  }
 }

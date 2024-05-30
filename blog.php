@@ -1,3 +1,9 @@
+
+<?php
+
+    require('include/db_config.php');
+    require('include/essentials.php');
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -21,6 +27,9 @@
                             <div class="ph-banner__item--content">
                                 <div class="ph-banner__item--details">
                                     
+                                <span class="ph-section__icon">
+                                    <i class="fa fa-cutlery" aria-hidden="true"></i>
+                                </span>
                                 <h2>
                                     Taste Authentic Flavours
                                 </h2>
@@ -31,7 +40,8 @@
                                 <div class="ph-breadcrums"><div class="container">
                                     <ul class="ph-breadcrums__list justify-content-center">
                                         <li class="item">
-                                            <a href="index.php" title="Go to Home Page">
+                                            <a href="index.php" title="Go to Home
+                                                Page">
                                                 Home </a>
                                         </li>
                                         <li class="item mt_page">
@@ -49,7 +59,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12 col-md-10 text-center mx-auto">                        
-                            <div class="ph-section__title ph-section__padding-md--b">
+                            <div class="ph-section__title ph-section__padding-md--b wow  fadeInUpBig">
                                 <h2>
                                     ALL DAY EXPERIENCE
                                 </h2>
@@ -59,7 +69,7 @@
                             </div>
                         </div>
                         <div class="col-12 col-md-6 col-lg-4">
-                            <div class="ph-blog__item">
+                            <div class="ph-blog__item wow  fadeInUpBig">
                                 <figure class="ph-blog__item--content">
                                     <img src="assets/img/blog/blog_1.jpg" alt="">
                                 </figure>
@@ -73,7 +83,7 @@
                             </div>
                         </div>
                         <div class="col-12 col-md-6 col-lg-4">
-                            <div class="ph-blog__item">
+                            <div class="ph-blog__item wow  fadeInUpBig">
                                 <figure class="ph-blog__item--content">
                                     <img src="assets/img/blog/blog_2.jpg" alt="">
                                 </figure>
@@ -87,7 +97,7 @@
                             </div>
                         </div>
                         <div class="col-12 col-md-6 col-lg-4">
-                            <div class="ph-blog__item">
+                            <div class="ph-blog__item wow  fadeInUpBig"   data-wow-delay="0.1s">
                                 <figure class="ph-blog__item--content">
                                     <img src="assets/img/blog/blog_3.jpg" alt="">
                                 </figure>
@@ -101,7 +111,7 @@
                             </div>
                         </div>
                         <div class="col-12 col-md-6 col-lg-4">
-                            <div class="ph-blog__item">
+                            <div class="ph-blog__item wow  fadeInUpBig"   data-wow-delay="0.1s">
                                 <figure class="ph-blog__item--content">
                                     <img src="assets/img/blog/blog_4.jpg" alt="">
                                 </figure>
@@ -115,7 +125,7 @@
                             </div>
                         </div>
                         <div class="col-12 col-md-6 col-lg-4">
-                            <div class="ph-blog__item">
+                            <div class="ph-blog__item wow  fadeInUpBig"   data-wow-delay="0.2s">
                                 <figure class="ph-blog__item--content">
                                     <img src="assets/img/blog/blog_5.jpg" alt="">
                                 </figure>
@@ -129,7 +139,7 @@
                             </div>
                         </div>
                         <div class="col-12 col-md-6 col-lg-4">
-                            <div class="ph-blog__item">
+                            <div class="ph-blog__item wow  fadeInUpBig"   data-wow-delay="0.2s">
                                 <figure class="ph-blog__item--content">
                                     <img src="assets/img/blog/blog_6.jpg" alt="">
                                 </figure>
@@ -143,7 +153,7 @@
                             </div>
                         </div>
                         <div class="col-12 col-md-6 col-lg-4">
-                            <div class="ph-blog__item">
+                            <div class="ph-blog__item wow  fadeInUpBig"   data-wow-delay="0.3s">
                                 <figure class="ph-blog__item--content">
                                     <img src="assets/img/blog/blog_8.jpg" alt="">
                                 </figure>
@@ -157,7 +167,7 @@
                             </div>
                         </div>
                         <div class="col-12 col-md-6 col-lg-4">
-                            <div class="ph-blog__item">
+                            <div class="ph-blog__item wow  fadeInUpBig"   data-wow-delay="0.3s">
                                 <figure class="ph-blog__item--content">
                                     <img src="assets/img/blog/blog_9.jpg" alt="">
                                 </figure>
@@ -171,7 +181,7 @@
                             </div>
                         </div>
                         <div class="col-12 col-md-6 col-lg-4">
-                            <div class="ph-blog__item">
+                            <div class="ph-blog__item wow  fadeInUpBig"   data-wow-delay="0.4s">
                                 <figure class="ph-blog__item--content">
                                     <img src="assets/img/blog/blog_7.jpg" alt="">
                                 </figure>

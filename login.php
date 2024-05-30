@@ -1,14 +1,17 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
-    require('include/db_config.php');
-    require('include/essentials.php');
+
+    require('admin/include/db_config.php');
+    require('admin/include/essentials.php');
 
     // Start the session to access session variables
     session_start();
 
     // Check if the session variable "adminLogin" is set and true
     if (isset($_SESSION["adminLogin"]) && $_SESSION["adminLogin"] === true) {
-        redirect('dashboard.php');
+        redirect('index.php');
     }
 
 ?>
@@ -24,9 +27,12 @@
         <title>Naktya Chhen - Login Page</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <?php require('include/admin-head-links.php')?>
+        <?php require('include/head-links.php') ?>
+
     </head>
-    <body><header class="ph-header">
+    <body>
+        
+    <header class="ph-header">
             <div class="ph-header__wrapper">
                 <div class="ph-header__wrapper--head">   
                     <div class="ph-header__open">
@@ -163,9 +169,6 @@
                             <div class="ph-banner__item--content">
                                 <div class="ph-banner__item--details">
                                     
-                                <span class="ph-section__icon">
-                                    <i class="fa fa-cutlery" aria-hidden="true"></i>
-                                </span>
                                 <h2>
                                     Taste Authentic Flavours
                                 </h2>
@@ -194,8 +197,11 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12 col-lg-6">
-                            <div class="ph-reservation__form">
+                            <div class="ph-reservation__form wow  fadeInLeftBig">
                                 <div class="ph-section__title mb-5">
+                                    <span class="ph-section__icon">
+                                        <i class="fa fa-cutlery" aria-hidden="true"></i>
+                                    </span>
                                     <h2>
                                         Login 
                                     </h2>
@@ -231,8 +237,8 @@
                                 </div>          
                             </div>
                         </div>
-                        <div class="col-12 col-lg-6 mt-5">
-                            <div class="ph-contact__img">
+                        <div class="col-12 col-lg-6">
+                            <div class="ph-contact__img wow  fadeInRightBig">
                                 <figure>
                                     <img src="../assets/img/banner-2.jpg" alt="">
                                 </figure>
@@ -262,43 +268,31 @@
         
         <!-- checking the data is being submitted -->
         <?php
-            // Handle both admin and user login
-            if (isset($_POST['login'])) {
+        
+            if(isset($_POST['login']))
+            {
                 $frm_data = filteration($_POST);
-                
-                // Admin login
-                $admin_query = "SELECT * FROM `admin_cred` WHERE `admin_name`=? AND `admin_pass`=?";
-                $admin_value = [$frm_data['admin_name'], $frm_data['admin_pass']];
-                $admin_res = select($admin_query, $admin_value, "ss");
+                $query = "SELECT * FROM `user` WHERE `email`=? AND `password`=?";
+                $value = [$frm_data['email'], $frm_data['password']];
 
-                if (mysqli_num_rows($admin_res) > 0) {
-                    $admin_row = mysqli_fetch_assoc($admin_res);
+                $res = select($query, $value,"ss" );
+
+                // testing login
+                // Check if a record is found
+                if (mysqli_num_rows($res) > 0) {
+                    // Handle further actions (e.g., session setup, redirect)
+                    $row = mysqli_fetch_assoc($res);
+
                     $_SESSION['adminLogin'] = true;
-                    $_SESSION['adminId'] = $admin_row['sr_no'];
-                    redirect('dashboard.php');
+                    $_SESSION['adminId'] = $row['sr_no'];
+                    redirect('index.php');
+                } else {
+                    // Login failed
+                    alert('error', 'Login Failed - Invalid Credentials');
                 }
-
-                    // User login
-                    $user_query = "SELECT * FROM `user` WHERE `email`=? AND `password`=?";
-                    $user_value = [$frm_data['admin_name'], $frm_data['admin_pass']];
-                    echo "User Query: $user_query\n"; // Echo the query for debugging purposes
-                    $user_res = select($user_query, $user_value, "ss");
-
-
-                if (mysqli_num_rows($user_res) > 0) {
-                    $user_row = mysqli_fetch_assoc($user_res);
-                    $_SESSION['adminLogin'] = true;
-                    $_SESSION['userId'] = $user_row['sr_no'];
-                    redirect('../index.php');
-                }
-
-                // If neither admin nor user login succeeds, display error message
-                alert('error', 'Login Failed - Invalid Credentials');
             }
-
-            ?>
-
-        <?php require('../include/script.php')?>
+        ?>
+        <?php require('include/script.php')?>
     </body>
 </html>
     

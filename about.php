@@ -51,7 +51,7 @@
                     <div class="row justify-content-center">
                         
                         <div class="col-12 col-md-10 mx-auto text-center ph-section__padding-sm--b">
-                            <div class="ph-section__title">
+                            <div class="ph-section__title wow  fadeInUpBig">
                                 <h2>
                                 A Symphony of Culinary Talent
                                 </h2>
@@ -63,13 +63,13 @@
                     </div>
                     <div class="row">
                         <div class="col-12 col-md-6 col-lg-3">
-                            <div class="ph-frame__item">
+                            <div class="ph-frame__item wow  fadeInUpBig">
                                 <div class="ph-frame__item--img">
                                     <figure>
                                         <img src="assets/img/about-chef-1.png" alt="">
                                     </figure>
                                 </div>
-                                <div class="ph-frame__item--content">
+                                <div class="ph-frame__item--content ">
                                     <h4>
                                     Greetings! I'm Brian, your Manager
                                     </h4>
@@ -80,7 +80,7 @@
                             </div>
                         </div>
                         <div class="col-12 col-md-6 col-lg-3">
-                            <div class="ph-frame__item">
+                            <div class="ph-frame__item wow  fadeInUpBig" data-wow-delay="0.1s">
                                 <div class="ph-frame__item--img">
                                     <figure>
                                         <img src="assets/img/about-chef-2.png" alt="">
@@ -97,7 +97,7 @@
                             </div>
                         </div>
                         <div class="col-12 col-md-6 col-lg-3">
-                            <div class="ph-frame__item">
+                            <div class="ph-frame__item wow  fadeInUpBig" data-wow-delay="0.2s">
                                 <div class="ph-frame__item--img">
                                     <figure>
                                         <img src="assets/img/about-chef-3.png" alt="">
@@ -114,7 +114,7 @@
                             </div>
                         </div>
                         <div class="col-12 col-md-6 col-lg-3">
-                            <div class="ph-frame__item">
+                            <div class="ph-frame__item  wow  fadeInUpBig" data-wow-delay="0.3s">
                                 <div class="ph-frame__item--img">
                                     <figure>
                                         <img src="assets/img/about-chef-4.png" alt="">
@@ -144,7 +144,7 @@
                             </div>
                         </div>
                         <div class="col-12 col-md-6 g-0">
-                            <div class="ph-component__content">
+                            <div class="ph-component__content wow fadeInRightBig">
                                 <div class="ph-section__title">
                                     <h2>
                                     We Are Experienced Restaurant.
@@ -170,19 +170,16 @@
                             <div class="row text-center">
                                 <div class="col-12 col-md-10 mx-auto text-center">
                                     <div class="ph-section__title ph-section__padding-sm--b">
-                                        <span class="ph-section__icon">
-                                            <i class="fa fa-cutlery" aria-hidden="true"></i>
-                                        </span>
-                                        <h2>
+                                        <h2 class="wow  fadeInUpBig">
                                         Embark on a Culinary Journey with Us
                                         </h2>
-                                        <h3>
+                                        <h3 class="wow  fadeInUpBig">
                                         Discover Unmatched Hospitality, Culinary Excellence, and Captivating Ambiance
                                         </h3>
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-6 col-xl-4">
-                                    <div class="ph-about__content">
+                                    <div class="ph-about__content wow  fadeInUpBig">
                                         <figure>
                                             <img src="assets/img/about-content-1.jpg" alt="">
                                         </figure>
@@ -192,7 +189,7 @@
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-6 col-xl-4">
-                                    <div class="ph-about__content">
+                                    <div class="ph-about__content wow  fadeInUpBig">
                                         <figure>
                                             <img src="assets/img/about-content-2.jpg" alt="">
                                         </figure>
@@ -202,7 +199,7 @@
                                     </div>
                                 </div>
                                 <div class="col-12 col-lg-4">
-                                    <div class="ph-about__content">
+                                    <div class="ph-about__content wow  fadeInUpBig">
                                         <figure>
                                             <img src="assets/img/about-content-3.jpg" alt="">
                                         </figure>

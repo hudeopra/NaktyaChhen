@@ -1,3 +1,9 @@
+
+<?php
+
+    require('include/db_config.php');
+    require('include/essentials.php');
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -21,6 +27,9 @@
                             <div class="ph-banner__item--content">
                                 <div class="ph-banner__item--details">
                                     
+                                <span class="ph-section__icon">
+                                    <i class="fa fa-cutlery" aria-hidden="true"></i>
+                                </span>
                                 <h2>
                                     Taste Authentic Flavours
                                 </h2>
@@ -52,14 +61,14 @@
             <section class="ph-blog-single ph-section__padding-lg--tb">
                 <div class="container">
                     <div class="row">
-                        <div class="col-12 col-lg-8">
+                        <div class="col-12 col-xxl-8 mb-3">
                             <div class="ph-blog-single__banner">
                                 <figure>
                                     <img src="assets/img/blog/blog_1.jpg" alt="">
                                 </figure>
                             </div>
                         </div>
-                        <div class="col-12 col-lg-4">
+                        <div class="col-12 col-xxl-4">
                             <div class="ph-blog-single__head">
                                 <h3>
                                     How to choose the best type of combi oven

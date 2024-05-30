@@ -1,10 +1,12 @@
 
         <!-- jquery -->
-        <script src="assets/library/jquery-3.5.1.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <!-- slick-slider -->
-        <script type="text/javascript" src="assets/library/slick-1.8.1/slick/slick.js"></script>
+        <script type="text/javascript" src="admin/assets/library/slick-1.8.1/slick/slick.js"></script>
         <!-- boottrap -->
         <script src="assets/library/bootstrap/bootstrap.min.js"></script>
+        <!-- counter -->
+        <script src="assets/library/multi-animated-counter.js"></script>
         <!-- wow js -->
         <script src="assets/library/wow-js/wow.min.js"></script>
         <!-- nice select -->
